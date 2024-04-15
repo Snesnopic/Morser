@@ -67,7 +67,6 @@
 		9D3DED1E2BCD109400DAD675 = {
 			isa = PBXGroup;
 			children = (
-				9D2099822BCD37D800229594 /* Model */,
 				9D3DED292BCD109400DAD675 /* Morser */,
 				9D3DED282BCD109400DAD675 /* Products */,
 			);
@@ -84,6 +83,7 @@
 		9D3DED292BCD109400DAD675 /* Morser */ = {
 			isa = PBXGroup;
 			children = (
+				9D2099822BCD37D800229594 /* Model */,
 				9DC81D112BCD30E300A13C99 /* AHAP */,
 				9DC81D142BCD33F900A13C99 /* Views */,
 				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,

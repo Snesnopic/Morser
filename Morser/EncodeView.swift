@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct EncodeView: View {
+    @State private var enteredText:String = ""
+    @FocusState private var textFieldIsFocused:Bool
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Hello, World!")
+                Spacer()
+                TextField(text: $enteredText, prompt: Text("Sentence to encode")) {
+                    
+                }
+                .focused($textFieldIsFocused)
+                .onSubmit {
+                }
+                .textInputAutocapitalization(.never)
+                .textFieldStyle(.roundedBorder)
+                .disableAutocorrection(true)
+                .padding(.horizontal)
                 
+                
+                Text(enteredText.isEmpty ? "Morse code will be here!" : MorseEncoder.encode(string: enteredText))
+                Spacer()
+                
+                Button {
+                    VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+                } label: {
+                    Text("Play haptics")
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+
+                
+                Spacer()
             }
-                .navigationTitle("Encode")
+            .navigationTitle("Encode")
         }
+        
     }
 }
 

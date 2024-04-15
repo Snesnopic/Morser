@@ -13,17 +13,17 @@ struct ParentView: View {
             EncodeView().tabItem{
                 Label(
                     title: { Text("Encode") },
-                    icon: { Image(systemName: "42.circle") }
+                    icon: { Image(systemName: "text.badge.plus") }
                 ) }
             QuickTranslateView().tabItem {
                 Label(
                     title: { Text("Quick Translate") },
-                    icon: { Image(systemName: "42.circle") }
+                    icon: { Image(systemName: "list.bullet") }
                 ) }
             ListenView().tabItem {
                 Label(
                     title: { Text("Listen") },
-                    icon: { Image(systemName: "42.circle") }
+                    icon: { Image(systemName: "waveform") }
                 )
             }
         }

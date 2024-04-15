@@ -14,7 +14,7 @@ class SettingsBundleHelper {
     }
    
     static func getSliderPreference() -> Double {
-        print(Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0)
+        print("Current haptics speed: \(Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0)")
         return Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0
     }
     

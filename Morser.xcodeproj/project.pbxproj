@@ -18,6 +18,8 @@
 		9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
 		9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */; };
 		9D3DED462BCD2CE200DAD675 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED452BCD2CE200DAD675 /* Settings.bundle */; };
+		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
+		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		9D3DED412BCD248100DAD675 /* MorseEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseEncoder.swift; sourceTree = "<group>"; };
 		9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		9D3DED452BCD2CE200DAD675 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		9DC81D0F2BCD30E300A13C99 /* dash.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dash.ahap; sourceTree = "<group>"; };
+		9DC81D102BCD30E300A13C99 /* dot.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot.ahap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		9D3DED292BCD109400DAD675 /* Morser */ = {
 			isa = PBXGroup;
 			children = (
+				9DC81D112BCD30E300A13C99 /* AHAP */,
 				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
 				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
@@ -88,6 +93,15 @@
 				9D3DED322BCD109500DAD675 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DC81D112BCD30E300A13C99 /* AHAP */ = {
+			isa = PBXGroup;
+			children = (
+				9DC81D0F2BCD30E300A13C99 /* dash.ahap */,
+				9DC81D102BCD30E300A13C99 /* dot.ahap */,
+			);
+			path = AHAP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3DED332BCD109500DAD675 /* Preview Assets.xcassets in Resources */,
+				9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */,
 				9D3DED462BCD2CE200DAD675 /* Settings.bundle in Resources */,
 				9D3DED2F2BCD109500DAD675 /* Assets.xcassets in Resources */,
+				9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

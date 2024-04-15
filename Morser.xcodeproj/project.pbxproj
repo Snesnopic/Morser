@@ -14,6 +14,9 @@
 		9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED392BCD167600DAD675 /* EncodeView.swift */; };
 		9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */; };
 		9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */; };
+		9D3DED402BCD23E700DAD675 /* VibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */; };
+		9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
+		9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		9D3DED392BCD167600DAD675 /* EncodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeView.swift; sourceTree = "<group>"; };
 		9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTranslateView.swift; sourceTree = "<group>"; };
 		9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenView.swift; sourceTree = "<group>"; };
+		9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationEngine.swift; sourceTree = "<group>"; };
+		9D3DED412BCD248100DAD675 /* MorseEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseEncoder.swift; sourceTree = "<group>"; };
+		9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
 				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
+				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,
+				9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */,
+				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
 				9D3DED2E2BCD109500DAD675 /* Assets.xcassets */,
@@ -148,11 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */,
 				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
 				9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */,
+				9D3DED402BCD23E700DAD675 /* VibrationEngine.swift in Sources */,
 				9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
+				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

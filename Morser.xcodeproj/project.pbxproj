@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D20997F2BCD378F00229594 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20997E2BCD378F00229594 /* Data.swift */; };
+		9D2099812BCD37AA00229594 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2099802BCD37AA00229594 /* Sentence.swift */; };
 		9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2A2BCD109400DAD675 /* MorserApp.swift */; };
 		9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ParentView.swift */; };
 		9D3DED2F2BCD109500DAD675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED2E2BCD109500DAD675 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D20997E2BCD378F00229594 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		9D2099802BCD37AA00229594 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 		9D3DED272BCD109400DAD675 /* Morser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3DED2A2BCD109400DAD675 /* MorserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserApp.swift; sourceTree = "<group>"; };
 		9D3DED2C2BCD109400DAD675 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
@@ -51,9 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D2099822BCD37D800229594 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D20997E2BCD378F00229594 /* Data.swift */,
+				9D2099802BCD37AA00229594 /* Sentence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9D3DED1E2BCD109400DAD675 = {
 			isa = PBXGroup;
 			children = (
+				9D2099822BCD37D800229594 /* Model */,
 				9D3DED292BCD109400DAD675 /* Morser */,
 				9D3DED282BCD109400DAD675 /* Products */,
 			);
@@ -187,11 +201,13 @@
 			files = (
 				9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */,
 				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
+				9D2099812BCD37AA00229594 /* Sentence.swift in Sources */,
 				9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */,
 				9D3DED402BCD23E700DAD675 /* VibrationEngine.swift in Sources */,
 				9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
+				9D20997F2BCD378F00229594 /* Data.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

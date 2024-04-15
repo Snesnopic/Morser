@@ -30,7 +30,10 @@ struct EncodeView: View {
                 Spacer()
                 
                 Button {
-                    VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+                    if !VibrationEngine.shared.isVibrating() {
+                        VibrationEngine.shared.createEngine()
+                        VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+                    }
                 } label: {
                     Text("Play haptics")
                 }

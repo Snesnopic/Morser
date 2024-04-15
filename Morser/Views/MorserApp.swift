@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MorserApp: App {
@@ -13,5 +14,6 @@ struct MorserApp: App {
         WindowGroup {
             ParentView()
         }
+        .modelContainer(for: Sentence.self)
     }
 }

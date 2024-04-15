@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2A2BCD109400DAD675 /* MorserApp.swift */; };
-		9D3DED2D2BCD109400DAD675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ContentView.swift */; };
+		9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ParentView.swift */; };
 		9D3DED2F2BCD109500DAD675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED2E2BCD109500DAD675 /* Assets.xcassets */; };
 		9D3DED332BCD109500DAD675 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED322BCD109500DAD675 /* Preview Assets.xcassets */; };
 		9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED392BCD167600DAD675 /* EncodeView.swift */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		9D3DED272BCD109400DAD675 /* Morser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3DED2A2BCD109400DAD675 /* MorserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserApp.swift; sourceTree = "<group>"; };
-		9D3DED2C2BCD109400DAD675 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9D3DED2C2BCD109400DAD675 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		9D3DED2E2BCD109500DAD675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3DED302BCD109500DAD675 /* Morser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Morser.entitlements; sourceTree = "<group>"; };
 		9D3DED322BCD109500DAD675 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
-				9D3DED2C2BCD109400DAD675 /* ContentView.swift */,
+				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
@@ -148,7 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D3DED2D2BCD109400DAD675 /* ContentView.swift in Sources */,
+				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
 				9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */,
 				9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ParentView.swift
 //  Morser
 //
 //  Created by Giuseppe Francione on 15/04/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ParentView: View {
     var body: some View {
         TabView {
             EncodeView().tabItem{
@@ -31,5 +31,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ParentView()
 }

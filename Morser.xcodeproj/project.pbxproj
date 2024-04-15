@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D20997F2BCD378F00229594 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20997E2BCD378F00229594 /* Data.swift */; };
 		9D2099812BCD37AA00229594 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2099802BCD37AA00229594 /* Sentence.swift */; };
 		9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2A2BCD109400DAD675 /* MorserApp.swift */; };
 		9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ParentView.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D20997E2BCD378F00229594 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9D2099802BCD37AA00229594 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
 		9D3DED272BCD109400DAD675 /* Morser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3DED2A2BCD109400DAD675 /* MorserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserApp.swift; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 		9D2099822BCD37D800229594 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9D20997E2BCD378F00229594 /* Data.swift */,
 				9D2099802BCD37AA00229594 /* Sentence.swift */,
 			);
 			path = Model;
@@ -207,7 +204,6 @@
 				9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
-				9D20997F2BCD378F00229594 /* Data.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -324,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -357,7 +353,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -396,7 +392,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;

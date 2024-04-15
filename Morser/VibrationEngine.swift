@@ -8,7 +8,6 @@
 import Foundation
 import CoreHaptics
 import AVFAudio
-import UIKit
 
 class VibrationEngine {
     static let shared:VibrationEngine = VibrationEngine()

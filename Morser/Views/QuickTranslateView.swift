@@ -12,43 +12,42 @@ struct QuickTranslateView: View {
     @Query(sort: \Sentence.order) private var sentences: [Sentence]
     @Environment(\.modelContext) private var modelContext: ModelContext
     @State private var mode:EditMode = .inactive
-    @State private var createdSentence:String = ""
     @FocusState private var textFieldIsFocused:Bool
     var body: some View {
         NavigationStack {
             List {
                 ForEach(sentences) { sentence in
-                    if sentence.order == -1 {
-                        TextField("Input",text: $createdSentence)
-                            .focused($textFieldIsFocused)
-                            .onSubmit {
-                                textFieldIsFocused = false
-                                sentence.sentence = createdSentence
-                                createdSentence = ""
-                                let tempItems = sentences
-                                tempItems.indices.forEach({ index in
-                                    sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
-                                })
-                                do {
-                                    try modelContext.save()
-                                } catch {
-                                    print(error)
+                    TextField("Input",text: sentence.boundSentence)
+                        .if(!mode.isEditing && sentence.order != -1, transform: { view in
+                            view
+                                .disabled(true)
+                                .overlay {
+                                    Color.white.opacity(0.0001)
+                                        .onTapGesture {
+                                            if !VibrationEngine.shared.isVibrating() {
+                                                VibrationEngine.shared.createEngine()
+                                                VibrationEngine.shared.readMorseCode(morseCode: sentence.morseCode)
+                                            }
+                                        }
                                 }
+                            
+                        })
+                        .focused($textFieldIsFocused)
+                        .onSubmit {
+                            textFieldIsFocused = false
+                            let tempItems = sentences
+                            tempItems.indices.forEach({ index in
+                                sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
+                            })
+                            do {
+                                try modelContext.save()
+                            } catch {
+                                print(error)
                             }
-                    } else if mode.isEditing {
-                        TextField("Input",text: sentence.boundSentence)
-                    }
-                    else {
-                        Text(sentence.sentence)
-                            .onTapGesture {
-                                if !VibrationEngine.shared.isVibrating() {
-                                    VibrationEngine.shared.createEngine()
-                                    VibrationEngine.shared.readMorseCode(morseCode: sentence.morseCode)
-                                }
-                            }
-                        
-                    }
+                        }
+                    
                 }
+                
                 .onDelete { indexSet in
                     indexSet.forEach { index in
                         modelContext.delete(sentences[index])
@@ -70,7 +69,6 @@ struct QuickTranslateView: View {
                 })
                 
             }
-            
             .listStyle(.plain)
             .navigationTitle("Quick Translate")
             .toolbar{
@@ -92,7 +90,6 @@ struct QuickTranslateView: View {
         }
     }
 }
-
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Sentence.self, configurations: config)

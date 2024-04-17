@@ -70,3 +70,8 @@ struct EncodeView: View {
 #Preview {
     EncodeView()
 }
+
+#Preview ("Dark mode") {
+    EncodeView()
+        .preferredColorScheme(.dark)
+}

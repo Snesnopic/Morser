@@ -63,6 +63,9 @@
 		9D2099822BCD37D800229594 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,
+				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
+				9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */,
 				9D2099802BCD37AA00229594 /* Sentence.swift */,
 			);
 			path = Model;
@@ -87,16 +90,14 @@
 		9D3DED292BCD109400DAD675 /* Morser */ = {
 			isa = PBXGroup;
 			children = (
+				9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */,
 				9D1CB9AE2BCEB2810088F90C /* Info.plist */,
 				9DA6966F2BCD7154002B9CBB /* Extensions.swift */,
-				9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */,
 				9D2099822BCD37D800229594 /* Model */,
 				9DC81D112BCD30E300A13C99 /* AHAP */,
 				9DC81D142BCD33F900A13C99 /* Views */,
-				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,
 				9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */,
 				9D3DED452BCD2CE200DAD675 /* Settings.bundle */,
-				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
 				9D3DED2E2BCD109500DAD675 /* Assets.xcassets */,
 				9D3DED302BCD109500DAD675 /* Morser.entitlements */,
 				9D3DED312BCD109500DAD675 /* Preview Content */,
@@ -126,7 +127,6 @@
 			children = (
 				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
 				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
-				9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,

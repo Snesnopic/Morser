@@ -60,8 +60,6 @@ struct EncodeView: View {
                 })
                 .padding(.all, 50)
                 .buttonStyle(.plain)
-                .buttonStyle(BorderedProminentButtonStyle())
-
                 
                 Spacer()
             }

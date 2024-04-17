@@ -15,14 +15,14 @@ struct ListenView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Button(action: {
+                Button {
                     if isRecording {
                         stopTranscribing()
                     }
                     else {
                         startTranscribing()
                     }
-                }, label: {
+                } label: {
                     ZStack {
                         Circle()
                             .foregroundStyle(Color.accentColor.opacity(0.5))
@@ -44,7 +44,7 @@ struct ListenView: View {
                             .font(.title)
                             .foregroundStyle(.background)
                     }
-                })
+                }
                 .padding(.all, 50)
                 .buttonStyle(.plain)    
                 Text("\(speechRecognizer.transcript)")

@@ -30,12 +30,12 @@ struct EncodeView: View {
                 Text(enteredText.isEmpty ? "Morse code will be here!" : MorseEncoder.encode(string: enteredText))
                 Spacer()
                 
-                Button(action: {
+                Button {
                     if !VibrationEngine.shared.isVibrating() {
                         VibrationEngine.shared.createEngine()
                         VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
                     }
-                }, label: {
+                } label: {
                     ZStack {
                         Circle()
                             .foregroundStyle(Color.accentColor.opacity(0.5))
@@ -57,7 +57,7 @@ struct EncodeView: View {
                             .font(.title)
                             .foregroundStyle(.background)
                     }
-                })
+                }
                 .padding(.all, 50)
                 .buttonStyle(.plain)
                 

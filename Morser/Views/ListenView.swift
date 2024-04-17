@@ -11,7 +11,7 @@ struct ListenView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State var isRecording:Bool = false
     @State private var circleAnimationAmount:Double = 1.005
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -39,15 +39,20 @@ struct ListenView: View {
                         Circle()
                             .foregroundStyle(Color.accentColor)
                             .padding()
-                        Text((isRecording ? "Stop" : "Start") + " listening")
-                            .bold()
-                            .font(.title)
-                            .foregroundStyle(.background)
+                        VStack {
+                            Image(systemName: "mic.fill")
+                            Text((isRecording ? "Stop" : "Start") + " listening")
+                        }
+                        .bold()
+                        .font(.title)
+                        .foregroundStyle(.background)
                     }
                 }
                 .padding(.all, 50)
-                .buttonStyle(.plain)    
-                Text("\(speechRecognizer.transcript)")
+                .buttonStyle(.plain)
+                Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!" : "\(speechRecognizer.transcript)")
+                    .bold()
+                    .font(.title2)
             }
             .navigationTitle("Listen")
         }
@@ -66,4 +71,9 @@ struct ListenView: View {
 
 #Preview {
     ListenView()
+}
+
+#Preview ("Dark mode") {
+    ListenView()
+        .preferredColorScheme(.dark)
 }

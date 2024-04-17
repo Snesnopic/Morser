@@ -15,9 +15,7 @@ struct EncodeView: View {
         NavigationStack {
             VStack {
                 Spacer()
-                TextField(text: $enteredText, prompt: Text("Sentence to encode")) {
-                    
-                }
+                TextField("Sentence to encode",text: $enteredText)
                 .focused($textFieldIsFocused)
                 .onSubmit {
                 }

@@ -1,0 +1,57 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "Encode" : {
+
+    },
+    "I understand, let me assist you." : {
+
+    },
+    "I'll describe the menu options for you." : {
+
+    },
+    "I'll help you navigate through touch." : {
+
+    },
+    "I'll lead you to the bus stop." : {
+
+    },
+    "I'll tap your hand to get your attention." : {
+
+    },
+    "I'll write it down for you." : {
+
+    },
+    "I'm communicating with you through touch." : {
+
+    },
+    "I'm here to help." : {
+
+    },
+    "Input" : {
+
+    },
+    "Let me describe the location to you." : {
+
+    },
+    "Listen" : {
+
+    },
+    "Play haptics" : {
+
+    },
+    "Quick Translate" : {
+
+    },
+    "Sentence to encode" : {
+
+    },
+    "Yes, I can guide you." : {
+
+    }
+  },
+  "version" : "1.0"
+}

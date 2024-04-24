@@ -66,6 +66,7 @@ struct EncodeView: View {
                 Spacer()
             }
             .navigationTitle("Encode")
+            .ignoresSafeArea(.keyboard)
         }
         
     }

@@ -33,6 +33,7 @@ struct EncodeView: View {
                     .disableAutocorrection(true)
                     .padding(.horizontal)
                 Text(enteredText.isEmpty ? "Morse code will be here!" : MorseEncoder.encode(string: enteredText))
+                    .bold()
                 Spacer()
                 
                 Button {
@@ -57,7 +58,7 @@ struct EncodeView: View {
                         Text("Play haptics")
                             .bold()
                             .font(.title)
-                            .foregroundStyle(.background)
+                            .foregroundStyle(.white)
                     }
                 }
                 .padding(.all, 50)

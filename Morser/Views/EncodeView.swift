@@ -11,28 +11,32 @@ struct EncodeView: View {
     @State private var enteredText:String = ""
     @FocusState private var textFieldIsFocused:Bool
     @State private var circleAnimationAmount:Double = 1.005
+    fileprivate func tryReading() {
+        textFieldIsFocused = false
+        if !VibrationEngine.shared.isVibrating() {
+            VibrationEngine.shared.createEngine()
+            VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer()
                 TextField("Sentence to encode",text: $enteredText)
-                .focused($textFieldIsFocused)
-                .onSubmit {
-                }
-                .textInputAutocapitalization(.never)
-                .textFieldStyle(.roundedBorder)
-                .disableAutocorrection(true)
-                .padding(.horizontal)
-                
-                
+                    .focused($textFieldIsFocused)
+                    .onSubmit {
+                        tryReading()
+                    }
+                    .textInputAutocapitalization(.never)
+                    .textFieldStyle(.roundedBorder)
+                    .disableAutocorrection(true)
+                    .padding(.horizontal)
                 Text(enteredText.isEmpty ? "Morse code will be here!" : MorseEncoder.encode(string: enteredText))
                 Spacer()
                 
                 Button {
-                    if !VibrationEngine.shared.isVibrating() {
-                        VibrationEngine.shared.createEngine()
-                        VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
-                    }
+                    tryReading()
                 } label: {
                     ZStack {
                         Circle()

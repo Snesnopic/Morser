@@ -45,7 +45,7 @@ struct ListenView: View {
                         }
                         .bold()
                         .font(.title)
-                        .foregroundStyle(.background)
+                        .foregroundStyle(.white)
                     }
                 }
                 .padding(.all, 50)

@@ -151,6 +151,10 @@ actor SpeechRecognizer: ObservableObject {
     nonisolated private func transcribe(_ message: String) {
         Task { @MainActor in
             transcript = message
+            if !VibrationEngine.shared.isVibrating() {
+                VibrationEngine.shared.createEngine()
+                VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: transcript))
+            }
         }
     }
     nonisolated private func transcribe(_ error: Error) {

@@ -17,7 +17,7 @@ struct QuickTranslateView: View {
         NavigationStack {
             List {
                 ForEach(sentences) { sentence in
-                    TextField("Input",text: sentence.boundSentence)
+                    TextField("Insert a frequently used sentence",text: sentence.boundSentence)
                         .if(!mode.isEditing && sentence.order != -1, transform: { view in
                             view
                                 .disabled(true)

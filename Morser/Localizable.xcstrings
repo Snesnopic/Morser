@@ -101,12 +101,12 @@
         }
       }
     },
-    "Input" : {
+    "Insert a frequently used sentence" : {
       "localizations" : {
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Input"
+            "value" : "Inserisci una frase usata spesso"
           }
         }
       }
@@ -127,6 +127,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ascolta"
+          }
+        }
+      }
+    },
+    "Morse code will be here!" : {
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il codice morse apparirà qui!"
           }
         }
       }

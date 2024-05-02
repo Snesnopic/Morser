@@ -9,7 +9,7 @@ import Foundation
 import CoreHaptics
 import AVFAudio
 
-class VibrationEngine {
+class VibrationEngine: ObservableObject {
     static let shared:VibrationEngine = VibrationEngine()
     private init() {
         
@@ -28,7 +28,7 @@ class VibrationEngine {
     
     var vibrationTimer: Timer?
     
-    var morseCodeIndex = 0
+    @Published var morseCodeIndex = 0
     var morseCodeString = ""
     
     var dotPlayer:BeepPlayer? = nil
@@ -49,6 +49,7 @@ class VibrationEngine {
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {
             // End of Morse code string
+            morseCodeIndex = 0
             vibrationTimer = nil
             return
         }

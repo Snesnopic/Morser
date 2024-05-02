@@ -24,6 +24,7 @@
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
 		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
+		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		9DA6966F2BCD7154002B9CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DC81D0F2BCD30E300A13C99 /* dash.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dash.ahap; sourceTree = "<group>"; };
 		9DC81D102BCD30E300A13C99 /* dot.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot.ahap; sourceTree = "<group>"; };
+		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,
+				9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */,
 				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
 				9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */,
 				9D2099802BCD37AA00229594 /* Sentence.swift */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */,
 				9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */,
 				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
 				9D1CB9B02BCEB5930088F90C /* SpeechRecognizer.swift in Sources */,

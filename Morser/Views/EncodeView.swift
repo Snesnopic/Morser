@@ -11,11 +11,12 @@ struct EncodeView: View {
     @State private var enteredText:String = ""
     @FocusState private var textFieldIsFocused:Bool
     @State private var circleAnimationAmount:Double = 1.005
+    @ObservedObject private var vibrationEngine = VibrationEngine.shared
     fileprivate func tryReading() {
         textFieldIsFocused = false
-        if !VibrationEngine.shared.isVibrating() {
-            VibrationEngine.shared.createEngine()
-            VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+        if !vibrationEngine.isVibrating() {
+            vibrationEngine.createEngine()
+            vibrationEngine.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
         }
     }
     
@@ -32,8 +33,26 @@ struct EncodeView: View {
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)
                     .padding(.horizontal)
-                Text(enteredText.isEmpty ? "Morse code will be here!" : MorseEncoder.encode(string: enteredText))
-                    .bold()
+                if enteredText.isEmpty {
+                    Text("Morse code will be here!")
+                        .bold()
+                }
+                else {
+                    if !vibrationEngine.isVibrating() {
+                        Text(MorseEncoder.encode(string: enteredText))
+                            .bold()
+                    }
+                    else {
+                        HStack {
+                            Text(vibrationEngine.morseCodeString.prefix(vibrationEngine.morseCodeIndex - 1))
+                            Text(String(vibrationEngine.morseCodeString.charAt(vibrationEngine.morseCodeIndex - 1)))
+                                .font(.largeTitle)
+                            Text(vibrationEngine.morseCodeString.dropFirst(vibrationEngine.morseCodeIndex))
+                        }
+                        .bold()
+                    }
+                }
+                
                 Spacer()
                 
                 Button {

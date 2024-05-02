@@ -88,7 +88,7 @@ class MorseEncoder {
     // encode string to morse (removing trailing and leading whitespace)
     public static func encode(string: String) -> String {
         var morse: String = ""
-        string.trimmingCharacters(in: .whitespacesAndNewlines).forEach { char in
+        string.trimmingCharacters(in: .whitespacesAndNewlines).folding(options: .diacriticInsensitive, locale: .current).forEach { char in
             if char.isASCII {
                 morse.append(AlphaNumToMorse[char.description] ?? "")
             }

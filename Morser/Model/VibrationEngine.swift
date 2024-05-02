@@ -31,12 +31,20 @@ class VibrationEngine {
     var morseCodeIndex = 0
     var morseCodeString = ""
     
+    var dotPlayer:BeepPlayer? = nil
+    var dashPlayer:BeepPlayer? = nil
+    
     func readMorseCode(morseCode: String) {
+        
         morseCodeIndex = 0
         morseCodeString = morseCode
+        if SettingsBundleHelper.getSoundPreference() && dotPlayer == nil && dashPlayer == nil {
+            dotPlayer = BeepPlayer(frequency: 600, duration: dotDuration)
+            dashPlayer = BeepPlayer(frequency: 600, duration: dashDuration)
+        }
         triggerNextVibration()
     }
-    
+ 
     // Function to trigger vibrations based on Morse code
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {
@@ -58,11 +66,17 @@ class VibrationEngine {
         
         switch character {
         case ".":
+            if SettingsBundleHelper.getSoundPreference() {
+                dotPlayer?.playSound()
+            }
             playHapticsFile(named: "dot")
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                 self.triggerNextVibration()
             }
         case "-":
+            if SettingsBundleHelper.getSoundPreference() {
+                dashPlayer?.playSound()
+            }
             for _ in 1...3 {
                 playHapticsFile(named: "dash")
                 usleep(UInt32(dashDuration) * (10000 * UInt32(VibrationEngine.timeUnit)))
@@ -127,7 +141,7 @@ class VibrationEngine {
                 print("Unknown error")
             }
         }
- 
+        
         // The reset handler provides an opportunity for your app to restart the engine in case of failure.
         engine.resetHandler = {
             // Try restarting the engine.
@@ -144,9 +158,9 @@ class VibrationEngine {
     func playHapticsFile(named filename: String) {
         
         // If the device doesn't support Core Haptics, abort.
-//        if !supportsHaptics {
-//            return
-//        }
+        //        if !supportsHaptics {
+        //            return
+        //        }
         
         // Express the path to the AHAP file before attempting to load it.
         guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
@@ -165,10 +179,10 @@ class VibrationEngine {
         }
     }
     // Maintain a variable to check for Core Haptics compatibility on device.
-//    lazy var supportsHaptics: Bool = {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        return appDelegate.supportsHaptics
-//    }()
+    //    lazy var supportsHaptics: Bool = {
+    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //        return appDelegate.supportsHaptics
+    //    }()
     func isVibrating() -> Bool {
         return vibrationTimer != nil
     }

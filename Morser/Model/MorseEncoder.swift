@@ -90,7 +90,7 @@ class MorseEncoder {
         var morse: String = ""
         string.trimmingCharacters(in: .whitespacesAndNewlines).forEach { char in
             if char.isASCII {
-                morse.append(AlphaNumToMorse[char.description]!)
+                morse.append(AlphaNumToMorse[char.description] ?? "")
             }
         }
         return morse

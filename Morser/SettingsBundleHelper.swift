@@ -16,7 +16,14 @@ class SettingsBundleHelper {
     static func getSliderPreference() -> Double {
         print("Settings value:  \(Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)))")
         print("Current haptics speed:   \(Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0)")
-        return Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0
+        if UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider) == 0 {
+            print("Error! For some reason haptics speed is set to 0, resetting to 1")
+            UserDefaults.standard.set(1, forKey: SettingsBundleKeys.Slider)
+            return 0.1
+        }
+        else {
+            return Double(UserDefaults.standard.integer(forKey: SettingsBundleKeys.Slider)) / 10.0
+        }
     }
     
     static func getSoundPreference() -> Bool {

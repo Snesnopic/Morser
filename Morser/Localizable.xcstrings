@@ -2,58 +2,184 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "Encode" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codifica"
+          }
+        }
+      }
     },
     "I understand, let me assist you." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capisco, lascia che ti aiuti."
+          }
+        }
+      }
     },
     "I'll describe the menu options for you." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descriverò il menù per te."
+          }
+        }
+      }
     },
     "I'll help you navigate through touch." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti aiuterò a orientarti tramite il tocco."
+          }
+        }
+      }
     },
     "I'll lead you to the bus stop." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ti aiuterò ad arrivare alla fermata."
+          }
+        }
+      }
     },
     "I'll tap your hand to get your attention." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toccherò la tua mano per avere la tua attenzione."
+          }
+        }
+      }
     },
     "I'll write it down for you." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te lo scriverò."
+          }
+        }
+      }
     },
     "I'm communicating with you through touch." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sto comunicando con te attraverso il tocco."
+          }
+        }
+      }
     },
     "I'm here to help." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sono qui per aiutarti."
+          }
+        }
+      }
     },
     "Input" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Input"
+          }
+        }
+      }
     },
     "Let me describe the location to you." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lascia che ti descriva il posto."
+          }
+        }
+      }
     },
     "Listen" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ascolta"
+          }
+        }
+      }
     },
     "Play haptics" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia vibrazioni"
+          }
+        }
+      }
     },
     "Quick Translate" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traduzione veloce"
+          }
+        }
+      }
     },
     "Sentence to encode" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frase da codificare"
+          }
+        }
+      }
     },
     "Transcript will be here!" : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La trascrizione sarà qui!"
+          }
+        }
+      }
     },
     "Yes, I can guide you." : {
-
+      "localizations" : {
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sì, ti posso guidare."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

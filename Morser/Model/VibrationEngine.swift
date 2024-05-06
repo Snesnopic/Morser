@@ -10,9 +10,17 @@ import CoreHaptics
 import AVFAudio
 
 class VibrationEngine: ObservableObject {
+    var dashAhapUrl:URL? = nil
+    var dotAhapUrl:URL? = nil
     static let shared:VibrationEngine = VibrationEngine()
     private init() {
+       dashAhapUrl =  """
+        {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dashDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
+        """.createAhapFile("dash")
         
+        dotAhapUrl =  """
+        {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dotDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
+        """.createAhapFile("dash")
     }
     // A haptic engine manages the connection to the haptic server.
     var engine: CHHapticEngine?
@@ -70,7 +78,7 @@ class VibrationEngine: ObservableObject {
             if SettingsBundleHelper.getSoundPreference() {
                 dotPlayer?.playSound()
             }
-            playHapticsFile(named: "dot")
+            playHaptics(url: dotAhapUrl!)
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                 self.triggerNextVibration()
             }
@@ -79,7 +87,7 @@ class VibrationEngine: ObservableObject {
                 dashPlayer?.playSound()
             }
             for _ in 1...3 {
-                playHapticsFile(named: "dash")
+                playHaptics(url: dashAhapUrl!)
                 usleep(UInt32(dashDuration) * (10000 * UInt32(VibrationEngine.timeUnit)))
             }
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
@@ -156,27 +164,23 @@ class VibrationEngine: ObservableObject {
     }
     
     /// - Tag: PlayAHAP
-    func playHapticsFile(named filename: String) {
+    func playHaptics(url:URL) {
         
         // If the device doesn't support Core Haptics, abort.
         //        if !supportsHaptics {
         //            return
         //        }
         
-        // Express the path to the AHAP file before attempting to load it.
-        guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
-            return
-        }
         
         do {
             // Start the engine in case it's idle.
             try engine?.start()
             
             // Tell the engine to play a pattern.
-            try engine?.playPattern(from: URL(fileURLWithPath: path))
+            try engine?.playPattern(from: url)
             
         } catch { // Engine startup errors
-            print("An error occured playing \(filename): \(error).")
+            print("An error occured playing \(url): \(error).")
         }
     }
     // Maintain a variable to check for Core Haptics compatibility on device.

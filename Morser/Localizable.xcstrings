@@ -28,7 +28,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ggg"
+            "value" : "Закодировать"
           }
         }
       }
@@ -40,6 +40,12 @@
             "state" : "translated",
             "value" : "Capisco, lascia che ti aiuti."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я понял, дай мне помочь тебе"
+          }
         }
       }
     },
@@ -49,6 +55,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descriverò il menù per te."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я опишу позиции меню для тебя"
           }
         }
       }
@@ -60,6 +72,12 @@
             "state" : "translated",
             "value" : "Ti aiuterò a orientarti tramite il tocco."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я покажу тебе дорогу через касания"
+          }
         }
       }
     },
@@ -69,6 +87,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ti aiuterò ad arrivare alla fermata."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я отведу тебя на автобусную остановку"
           }
         }
       }
@@ -80,6 +104,12 @@
             "state" : "translated",
             "value" : "Toccherò la tua mano per avere la tua attenzione."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я коснусь твоей руки чтобы привлечь твоё внимание"
+          }
         }
       }
     },
@@ -89,6 +119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Te lo scriverò."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я запищу это для тебя"
           }
         }
       }
@@ -100,6 +136,12 @@
             "state" : "translated",
             "value" : "Sto comunicando con te attraverso il tocco."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я общаюсь с тобой через касание"
+          }
         }
       }
     },
@@ -109,6 +151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sono qui per aiutarti."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я здесь, чтобы помочь"
           }
         }
       }
@@ -120,6 +168,12 @@
             "state" : "translated",
             "value" : "Inserisci una frase usata spesso"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напиши часто используемое предложение"
+          }
         }
       }
     },
@@ -129,6 +183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lascia che ti descriva il posto."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дай мне описать местоположение для тебя"
           }
         }
       }
@@ -140,6 +200,12 @@
             "state" : "translated",
             "value" : "Ascolta"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слушай"
+          }
         }
       }
     },
@@ -149,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il codice morse apparirà qui!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Код Морзе будет здесь!"
           }
         }
       }
@@ -160,6 +232,12 @@
             "state" : "translated",
             "value" : "Avvia vibrazioni"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизвести код"
+          }
         }
       }
     },
@@ -169,6 +247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Traduzione veloce"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Быстрый перевод"
           }
         }
       }
@@ -180,6 +264,12 @@
             "state" : "translated",
             "value" : "Frase da codificare"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текст для кодирования"
+          }
         }
       }
     },
@@ -190,6 +280,12 @@
             "state" : "translated",
             "value" : "La trascrizione sarà qui!"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Транскрипция будет здесь"
+          }
         }
       }
     },
@@ -199,6 +295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sì, ti posso guidare."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Да, я могу помочь тебе"
           }
         }
       }

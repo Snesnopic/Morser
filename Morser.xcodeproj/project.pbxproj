@@ -21,6 +21,7 @@
 		9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
 		9D3DED442BCD249A00DAD675 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */; };
 		9D3DED462BCD2CE200DAD675 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED452BCD2CE200DAD675 /* Settings.bundle */; };
+		9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9BC1572BECE24200CD2C5B /* SettingsView.swift */; };
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
 		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
@@ -45,6 +46,7 @@
 		9D3DED412BCD248100DAD675 /* MorseEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorseEncoder.swift; sourceTree = "<group>"; };
 		9D3DED432BCD249A00DAD675 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		9D3DED452BCD2CE200DAD675 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		9D9BC1572BECE24200CD2C5B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9DA6966F2BCD7154002B9CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DC81D0F2BCD30E300A13C99 /* dash.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dash.ahap; sourceTree = "<group>"; };
 		9DC81D102BCD30E300A13C99 /* dot.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot.ahap; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
+				9D9BC1572BECE24200CD2C5B /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				en,
 				Base,
 				it,
+				ru,
 			);
 			mainGroup = 9D3DED1E2BCD109400DAD675;
 			productRefGroup = 9D3DED282BCD109400DAD675 /* Products */;
@@ -224,6 +228,7 @@
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
+				9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

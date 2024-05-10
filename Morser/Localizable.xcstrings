@@ -17,6 +17,9 @@
         }
       }
     },
+    "%lld" : {
+
+    },
     "Encode" : {
       "localizations" : {
         "it" : {
@@ -32,6 +35,12 @@
           }
         }
       }
+    },
+    "Haptics Speed (%lf)" : {
+
+    },
+    "Haptics Time Unit" : {
+
     },
     "I understand, let me assist you." : {
       "localizations" : {
@@ -272,6 +281,9 @@
           }
         }
       }
+    },
+    "Sound Haptics" : {
+
     },
     "Transcript will be here!" : {
       "localizations" : {

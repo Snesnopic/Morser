@@ -8,6 +8,7 @@
 import Foundation
 import CoreHaptics
 import AVFAudio
+import SwiftUI
 
 class VibrationEngine: ObservableObject {
     static let shared:VibrationEngine = VibrationEngine()
@@ -18,13 +19,14 @@ class VibrationEngine: ObservableObject {
     var engine: CHHapticEngine?
     
     // configurable time unit, will be changeable later with settings
-    static let timeUnit = SettingsBundleHelper.getSliderPreference()
-    
-    let dotDuration: TimeInterval = 1 * timeUnit // Duration for a dot
-    let dashDuration: TimeInterval = 3 * timeUnit // Duration for a dash
-    let sameCharacterSeparatorDelay: TimeInterval = 1 * timeUnit // Delay between same characters
-    let characterSeparatorDelay: TimeInterval = 3 * timeUnit // Delay between different characters
-    let wordSeparatorDelay: TimeInterval = 7 * timeUnit // Delay for word separator
+    @AppStorage("soundEnabled") static private var soundEnabled = true
+    @AppStorage("sliderPreference") static private var timeUnit = 1.0
+    @AppStorage("soundFrequency") static private var soundFrequency = 600.0
+    let dotDuration: TimeInterval = 1 * timeUnit / 10 // Duration for a dot
+    let dashDuration: TimeInterval = 3 * timeUnit / 10 // Duration for a dash
+    let sameCharacterSeparatorDelay: TimeInterval = 1 * timeUnit / 10 // Delay between same characters
+    let characterSeparatorDelay: TimeInterval = 3 * timeUnit / 10 // Delay between different characters
+    let wordSeparatorDelay: TimeInterval = 7 * timeUnit / 10 // Delay for word separator
     
     var vibrationTimer: Timer?
     
@@ -38,7 +40,7 @@ class VibrationEngine: ObservableObject {
         
         morseCodeIndex = 0
         morseCodeString = morseCode
-        if SettingsBundleHelper.getSoundPreference() && dotPlayer == nil && dashPlayer == nil {
+        if VibrationEngine.soundEnabled && dotPlayer == nil && dashPlayer == nil {
             dotPlayer = BeepPlayer(frequency: 600, duration: dotDuration)
             dashPlayer = BeepPlayer(frequency: 600, duration: dashDuration)
         }
@@ -67,7 +69,7 @@ class VibrationEngine: ObservableObject {
         
         switch character {
         case ".":
-            if SettingsBundleHelper.getSoundPreference() {
+            if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
             playHapticsFile(named: "dot")
@@ -75,7 +77,7 @@ class VibrationEngine: ObservableObject {
                 self.triggerNextVibration()
             }
         case "-":
-            if SettingsBundleHelper.getSoundPreference() {
+            if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }
             for _ in 1...3 {

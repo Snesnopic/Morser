@@ -818,7 +818,22 @@ class MorseEncoder {
         }
         // remove trailing leading whitespaces and diacritics
         string.trimmingCharacters(in: .whitespacesAndNewlines).folding(options: .diacriticInsensitive, locale: .current).forEach { char in
-            morse.append(bigDictionary[char.description.uppercased()] ?? "")
+            if char.isKorean {
+                let scalars = Array(String(char).decomposedStringWithCompatibilityMapping.unicodeScalars)
+                // for each scalar that composes the korean word
+                scalars.forEach { scalar in
+                    KoreanToMorse.keys.forEach { kor in
+                        // manual searching for compatibility reasons
+                        if kor.precomposedStringWithCompatibilityMapping == String(scalar).precomposedStringWithCompatibilityMapping {
+                            morse.append(KoreanToMorse[kor] ?? "")
+                        }
+                    }
+                }
+                morse.replace(String(char), with: "", maxReplacements: 1)
+            }
+            else {
+                morse.append(bigDictionary[char.description.uppercased()] ?? "")
+            }
         }
         return morse
     }

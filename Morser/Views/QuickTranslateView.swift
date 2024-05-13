@@ -46,8 +46,13 @@ struct QuickTranslateView: View {
                                 print(error)
                             }
                         }
-                        .if(vibrationEngine.morseCodeString == sentence.morseCode) { view in
+                        .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.morseCode) { view in
                             view.listRowBackground(Color.accentColor)
+                        }
+                        .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != sentence.morseCode) { view in
+                            view
+                                .disabled(true)
+                                .foregroundStyle(Color.gray)
                         }
                     
                 }

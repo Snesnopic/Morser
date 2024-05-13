@@ -637,6 +637,28 @@
         }
       }
     },
+    "Sound" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사운드"
+          }
+        }
+      }
+    },
     "Sound Haptics" : {
       "localizations" : {
         "es-419" : {
@@ -727,6 +749,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "시간 단위는 ms(밀리초) 단위로 표시됩니다.\n타이밍:\n. = 1 시간 단위(%.0f ms)\n- = 3시간 단위(%.0f ms)\n동일한 기호 사이의 간격 = 1 시간 단위(%.0f ms)\n서로 다른 기호 사이의 간격 = 3시간 단위(%.0f ms)\n단어 사이의 간격 = 7 시간 단위(%.0f ms)"
+          }
+        }
+      }
+    },
+    "Timings" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempos"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempismi"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이밍"
           }
         }
       }

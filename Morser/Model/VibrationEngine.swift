@@ -31,7 +31,7 @@ class VibrationEngine: ObservableObject {
     var vibrationTimer: Timer?
     
     @Published var morseCodeIndex = 0
-    var morseCodeString = ""
+    @Published var morseCodeString = ""
     
     var dotPlayer:BeepPlayer? = nil
     var dashPlayer:BeepPlayer? = nil
@@ -52,6 +52,7 @@ class VibrationEngine: ObservableObject {
         guard morseCodeIndex < morseCodeString.count else {
             // End of Morse code string
             morseCodeIndex = 0
+            morseCodeString = ""
             vibrationTimer = nil
             return
         }

@@ -27,14 +27,18 @@ struct ListenView: View {
                         Circle()
                             .foregroundStyle(Color.accentColor.opacity(0.5))
                             .scaleEffect(circleAnimationAmount)
-                            .onAppear{
-                                withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    circleAnimationAmount *= 1.2
-                                }
-                            }
-                            .onDisappear{
-                                circleAnimationAmount = 1.0
-                            }
+                            .if(isRecording, transform: { view in
+                                view
+                                    .onAppear{
+                                        withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                                            circleAnimationAmount *= 1.2
+                                        }
+                                    }
+                                    .onDisappear{
+                                        circleAnimationAmount = 1.0
+                                    }
+                            })
+                        
                             .padding()
                         Circle()
                             .foregroundStyle(Color.accentColor)

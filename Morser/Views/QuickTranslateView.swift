@@ -13,6 +13,7 @@ struct QuickTranslateView: View {
     @Environment(\.modelContext) private var modelContext: ModelContext
     @State private var mode:EditMode = .inactive
     @FocusState private var textFieldIsFocused:Bool
+    @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
         NavigationStack {
             List {
@@ -24,9 +25,9 @@ struct QuickTranslateView: View {
                                 .overlay {
                                     Color.white.opacity(0.0001)
                                         .onTapGesture {
-                                            if !VibrationEngine.shared.isVibrating() {
-                                                VibrationEngine.shared.createEngine()
-                                                VibrationEngine.shared.readMorseCode(morseCode: sentence.morseCode)
+                                            if !vibrationEngine.isVibrating() {
+                                                vibrationEngine.createEngine()
+                                                vibrationEngine.readMorseCode(morseCode: sentence.morseCode)
                                             }
                                         }
                                 }
@@ -44,6 +45,9 @@ struct QuickTranslateView: View {
                             } catch {
                                 print(error)
                             }
+                        }
+                        .if(vibrationEngine.morseCodeString == sentence.morseCode) { view in
+                            view.listRowBackground(Color.accentColor)
                         }
                     
                 }

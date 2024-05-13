@@ -23,7 +23,7 @@ struct SettingsView: View {
                             Text("\(Int(soundFrequency))")
                         }
                         Slider(value: $soundFrequency, in: 300...800) {
-                            Text("Sound Frequency (\(soundFrequency))")
+                            Text("Sound Pitch (\(soundFrequency))")
                         }
                     }
                 } footer: {

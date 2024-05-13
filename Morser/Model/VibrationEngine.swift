@@ -22,12 +22,18 @@ class VibrationEngine: ObservableObject {
     @AppStorage("soundEnabled") static private var soundEnabled = true
     @AppStorage("sliderPreference") static private var timeUnit = 1.0
     @AppStorage("soundFrequency") static private var soundFrequency = 600.0
-    let dotDuration: TimeInterval = 1 * timeUnit / 10 // Duration for a dot
-    let dashDuration: TimeInterval = 3 * timeUnit / 10 // Duration for a dash
-    let sameCharacterSeparatorDelay: TimeInterval = 1 * timeUnit / 10 // Delay between same characters
-    let characterSeparatorDelay: TimeInterval = 3 * timeUnit / 10 // Delay between different characters
-    let wordSeparatorDelay: TimeInterval = 7 * timeUnit / 10 // Delay for word separator
-    
+    var dotDuration: TimeInterval = 1 * timeUnit / 10 // Duration for a dot
+    var dashDuration: TimeInterval = 3 * timeUnit / 10 // Duration for a dash
+    var sameCharacterSeparatorDelay: TimeInterval = 1 * timeUnit / 10 // Delay between same characters
+    var characterSeparatorDelay: TimeInterval = 3 * timeUnit / 10 // Delay between different characters
+    var wordSeparatorDelay: TimeInterval = 7 * timeUnit / 10 // Delay for word separator
+    func updateTimings() {
+        dotDuration = 1 * VibrationEngine.timeUnit / 10
+        dashDuration = 3 * VibrationEngine.timeUnit / 10
+        sameCharacterSeparatorDelay = 1 * VibrationEngine.timeUnit / 10
+        characterSeparatorDelay = 3 * VibrationEngine.timeUnit / 10
+        wordSeparatorDelay = 7 * VibrationEngine.timeUnit / 10
+    }
     var vibrationTimer: Timer?
     
     @Published var morseCodeIndex = 0
@@ -46,7 +52,7 @@ class VibrationEngine: ObservableObject {
         }
         triggerNextVibration()
     }
- 
+    
     // Function to trigger vibrations based on Morse code
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {

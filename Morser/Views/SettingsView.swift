@@ -47,6 +47,9 @@ struct SettingsView: View {
                     Slider(value: $sliderPreference, in: (0.1)...(5.0)) {
                         Text("Haptics Speed (\(sliderPreference))")
                     }
+                    .onChange(of: sliderPreference) { oldValue, newValue in
+                        VibrationEngine.shared.updateTimings()
+                    }
                 } header: {
                     Text("Timings")
                 }

@@ -89,30 +89,30 @@ class MorseEncoder {
     ]
     // greek characters
     private static let GreekToMorse: [String:String] = [
-        "Α": ".-",       // Alpha
-        "Β": "-...",     // Beta
-        "Γ": "--.",      // Gamma
-        "Δ": "-..",      // Delta
-        "Ε": ".",        // Epsilon
-        "Ζ": "--..",     // Zeta
-        "Η": "....",     // Eta
-        "Θ": "-.-.",     // Theta
-        "Ι": "..",       // Iota
-        "Κ": "-.-",      // Kappa
-        "Λ": ".-..",     // Lambda
-        "Μ": "--",       // Mu
-        "Ν": "-.",       // Nu
-        "Ξ": "-..-",     // Xi
-        "Ο": "---",      // Omicron
-        "Π": ".--.",     // Pi
-        "Ρ": ".-.",      // Rho
-        "Σ": "...",      // Sigma
-        "Τ": "-",        // Tau
-        "Υ": "..-",      // Upsilon
-        "Φ": "..-.",     // Phi
-        "Χ": "----",     // Chi
-        "Ψ": "--.-",     // Psi
-        "Ω": ".--",      // Omega
+        "Α":".-",
+        "Β":"-...",
+        "Γ":"--.",
+        "Δ":"-..",
+        "Ε":".",
+        "Ζ":"--..",
+        "Η":"....",
+        "Θ":"-.-.",
+        "Ι":"..",
+        "Κ":"-.-",
+        "Λ":".-..",
+        "Μ":"--",
+        "Ν":"-.",
+        "Ξ":"-..-",
+        "Ο":"---",
+        "Π":".--.",
+        "Ρ":".-.",
+        "Σ":"...",
+        "Τ":"-",
+        "Υ":"-.--",
+        "Φ":"..-.",
+        "Χ":"----",
+        "Ψ":"--.-",
+        "Ω":".--",
         "α": ".-",       // Alpha (lowercase)
         "β": "-...",     // Beta (lowercase)
         "γ": "--.",      // Gamma (lowercase)
@@ -132,7 +132,7 @@ class MorseEncoder {
         "ρ": ".-.",      // Rho (lowercase)
         "σ": "...",      // Sigma (lowercase)
         "τ": "-",        // Tau (lowercase)
-        "υ": "..-",      // Upsilon (lowercase)
+        "υ": "-.--",      // Upsilon (lowercase)
         "φ": "..-.",     // Phi (lowercase)
         "χ": "----",     // Chi (lowercase)
         "ψ": "--.-",     // Psi (lowercase)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EncodeView: View {
-    @State private var enteredText:String = "bhjfjhdsfbhjsfdjsbhjdfbhjsf"
+    @State private var enteredText:String = ""
     @FocusState private var textFieldIsFocused:Bool
     @State private var circleAnimationAmount:Double = 1.005
     @ObservedObject private var vibrationEngine = VibrationEngine.shared

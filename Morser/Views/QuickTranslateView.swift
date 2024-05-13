@@ -56,26 +56,29 @@ struct QuickTranslateView: View {
                         }
                     
                 }
-                
-                .onDelete { indexSet in
-                    indexSet.forEach { index in
-                        modelContext.delete(sentences[index])
-                    }
-                }
-                .onMove(perform: { source, destination in
-                    var tempItems = sentences
-                    tempItems.move(fromOffsets: source, toOffset: destination)
-                    
-                    tempItems.indices.forEach({ index in
-                        sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
-                    })
-                    do {
-                        try modelContext.save()
-                    }
-                    catch {
-                        print(error)
-                    }
+                .if(!vibrationEngine.isVibrating(), transform: { view in
+                    view
+                        .onDelete { indexSet in
+                            indexSet.forEach { index in
+                                modelContext.delete(sentences[index])
+                            }
+                        }
+                        .onMove(perform: { source, destination in
+                            var tempItems = sentences
+                            tempItems.move(fromOffsets: source, toOffset: destination)
+                            
+                            tempItems.indices.forEach({ index in
+                                sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
+                            })
+                            do {
+                                try modelContext.save()
+                            }
+                            catch {
+                                print(error)
+                            }
+                        })
                 })
+                
                 
             }
             .listStyle(.plain)
@@ -83,6 +86,7 @@ struct QuickTranslateView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
+                        .disabled(vibrationEngine.isVibrating())
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -92,6 +96,8 @@ struct QuickTranslateView: View {
                 label: {
                     Image(systemName: "plus")
                 }
+                .disabled(vibrationEngine.isVibrating())
+                    
                 }
                 
             }

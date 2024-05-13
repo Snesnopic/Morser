@@ -1,9 +1,43 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%.0f ms" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        }
+      }
+    },
     "%@" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -18,14 +52,73 @@
       }
     },
     "%lld" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "A %lldHz sound will be played alongside haptics to help recognition." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un %lldHz sonido será reproducido junto con vibración para ayudar en el reconocimiento."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un suono di %lldHz verrà riprodotto assieme alle vibrazioni per aiutare il riconoscimento."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldHz"
+          }
+        }
+      }
     },
     "Encode" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codificar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Codifica"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "암호화"
           }
         },
         "ru" : {
@@ -37,17 +130,67 @@
       }
     },
     "Haptics Speed (%lf)" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocidad de la vibración"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocità vibrazioni (%lf)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햅틱 속도 (%lf)"
+          }
+        }
+      }
     },
     "Haptics Time Unit" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unidad de Tiempo de Vibración"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unità di tempo delle vibrazioni"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햅틱 시간 단위"
+          }
+        }
+      }
     },
     "I understand, let me assist you." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entiendo, déjame ayudarte."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Capisco, lascia che ti aiuti."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이해했습니다. 도와드릴게요."
           }
         },
         "ru" : {
@@ -60,10 +203,22 @@
     },
     "I'll describe the menu options for you." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Describiré el menú de opciones para ti."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descriverò il menù per te."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴를 설명해드릴게요."
           }
         },
         "ru" : {
@@ -76,10 +231,22 @@
     },
     "I'll help you navigate through touch." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te ayudaré a navegar a través del tacto."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ti aiuterò a orientarti tramite il tocco."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "터치 기능을 이용해 탐색을 도와드리겠습니다."
           }
         },
         "ru" : {
@@ -92,10 +259,22 @@
     },
     "I'll lead you to the bus stop." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te guiaré a la parada de autobús."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ti aiuterò ad arrivare alla fermata."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버스 정류장까지 안내해 드리겠습니다."
           }
         },
         "ru" : {
@@ -108,10 +287,22 @@
     },
     "I'll tap your hand to get your attention." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocaré tu mano para llamar tu atención."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toccherò la tua mano per avere la tua attenzione."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주의를 끌기 위해 손을 두드리겠습니다."
           }
         },
         "ru" : {
@@ -124,10 +315,22 @@
     },
     "I'll write it down for you." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo escribiré por tí."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Te lo scriverò."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "적어 드릴게요."
           }
         },
         "ru" : {
@@ -140,10 +343,22 @@
     },
     "I'm communicating with you through touch." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Me estoy comunicando contigo a través del tacto."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sto comunicando con te attraverso il tocco."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "터치 기능을 이용해 소통을 하고있습니다."
           }
         },
         "ru" : {
@@ -156,10 +371,22 @@
     },
     "I'm here to help." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estoy aqui para ayudar."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sono qui per aiutarti."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도와드릴게요."
           }
         },
         "ru" : {
@@ -172,10 +399,22 @@
     },
     "Insert a frequently used sentence" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escribe una frase que utilizas frecuentemente."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inserisci una frase usata spesso"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자주 사용하는 문장을 기입하세요."
           }
         },
         "ru" : {
@@ -188,10 +427,22 @@
     },
     "Let me describe the location to you." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Déjame describirte el lugar."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lascia che ti descriva il posto."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치를 설명해 드리겠습니다."
           }
         },
         "ru" : {
@@ -204,10 +455,22 @@
     },
     "Listen" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escucha"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ascolta"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기"
           }
         },
         "ru" : {
@@ -220,10 +483,22 @@
     },
     "Morse code will be here!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Código morse estará aqui!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il codice morse apparirà qui!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모스 부호가 여기에 표기될 것입니다."
           }
         },
         "ru" : {
@@ -234,12 +509,46 @@
         }
       }
     },
+    "No sound will be played alongside haptics." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ningún sonido se reproducirá junto con la vibración."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun suono verrà riprodotto assieme alle vibrazioni."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햅틱과 함께 소리가 재생되지 않습니다."
+          }
+        }
+      }
+    },
     "Play haptics" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avvia vibrazioni"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "햅틱 재생"
           }
         },
         "ru" : {
@@ -252,10 +561,22 @@
     },
     "Quick Translate" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traducción rápida"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Traduzione veloce"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빠른 번역"
           }
         },
         "ru" : {
@@ -268,10 +589,22 @@
     },
     "Sentence to encode" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frase a codificar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frase da codificare"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "암호화할 문장"
           }
         },
         "ru" : {
@@ -282,15 +615,140 @@
         }
       }
     },
+    "Settings" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impostazioni"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        }
+      }
+    },
     "Sound Haptics" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir vibración"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibrazioni sonore"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사운드 햅틱"
+          }
+        }
+      }
+    },
+    "Sound Pitch" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tono de Sonido"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tono del suono"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음정"
+          }
+        }
+      }
+    },
+    "Sound Pitch (%lf)" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tono de Sonido (%lf)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tono del suono(%lf)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음정 Sound Pitch (%lf)"
+          }
+        }
+      }
+    },
+    "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%.0f ms)\n- = 3 time units (%.0f ms)\nSpace between same symbols = 1 time unit (%.0f ms)\nSpace between different symbols = 3 time units (%.0f ms)\nSpace between words = 7 time units (%.0f ms)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La unidad de tiempo se expresa en ms (milisegundos).\nTiempos:\n. = 1 unidad de tiempo (%1$.0f ms)\n- = 3 unidades de tiempo (%2$.0f ms)\nEspacio entre los mismos símbolos = 1 unidad de tiempo (%3$.0f ms)\nEspacio entre diferentes símbolos = 3 unidades de tiempo (%4$.0f ms)\nEspacio entre palabras = 7 unidades de tiempo (%5$.0f ms)"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unità temporale espressa in ms (millisecondi).\nTempismi:\n. = 1 unità temporale (%1$.0f ms)\n- = 3 unità temporali (%2$.0f ms)\nSpazio tra simboli uguali = 1 unità temporale (%3$.0f ms)\nSpazio tra simboli diversi = 3 unità temporali (%4$.0f ms)\nSpazio tra parole = 7 unità temporali (%5$.0f ms)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간 단위는 ms(밀리초) 단위로 표시됩니다.\n타이밍:\n. = 1 시간 단위(%.0f ms)\n- = 3시간 단위(%.0f ms)\n동일한 기호 사이의 간격 = 1 시간 단위(%.0f ms)\n서로 다른 기호 사이의 간격 = 3시간 단위(%.0f ms)\n단어 사이의 간격 = 7 시간 단위(%.0f ms)"
+          }
+        }
+      }
     },
     "Transcript will be here!" : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡La transcripción estará aquí!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La trascrizione sarà qui!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "녹취록이 여기 있을 겁니다!"
           }
         },
         "ru" : {
@@ -303,10 +761,22 @@
     },
     "Yes, I can guide you." : {
       "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sí, puedo guiarte."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sì, ti posso guidare."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네, 안내해 드릴 수 있습니다."
           }
         },
         "ru" : {

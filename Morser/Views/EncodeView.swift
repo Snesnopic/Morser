@@ -43,6 +43,9 @@ struct EncodeView: View {
                             .font(.title3)
                             .bold()
                             .padding()
+                            .onTapGesture {
+                                textFieldIsFocused = false
+                            }
                     }
                     else {
                         HStack {
@@ -58,6 +61,9 @@ struct EncodeView: View {
                 }
                 
                 Spacer()
+                    .onTapGesture {
+                        textFieldIsFocused = false
+                    }
                 
                 Button {
                     tryReading()

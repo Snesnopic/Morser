@@ -96,7 +96,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lldHz"
+            "value" : "인식을 돕기 위해 %lldHz 사운드가 햅틱과 함께 재생됩니다."
           }
         }
       }

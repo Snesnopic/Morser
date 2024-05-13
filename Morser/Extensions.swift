@@ -31,3 +31,9 @@ extension Character {
     }
 }
 
+extension String {
+    // helper function to get single char from string
+    func charAt(_ i: Int) -> Character {
+        return Array(self)[i]
+    }
+}

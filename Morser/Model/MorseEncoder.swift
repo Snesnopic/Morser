@@ -810,7 +810,7 @@ class MorseEncoder {
     // encode string to morse (removing trailing and leading whitespace)
     public static func encode(string: String) -> String {
         var morse: String = ""
-        let dictionaries = [AlphaNumToMorse,KoreanToMorse,GreekToMorse,CyrillicToMorse,HebrewToMorse,ArabicToMorse,PersianToMorse,KurdishToMorse,DevanagariToMorse]
+        let dictionaries = [AlphaNumToMorse,KoreanToMorse,GreekToMorse,CyrillicToMorse,HebrewToMorse,ArabicToMorse,PersianToMorse,KurdishToMorse,DevanagariToMorse,JapaneseToMorse,ThaiToMorse]
         let bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
             partialResult = map.merging(partialResult, uniquingKeysWith: { current, _ in
                 current

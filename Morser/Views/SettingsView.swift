@@ -26,15 +26,18 @@ struct SettingsView: View {
                             Text("Sound Pitch (\(soundFrequency))")
                         }
                     }
-                } footer: {
-                    if soundEnabled {
-                        Text("A \(Int(soundFrequency))Hz sound will be played alongside haptics to help recognition.")
-                    }
-                    else {
-                        Text("No sound will be played alongside haptics.")
-                    }
-                
+                } header: {
+                    Text("Sound")
                 }
+            footer: {
+                if soundEnabled {
+                    Text("A \(Int(soundFrequency))Hz sound will be played alongside haptics to help recognition.")
+                }
+                else {
+                    Text("No sound will be played alongside haptics.")
+                }
+                
+            }
                 Section {
                     HStack {
                         Text("Haptics Time Unit")
@@ -44,8 +47,11 @@ struct SettingsView: View {
                     Slider(value: $sliderPreference, in: 1...5) {
                         Text("Haptics Speed (\(sliderPreference))")
                     }
-                } footer: {
-                    Text("""
+                } header: {
+                    Text("Timings")
+                }
+            footer: {
+                Text("""
                         Time unit is espressed in ms (milliseconds).
                         Timings:
                         . = 1 time unit (\(sliderPreference * 100,specifier: "%.0f") ms)
@@ -54,8 +60,8 @@ struct SettingsView: View {
                         Space between different symbols = 3 time units (\(sliderPreference * 100 * 3,specifier: "%.0f") ms)
                         Space between words = 7 time units (\(sliderPreference * 100 * 7,specifier: "%.0f") ms)
                         """
-                    )
-                }
+                )
+            }
             }
             .navigationTitle(String(localized: "Settings"))
         }

@@ -3,6 +3,12 @@
   "strings" : {
     "%.0f ms" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -25,6 +31,12 @@
     },
     "%@" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -53,6 +65,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -81,6 +99,12 @@
     },
     "A %lldHz sound will be played alongside haptics to help recognition." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A %lldHz sound will be played alongside haptics to help recognition."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,6 +127,12 @@
     },
     "Encode" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encode"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -131,6 +161,12 @@
     },
     "Haptics Speed (%lf)" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptics Speed (%lf)"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -153,6 +189,12 @@
     },
     "Haptics Time Unit" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptics Time Unit"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -175,6 +217,12 @@
     },
     "I understand, let me assist you." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I understand, let me assist you."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -203,6 +251,12 @@
     },
     "I'll describe the menu options for you." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll describe the menu options for you."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -231,6 +285,12 @@
     },
     "I'll help you navigate through touch." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll help you navigate through touch."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +319,12 @@
     },
     "I'll lead you to the bus stop." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll lead you to the bus stop."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -287,6 +353,12 @@
     },
     "I'll tap your hand to get your attention." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll tap your hand to get your attention."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -315,6 +387,12 @@
     },
     "I'll write it down for you." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll write it down for you."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -343,6 +421,12 @@
     },
     "I'm communicating with you through touch." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'm communicating with you through touch."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -371,6 +455,12 @@
     },
     "I'm here to help." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'm here to help."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -399,6 +489,12 @@
     },
     "Insert a frequently used sentence" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert a frequently used sentence"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -427,6 +523,12 @@
     },
     "Let me describe the location to you." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let me describe the location to you."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -455,6 +557,12 @@
     },
     "Listen" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -483,6 +591,12 @@
     },
     "Morse code will be here!" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morse code will be here!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -511,6 +625,12 @@
     },
     "No sound will be played alongside haptics." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No sound will be played alongside haptics."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -533,6 +653,12 @@
     },
     "Play haptics" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play haptics"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -561,6 +687,12 @@
     },
     "Quick Translate" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Translate"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -589,6 +721,12 @@
     },
     "Sentence to encode" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sentence to encode"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -617,6 +755,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -639,6 +783,12 @@
     },
     "Sound" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -661,6 +811,12 @@
     },
     "Sound Haptics" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Haptics"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -683,6 +839,12 @@
     },
     "Sound Pitch" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Pitch"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -705,6 +867,12 @@
     },
     "Sound Pitch (%lf)" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Pitch (%lf)"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -733,6 +901,12 @@
             "value" : "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
           }
         },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -755,6 +929,12 @@
     },
     "Timings" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timings"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -777,6 +957,12 @@
     },
     "Transcript will be here!" : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcript will be here!"
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
@@ -805,6 +991,12 @@
     },
     "Yes, I can guide you." : {
       "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, I can guide you."
+          }
+        },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",

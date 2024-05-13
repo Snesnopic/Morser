@@ -29,6 +29,12 @@ struct ParentView: View {
                     icon: { Image(systemName: "waveform") }
                 )
             }
+            SettingsView().tabItem {
+                Label(
+                    title: { Text("Settings") },
+                    icon: { Image(systemName: "gearshape") }
+                )
+            }
         }
         .onAppear {
             if sentences.isEmpty {

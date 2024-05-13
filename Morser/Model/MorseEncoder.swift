@@ -816,6 +816,7 @@ class MorseEncoder {
                 current
             })
         }
+        // remove trailing leading whitespaces and diacritics
         string.trimmingCharacters(in: .whitespacesAndNewlines).folding(options: .diacriticInsensitive, locale: .current).forEach { char in
             morse.append(bigDictionary[char.description.uppercased()] ?? "")
         }

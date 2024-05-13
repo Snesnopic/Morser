@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EncodeView: View {
-    @State private var enteredText:String = ""
+    @State private var enteredText:String = "bhjfjhdsfbhjsfdjsbhjdfbhjsf"
     @FocusState private var textFieldIsFocused:Bool
     @State private var circleAnimationAmount:Double = 1.005
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
@@ -40,7 +40,9 @@ struct EncodeView: View {
                 else {
                     if !vibrationEngine.isVibrating() {
                         Text(MorseEncoder.encode(string: enteredText))
+                            .font(.title3)
                             .bold()
+                            .padding()
                     }
                     else {
                         HStack {
@@ -50,6 +52,8 @@ struct EncodeView: View {
                             Text(vibrationEngine.morseCodeString.dropFirst(vibrationEngine.morseCodeIndex))
                         }
                         .bold()
+                        .padding()
+                        .font(.title3)
                     }
                 }
                 

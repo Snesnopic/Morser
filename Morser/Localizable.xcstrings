@@ -26,6 +26,12 @@
             "state" : "translated",
             "value" : "%.0f ms"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "мс"
+          }
         }
       }
     },
@@ -122,6 +128,12 @@
             "state" : "translated",
             "value" : "인식을 돕기 위해 %lldHz 사운드가 햅틱과 함께 재생됩니다."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ГГц звук будет воспроизведён вместе с вибрация что помочь восприятию."
+          }
         }
       }
     },
@@ -170,7 +182,7 @@
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velocidad de la vibración"
+            "value" : "Velocidad de la vibración (%lf)"
           }
         },
         "it" : {
@@ -183,6 +195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "햅틱 속도 (%lf)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скорость вибрации (%lf)"
           }
         }
       }
@@ -211,6 +229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "햅틱 시간 단위"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Единицы измерения вибрации"
           }
         }
       }
@@ -648,6 +672,12 @@
             "state" : "translated",
             "value" : "햅틱과 함께 소리가 재생되지 않습니다."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звук не будет воспроизводиться вместе с вибрацией."
+          }
         }
       }
     },
@@ -778,6 +808,12 @@
             "state" : "translated",
             "value" : "설정"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
         }
       }
     },
@@ -805,6 +841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사운드"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звук"
           }
         }
       }
@@ -834,6 +876,12 @@
             "state" : "translated",
             "value" : "사운드 햅틱"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Озвучивать код"
+          }
         }
       }
     },
@@ -862,6 +910,12 @@
             "state" : "translated",
             "value" : "음정"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высота звука"
+          }
         }
       }
     },
@@ -889,6 +943,80 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "음정 Sound Pitch (%lf)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Высота звука (%lf)"
+          }
+        }
+      }
+    },
+    "Start listening" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start listening"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comenzar a escuchar"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia ad ascoltare"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 시작"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать прослушивание"
+          }
+        }
+      }
+    },
+    "Stop listening" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop listening"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detener la escucha"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interrompi l'ascolto"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 중지"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить прослушивание"
           }
         }
       }
@@ -924,6 +1052,12 @@
             "state" : "translated",
             "value" : "시간 단위는 ms(밀리초) 단위로 표시됩니다.\n타이밍:\n. = 1 시간 단위(%.0f ms)\n- = 3시간 단위(%.0f ms)\n동일한 기호 사이의 간격 = 1 시간 단위(%.0f ms)\n서로 다른 기호 사이의 간격 = 3시간 단위(%.0f ms)\n단어 사이의 간격 = 7 시간 단위(%.0f ms)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Единицы времени выражены в мс (миллисекундах).\nВремя: . = 1 единица времени (%1$.0f ms) - = 3 единицы времени(%2$.0f ms) Промежуток между одинаковыми символами = 1 единица времени (%3$.0f ms)\nПромежуток между разными символами = 3 единицы времени (%4$.0f ms)\nПромежуток между словами = 7 единиц времени (%5$.0f ms)"
+          }
         }
       }
     },
@@ -951,6 +1085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "타이밍"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тайминг"
           }
         }
       }

@@ -9,72 +9,90 @@ import SwiftUI
 import SwiftData
 
 struct QuickTranslateView: View {
-    @Query(sort: \Sentence.order) private var sentences: [Sentence]
-    @Environment(\.modelContext) private var modelContext: ModelContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
+    @Environment(\.managedObjectContext) var moc
     @State private var mode:EditMode = .inactive
     @FocusState private var textFieldIsFocused:Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    
+    private func vibrate(_ sentence:Sentence) {
+        if !vibrationEngine.isVibrating() {
+            vibrationEngine.createEngine()
+            vibrationEngine.readMorseCode(sentence: sentence)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(sentences) { sentence in
-                    TextField("Insert a frequently used sentence",text: sentence.boundSentence)
-                        .if(!mode.isEditing && sentence.order != -1, transform: { view in
-                            view
-                                .disabled(true)
-                                .overlay {
-                                    Color.white.opacity(0.0001)
-                                        .onTapGesture {
-                                            if !vibrationEngine.isVibrating() {
-                                                vibrationEngine.createEngine()
-                                                vibrationEngine.readMorseCode(morseCode: sentence.morseCode)
-                                            }
-                                        }
-                                }
-                            
-                        })
-                        .focused($textFieldIsFocused)
-                        .onSubmit {
-                            textFieldIsFocused = false
-                            let tempItems = sentences
-                            tempItems.indices.forEach({ index in
-                                sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
-                            })
-                            do {
-                                try modelContext.save()
-                            } catch {
-                                print(error)
+                ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
+                    return sent1.order < sent2.order
+                })) { sentence in
+                    TextField("Insert a frequently used sentence",text: Binding(get: {
+                        sentence.sentence!
+                    }, set: { newValue in
+                        sentence.sentence! = newValue
+                    }))
+                    .if(!mode.isEditing && sentence.order != -1, transform: { view in
+                        view
+                            .disabled(true)
+                            .overlay {
+                                Color.white.opacity(0.0001)
+                                    .onTapGesture {
+                                        vibrate(sentence)
+                                    }
                             }
+                    })
+                    .focused($textFieldIsFocused)
+                    .onSubmit {
+                        textFieldIsFocused = false
+                        let tempItems = sentences.toArray()
+                        tempItems.indices.forEach({ index in
+                            sentences.filter({
+                                $0.sentence! == tempItems[index].sentence!
+                            }).first!.order = Int32(index)
+                            sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = Int32(index)
+                        })
+                        do {
+                            try moc.save()
                         }
-                        .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.morseCode) { view in
-                            view.listRowBackground(Color.accentColor)
+                        catch {
+                            print("Error: \(error)")
                         }
-                        .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != sentence.morseCode) { view in
-                            view
-                                .disabled(true)
-                                .foregroundStyle(Color.gray)
-                        }
-                    
+                    }
+                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == MorseEncoder.encode(string: sentence.sentence!)) { view in
+                        view.listRowBackground(Color.accentColor)
+                    }
+                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != MorseEncoder.encode(string: sentence.sentence!)) { view in
+                        view
+                            .disabled(true)
+                            .foregroundStyle(Color.gray)
+                    }
                 }
                 .if(!vibrationEngine.isVibrating(), transform: { view in
                     view
                         .onDelete { indexSet in
                             indexSet.forEach { index in
-                                modelContext.delete(sentences[index])
+                                moc.delete(sentences[index])
+                            }
+                            do {
+                                try moc.save()
+                            }
+                            catch {
+                                print("Error: \(error)")
                             }
                         }
                         .onMove(perform: { source, destination in
-                            var tempItems = sentences
+                            var tempItems = sentences.toArray()
                             tempItems.move(fromOffsets: source, toOffset: destination)
-                            
                             tempItems.indices.forEach({ index in
-                                sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = index
+                                sentences.filter({ $0.sentence! == tempItems[index].sentence!}).first!.order = Int32(index)
                             })
                             do {
-                                try modelContext.save()
+                                try moc.save()
                             }
                             catch {
-                                print(error)
+                                print("Error: \(error)")
                             }
                         })
                 })
@@ -90,7 +108,9 @@ struct QuickTranslateView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        modelContext.insert(Sentence(sentence: "", order: -1))
+                        let newSentence = Sentence(context: moc)
+                        newSentence.order = -1
+                        newSentence.sentence = ""
                         textFieldIsFocused = true
                     }
                 label: {
@@ -105,46 +125,46 @@ struct QuickTranslateView: View {
         }
     }
 }
-#Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Sentence.self, configurations: config)
-    [
-        Sentence(sentence: "Yes, I can guide you.", order: 0),
-        Sentence(sentence: "I'm here to help.", order: 1),
-        Sentence(sentence: "I understand, let me assist you.", order: 2),
-        Sentence(sentence: "I'll write it down for you.", order: 3),
-        Sentence(sentence: "I'll describe the menu options for you.", order: 4),
-        Sentence(sentence: "I'll help you navigate through touch.", order: 5),
-        Sentence(sentence: "I'm communicating with you through touch.", order: 6),
-        Sentence(sentence: "I'll lead you to the bus stop.", order: 7),
-        Sentence(sentence: "Let me describe the location to you.", order: 8),
-        Sentence(sentence: "I'll tap your hand to get your attention.", order: 9)
-    ].forEach { sentence in
-        container.mainContext.insert(sentence)
-    }
-    
-    return QuickTranslateView().modelContainer(container)
-}
-
-#Preview ("Dark mode") {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Sentence.self, configurations: config)
-    [
-        Sentence(sentence: "Yes, I can guide you.", order: 0),
-        Sentence(sentence: "I'm here to help.", order: 1),
-        Sentence(sentence: "I understand, let me assist you.", order: 2),
-        Sentence(sentence: "I'll write it down for you.", order: 3),
-        Sentence(sentence: "I'll describe the menu options for you.", order: 4),
-        Sentence(sentence: "I'll help you navigate through touch.", order: 5),
-        Sentence(sentence: "I'm communicating with you through touch.", order: 6),
-        Sentence(sentence: "I'll lead you to the bus stop.", order: 7),
-        Sentence(sentence: "Let me describe the location to you.", order: 8),
-        Sentence(sentence: "I'll tap your hand to get your attention.", order: 9)
-    ].forEach { sentence in
-        container.mainContext.insert(sentence)
-    }
-    
-    return QuickTranslateView()
-        .modelContainer(container)
-        .preferredColorScheme(.dark)
-}
+//#Preview {
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: Sentence.self, configurations: config)
+//    [
+//        Sentence(sentence: "Yes, I can guide you.", order: 0),
+//        Sentence(sentence: "I'm here to help.", order: 1),
+//        Sentence(sentence: "I understand, let me assist you.", order: 2),
+//        Sentence(sentence: "I'll write it down for you.", order: 3),
+//        Sentence(sentence: "I'll describe the menu options for you.", order: 4),
+//        Sentence(sentence: "I'll help you navigate through touch.", order: 5),
+//        Sentence(sentence: "I'm communicating with you through touch.", order: 6),
+//        Sentence(sentence: "I'll lead you to the bus stop.", order: 7),
+//        Sentence(sentence: "Let me describe the location to you.", order: 8),
+//        Sentence(sentence: "I'll tap your hand to get your attention.", order: 9)
+//    ].forEach { sentence in
+//        container.mainContext.insert(sentence)
+//    }
+//
+//    return QuickTranslateView().modelContainer(container)
+//}
+//
+//#Preview ("Dark mode") {
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: Sentence.self, configurations: config)
+//    [
+//        Sentence(sentence: "Yes, I can guide you.", order: 0),
+//        Sentence(sentence: "I'm here to help.", order: 1),
+//        Sentence(sentence: "I understand, let me assist you.", order: 2),
+//        Sentence(sentence: "I'll write it down for you.", order: 3),
+//        Sentence(sentence: "I'll describe the menu options for you.", order: 4),
+//        Sentence(sentence: "I'll help you navigate through touch.", order: 5),
+//        Sentence(sentence: "I'm communicating with you through touch.", order: 6),
+//        Sentence(sentence: "I'll lead you to the bus stop.", order: 7),
+//        Sentence(sentence: "Let me describe the location to you.", order: 8),
+//        Sentence(sentence: "I'll tap your hand to get your attention.", order: 9)
+//    ].forEach { sentence in
+//        container.mainContext.insert(sentence)
+//    }
+//
+//    return QuickTranslateView()
+//        .modelContainer(container)
+//        .preferredColorScheme(.dark)
+//}

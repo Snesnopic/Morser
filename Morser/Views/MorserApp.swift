@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct MorserApp: App {
+    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             ParentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
-        .modelContainer(for: Sentence.self)
     }
 }

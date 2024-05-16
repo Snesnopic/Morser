@@ -53,6 +53,14 @@ class VibrationEngine: ObservableObject {
         triggerNextVibration()
     }
     
+    func readMorseCode(sentence: Sentence) {
+        morseCodeIndex = 0
+        morseCodeString = MorseEncoder.encode(string: sentence.sentence!)
+        if VibrationEngine.soundEnabled && dotPlayer == nil && dashPlayer == nil {
+            dotPlayer = BeepPlayer(frequency: 600, duration: dotDuration)
+            dashPlayer = BeepPlayer(frequency: 600, duration: dashDuration)
+        }
+        triggerNextVibration()    }
     // Function to trigger vibrations based on Morse code
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {

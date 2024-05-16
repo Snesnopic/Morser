@@ -36,4 +36,18 @@ extension String {
     func charAt(_ i: Int) -> Character {
         return Array(self)[i]
     }
+    
+    func morseCode() -> String {
+          return MorseEncoder.encode(string: self)
+    }
+}
+
+extension FetchedResults<Sentence> {
+    func toArray() -> [Sentence] {
+        var array:[Sentence] = []
+        self.forEach { result in
+            array.append(result)
+        }
+        return array
+    }
 }

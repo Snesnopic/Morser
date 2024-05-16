@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import SwiftData
+import CoreData
 
 struct ParentView: View {
-    @Query private var sentences: [Sentence]
-    @Environment(\.modelContext) private var modelContext: ModelContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
+    @Environment(\.managedObjectContext) var mocModelContext
     var body: some View {
         TabView {
             EncodeView().tabItem{
@@ -37,20 +37,29 @@ struct ParentView: View {
             }
         }
         .onAppear {
-            if sentences.isEmpty {
-                [
-                    Sentence(sentence: String(localized: "Yes, I can guide you."), order: 0),
-                    Sentence(sentence: String(localized: "I'm here to help."), order: 1),
-                    Sentence(sentence: String(localized: "I understand, let me assist you."), order: 2),
-                    Sentence(sentence: String(localized: "I'll write it down for you."), order: 3),
-                    Sentence(sentence: String(localized: "I'll describe the menu options for you."), order: 4),
-                    Sentence(sentence: String(localized: "I'll help you navigate through touch."), order: 5),
-                    Sentence(sentence: String(localized: "I'm communicating with you through touch."), order: 6),
-                    Sentence(sentence: String(localized: "I'll lead you to the bus stop."), order: 7),
-                    Sentence(sentence: String(localized: "Let me describe the location to you."), order: 8),
-                    Sentence(sentence: String(localized: "I'll tap your hand to get your attention."), order: 9)
-                ].forEach { sentence in
-                    modelContext.insert(sentence)
+            if sentences.toArray().isEmpty {
+                let strings = [
+                    String(localized: "I'm here to help."),
+                    String(localized: "Yes, I can guide you."),
+                    String(localized: "I understand, let me assist you."),
+                    String(localized: "I'll write it down for you."),
+                    String(localized: "I'll describe the menu options for you."),
+                    String(localized: "I'll help you navigate through touch."),
+                    String(localized: "I'm communicating with you through touch."),
+                    String(localized: "I'll lead you to the bus stop."),
+                    String(localized: "Let me describe the location to you."),
+                    String(localized: "I'll tap your hand to get your attention.")
+                ]
+                var array:[Sentence] = []
+                var index:Int32 = 0
+                strings.forEach { string in
+                    let sentence = Sentence(entity: Sentence.entity(), insertInto: mocModelContext)
+                    sentence.sentence = string
+                    sentence.order = index
+                    index += 1
+                    sentence.bindingWrapper = BindingWrapper()
+                    sentence.bindingWrapper?.boundSentence = .constant(string)
+                    array.append(sentence)
                 }
             }
         }
@@ -58,8 +67,9 @@ struct ParentView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Sentence.self, configurations: config)
-    
-    return ParentView().modelContainer(container)
+    //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    //    let container = try! ModelContainer(for: Sentence.self, configurations: config)
+    //
+    return ParentView()
+    //        .modelContainer(container)
 }

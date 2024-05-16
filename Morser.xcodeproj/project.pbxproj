@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0CB0572BF5E78500FD8E57 /* Sentence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */; };
+		9D0CB0592BF5E87F00FD8E57 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0582BF5E87F00FD8E57 /* DataController.swift */; };
 		9D1CB9B02BCEB5930088F90C /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */; };
-		9D2099812BCD37AA00229594 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2099802BCD37AA00229594 /* Sentence.swift */; };
+		9D2099812BCD37AA00229594 /* BindingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2099802BCD37AA00229594 /* BindingWrapper.swift */; };
 		9D39222F2BCFB86E00FA1D05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */; };
 		9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2A2BCD109400DAD675 /* MorserApp.swift */; };
 		9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ParentView.swift */; };
@@ -27,9 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D0CB0562BF5E78500FD8E57 /* Sentence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sentence.xcdatamodel; sourceTree = "<group>"; };
+		9D0CB0582BF5E87F00FD8E57 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		9D1CB9AE2BCEB2810088F90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
-		9D2099802BCD37AA00229594 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
+		9D2099802BCD37AA00229594 /* BindingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingWrapper.swift; sourceTree = "<group>"; };
 		9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9D3DED272BCD109400DAD675 /* Morser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Morser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3DED2A2BCD109400DAD675 /* MorserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserApp.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 				9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */,
 				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
 				9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */,
-				9D2099802BCD37AA00229594 /* Sentence.swift */,
+				9D2099802BCD37AA00229594 /* BindingWrapper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +134,8 @@
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
 				9D9BC1572BECE24200CD2C5B /* SettingsView.swift */,
+				9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */,
+				9D0CB0582BF5E87F00FD8E57 /* DataController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,11 +221,13 @@
 				9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */,
 				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
 				9D1CB9B02BCEB5930088F90C /* SpeechRecognizer.swift in Sources */,
-				9D2099812BCD37AA00229594 /* Sentence.swift in Sources */,
+				9D2099812BCD37AA00229594 /* BindingWrapper.swift in Sources */,
 				9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */,
 				9D3DED402BCD23E700DAD675 /* VibrationEngine.swift in Sources */,
 				9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */,
+				9D0CB0592BF5E87F00FD8E57 /* DataController.swift in Sources */,
 				9D3DED3E2BCD16EB00DAD675 /* ListenView.swift in Sources */,
+				9D0CB0572BF5E78500FD8E57 /* Sentence.xcdatamodeld in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
@@ -380,6 +388,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -423,6 +432,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -456,6 +466,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D0CB0562BF5E78500FD8E57 /* Sentence.xcdatamodel */,
+			);
+			currentVersion = 9D0CB0562BF5E78500FD8E57 /* Sentence.xcdatamodel */;
+			name = Sentence.xcdatamodeld;
+			path = /Users/giuseppefrancione/Documents/Morser/Morser/Views/Sentence.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9D3DED1F2BCD109400DAD675 /* Project object */;
 }

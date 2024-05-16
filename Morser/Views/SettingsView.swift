@@ -44,7 +44,7 @@ struct SettingsView: View {
                         Spacer()
                         Text("\(sliderPreference * 100,specifier: "%.0f") ms")
                     }
-                    Slider(value: $sliderPreference, in: (0.1)...(5.0)) {
+                    Slider(value: $sliderPreference, in: (1.0)...(5.0)) {
                         Text("Haptics Speed (\(sliderPreference))")
                     }
                     .onChange(of: sliderPreference) { oldValue, newValue in

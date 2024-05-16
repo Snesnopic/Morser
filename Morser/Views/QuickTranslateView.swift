@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct QuickTranslateView: View {
-    @State var temporaryString: String = ""
-    @State var orderBeingChanged: Int32 = -2
     @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
     @Environment(\.managedObjectContext) var moc
     @State private var mode:EditMode = .inactive
@@ -30,17 +28,11 @@ struct QuickTranslateView: View {
                 ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
                     return sent1.order < sent2.order
                 })) { sentence in
-                    TextField("Insert a frequently used sentence",text:
-                                orderBeingChanged != sentence.order ? sentence.bindingWrapper!.boundSentence : $temporaryString, onEditingChanged: { (changed) in
-                        if changed {
-                            temporaryString = sentence.bindingWrapper!.boundSentence.wrappedValue
-                            orderBeingChanged = sentence.order
-                        } else {
-                            sentence.bindingWrapper = BindingWrapper(temporaryString)
-                            temporaryString = ""
-                            orderBeingChanged = -2
-                        }
-                    })
+                    TextField("Insert a frequently used sentence",text: Binding(get: {
+                        sentence.sentence!
+                    }, set: { newValue in
+                        sentence.sentence! = newValue
+                    }))
                     .if(!mode.isEditing && sentence.order != -1, transform: { view in
                         view
                             .disabled(true)
@@ -53,7 +45,6 @@ struct QuickTranslateView: View {
                     })
                     .focused($textFieldIsFocused)
                     .onSubmit {
-                        sentence.sentence = sentence.bindingWrapper!.boundSentence.wrappedValue
                         textFieldIsFocused = false
                         let tempItems = sentences.toArray()
                         tempItems.indices.forEach({ index in
@@ -63,11 +54,12 @@ struct QuickTranslateView: View {
                             sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = Int32(index)
                         })
                         do {
-                           try moc.save()
+                            try moc.save()
                         }
                         catch {
                             print("Error: \(error)")
-                        }                    }
+                        }
+                    }
                     .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == MorseEncoder.encode(string: sentence.sentence!)) { view in
                         view.listRowBackground(Color.accentColor)
                     }
@@ -116,10 +108,9 @@ struct QuickTranslateView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        let newSentence = Sentence(entity: Sentence.entity(), insertInto: moc)
+                        let newSentence = Sentence(context: moc)
                         newSentence.order = -1
                         newSentence.sentence = ""
-                        newSentence.bindingWrapper = BindingWrapper()
                         textFieldIsFocused = true
                     }
                 label: {

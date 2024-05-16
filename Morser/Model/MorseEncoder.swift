@@ -490,7 +490,7 @@ class MorseEncoder {
         "ת": "-"
     ]
     // arabic characters
-    private static let ArabicToMorse: [String:String] = [
+    private static var ArabicToMorse: [String:String] = [
         "ا": ".-",
         "ب": "-...",
         "ت": "-",
@@ -522,7 +522,7 @@ class MorseEncoder {
         "ﺀ": "."
     ]
     // persian characters
-    private static let PersianToMorse: [String:String] = [
+    private static var PersianToMorse: [String:String] = [
         "ا": ".-",
         "ب": "-...",
         "پ": ".--.",
@@ -810,6 +810,12 @@ class MorseEncoder {
     // encode string to morse (removing trailing and leading whitespace)
     public static func encode(string: String) -> String {
         var morse: String = ""
+        ArabicToMorse.forEach { (key,value) in
+            self.ArabicToMorse[key] = String(value.reversed())
+        }
+        PersianToMorse.forEach { (key,value) in
+            self.PersianToMorse[key] = String(value.reversed())
+        }
         let dictionaries = [AlphaNumToMorse,GreekToMorse,CyrillicToMorse,HebrewToMorse,ArabicToMorse,PersianToMorse,KurdishToMorse,DevanagariToMorse,JapaneseToMorse,ThaiToMorse]
         let bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
             partialResult = map.merging(partialResult, uniquingKeysWith: { current, _ in

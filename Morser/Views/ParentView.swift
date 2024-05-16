@@ -57,8 +57,6 @@ struct ParentView: View {
                     sentence.sentence = string
                     sentence.order = index
                     index += 1
-                    sentence.bindingWrapper = BindingWrapper()
-                    sentence.bindingWrapper?.boundSentence = .constant(string)
                     array.append(sentence)
                 }
             }

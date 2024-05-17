@@ -43,24 +43,19 @@ class VibrationEngine: ObservableObject {
     var dashPlayer: BeepPlayer?
 
     func readMorseCode(morseCode: String) {
-
+        let soundFreq = Float(VibrationEngine.soundFrequency)
         morseCodeIndex = 0
         morseCodeString = morseCode
         if VibrationEngine.soundEnabled && dotPlayer == nil && dashPlayer == nil {
-            dotPlayer = BeepPlayer(frequency: 600, duration: dotDuration)
-            dashPlayer = BeepPlayer(frequency: 600, duration: dashDuration)
+            dotPlayer = BeepPlayer(frequency: soundFreq, duration: dotDuration)
+            dashPlayer = BeepPlayer(frequency: soundFreq, duration: dashDuration)
         }
         triggerNextVibration()
     }
 
     func readMorseCode(sentence: Sentence) {
-        morseCodeIndex = 0
-        morseCodeString = sentence.sentence!.morseCode()
-        if VibrationEngine.soundEnabled && dotPlayer == nil && dashPlayer == nil {
-            dotPlayer = BeepPlayer(frequency: 600, duration: dotDuration)
-            dashPlayer = BeepPlayer(frequency: 600, duration: dashDuration)
-        }
-        triggerNextVibration()    }
+        readMorseCode(morseCode: sentence.sentence!)
+    }
     // Function to trigger vibrations based on Morse code
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {
@@ -117,6 +112,8 @@ class VibrationEngine: ObservableObject {
         morseCodeString = ""
         vibrationTimer?.invalidate()
         vibrationTimer = nil
+        dotPlayer = nil
+        dashPlayer = nil
     }
 
     /// - Tag: CreateEngine

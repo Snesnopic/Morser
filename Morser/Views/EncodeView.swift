@@ -47,12 +47,10 @@ struct EncodeView: View {
                             }
                     } else {
                         HStack {
-                            Text("*") +
                             Text(vibrationEngine.morseCodeString.prefix(vibrationEngine.morseCodeIndex - 1)) +
                             Text(String(vibrationEngine.morseCodeString.charAt(vibrationEngine.morseCodeIndex - 1)))
                                 .font(.largeTitle) +
                             Text(vibrationEngine.morseCodeString.dropFirst(vibrationEngine.morseCodeIndex))
-                            Text("*")
                         }
                         .padding()
                         .font(.title3)

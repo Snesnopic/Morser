@@ -152,7 +152,7 @@ actor SpeechRecognizer: ObservableObject {
             transcript = message
             if !VibrationEngine.shared.isVibrating() {
                 VibrationEngine.shared.createEngine()
-                VibrationEngine.shared.readMorseCode(morseCode: MorseEncoder.encode(string: transcript))
+                VibrationEngine.shared.readMorseCode(morseCode: transcript.morseCode())
             }
         }
     }

@@ -16,7 +16,7 @@ struct EncodeView: View {
         textFieldIsFocused = false
         if !vibrationEngine.isVibrating() {
             vibrationEngine.createEngine()
-            vibrationEngine.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
+            vibrationEngine.readMorseCode(morseCode: enteredText.morseCode())
         }
     }
 
@@ -38,7 +38,7 @@ struct EncodeView: View {
                         .bold()
                 } else {
                     if !vibrationEngine.isVibrating() {
-                        Text(MorseEncoder.encode(string: enteredText))
+                        Text(enteredText.morseCode())
                             .font(.title3)
                             .bold()
                             .padding()

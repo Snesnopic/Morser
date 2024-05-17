@@ -59,10 +59,10 @@ struct QuickTranslateView: View {
                             print("Error: \(error)")
                         }
                     }
-                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == MorseEncoder.encode(string: sentence.sentence!)) { view in
+                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.sentence!.morseCode()) { view in
                         view.listRowBackground(Color.accentColor)
                     }
-                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != MorseEncoder.encode(string: sentence.sentence!)) { view in
+                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != sentence.sentence!.morseCode()) { view in
                         view
                             .disabled(true)
                             .foregroundStyle(Color.gray)

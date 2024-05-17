@@ -39,7 +39,11 @@ struct QuickTranslateView: View {
                             .overlay {
                                 Color.white.opacity(0.0001)
                                     .onTapGesture {
-                                        vibrate(sentence)
+                                        if !vibrationEngine.isVibrating() {
+                                            vibrate(sentence)
+                                        } else {
+                                            vibrationEngine.stopReading()
+                                        }
                                     }
                             }
                     })

@@ -65,11 +65,15 @@ struct EncodeView: View {
                     }
 
                 Button {
-                    tryReading()
+                    if !vibrationEngine.isVibrating() {
+                        tryReading()
+                    } else {
+                        vibrationEngine.stopReading()
+                    }
                 } label: {
                     ZStack {
                         Circle()
-                            .foregroundStyle(Color.accentColor.opacity(0.5))
+                            .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor.opacity(0.5) : Color.red.opacity(0.5))
                             .scaleEffect(circleAnimationAmount)
                             .onAppear {
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
@@ -81,17 +85,16 @@ struct EncodeView: View {
                             }
                             .padding()
                         Circle()
-                            .foregroundStyle(Color.accentColor)
+                            .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor : Color.red)
                             .padding()
-                        Text("Play haptics")
-                            .bold()
-                            .font(.title)
-                            .foregroundStyle(.white)
+                        Text(!vibrationEngine.isVibrating() ? "Play haptics" : "Stop haptics")
+                                .bold()
+                                .font(.title)
+                                .foregroundStyle(.white)
                     }
                 }
                 .padding(.all, 50)
                 .buttonStyle(.plain)
-
                 Spacer()
             }
             .navigationTitle("Encode")

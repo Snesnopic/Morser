@@ -65,9 +65,7 @@ class VibrationEngine: ObservableObject {
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {
             // End of Morse code string
-            morseCodeIndex = 0
-            morseCodeString = ""
-            vibrationTimer = nil
+            stopReading()
             return
         }
 
@@ -115,6 +113,8 @@ class VibrationEngine: ObservableObject {
 
     // Function to stop reading Morse code
     func stopReading() {
+        morseCodeIndex = 0
+        morseCodeString = ""
         vibrationTimer?.invalidate()
         vibrationTimer = nil
     }

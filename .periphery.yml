@@ -1,0 +1,6 @@
+project: Morser.xcodeproj
+retain_public: true
+schemes:
+- Morser
+targets:
+- Morser

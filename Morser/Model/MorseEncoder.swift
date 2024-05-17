@@ -835,7 +835,8 @@ class MorseEncoder {
                         }
                     }
                 }
-                morse.replace(String(char), with: "", maxReplacements: 1)
+//                morse.replace(String(char), maxReplacements: 1, with: "")
+                morse = morse.replacingOccurrences(of: String(char), with: "")
             }
             else {
                 morse.append(bigDictionary[char.description.uppercased()] ?? "")

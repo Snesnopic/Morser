@@ -23,7 +23,7 @@ struct QuickTranslateView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
                     return sent1.order < sent2.order

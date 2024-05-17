@@ -21,10 +21,10 @@ struct EncodeView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 Spacer()
-                TextField("Sentence to encode", text: $enteredText, axis: .vertical)
+                TextField("Sentence to encode", text: $enteredText)
                     .focused($textFieldIsFocused)
                     .onSubmit {
                         tryReading()
@@ -49,12 +49,13 @@ struct EncodeView: View {
                     }
                     else {
                         HStack {
+                            Text("*") +
                             Text(vibrationEngine.morseCodeString.prefix(vibrationEngine.morseCodeIndex - 1)) +
                             Text(String(vibrationEngine.morseCodeString.charAt(vibrationEngine.morseCodeIndex - 1)))
                                 .font(.largeTitle) +
                             Text(vibrationEngine.morseCodeString.dropFirst(vibrationEngine.morseCodeIndex))
+                            Text("*")
                         }
-                        .bold()
                         .padding()
                         .font(.title3)
                     }

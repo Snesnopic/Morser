@@ -13,7 +13,7 @@ struct ListenView: View {
     @State private var circleAnimationAmount:Double = 1.005
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 Button {
                     if isRecording {
@@ -46,13 +46,12 @@ struct ListenView: View {
                         VStack {
                             Image(systemName: "mic.fill")
                             if isRecording {
-                                Text("Stop listening")
+                                Text("**Stop listening**")
                             }
                             else {
-                                Text("Start listening")
+                                Text("**Start listening**")
                             }
                         }
-                        .bold()
                         .font(.title)
                         .foregroundStyle(.white)
                     }

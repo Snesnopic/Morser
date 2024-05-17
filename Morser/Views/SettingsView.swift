@@ -12,7 +12,7 @@ struct SettingsView: View {
     @AppStorage("sliderPreference") private var sliderPreference = 1.0
     @AppStorage("soundFrequency") private var soundFrequency = 600.0
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 Section {
                     Toggle("Sound Haptics", isOn: $soundEnabled)

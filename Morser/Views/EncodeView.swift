@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EncodeView: View {
-    @State private var enteredText:String = ""
-    @FocusState private var textFieldIsFocused:Bool
-    @State private var circleAnimationAmount:Double = 1.005
+    @State private var enteredText: String = ""
+    @FocusState private var textFieldIsFocused: Bool
+    @State private var circleAnimationAmount: Double = 1.005
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     fileprivate func tryReading() {
         textFieldIsFocused = false
@@ -19,7 +19,7 @@ struct EncodeView: View {
             vibrationEngine.readMorseCode(morseCode: MorseEncoder.encode(string: enteredText))
         }
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -36,8 +36,7 @@ struct EncodeView: View {
                 if enteredText.isEmpty {
                     Text("Morse code will be here!")
                         .bold()
-                }
-                else {
+                } else {
                     if !vibrationEngine.isVibrating() {
                         Text(MorseEncoder.encode(string: enteredText))
                             .font(.title3)
@@ -46,8 +45,7 @@ struct EncodeView: View {
                             .onTapGesture {
                                 textFieldIsFocused = false
                             }
-                    }
-                    else {
+                    } else {
                         HStack {
                             Text("*") +
                             Text(vibrationEngine.morseCodeString.prefix(vibrationEngine.morseCodeIndex - 1)) +
@@ -60,12 +58,12 @@ struct EncodeView: View {
                         .font(.title3)
                     }
                 }
-                
+
                 Spacer()
                     .onTapGesture {
                         textFieldIsFocused = false
                     }
-                
+
                 Button {
                     tryReading()
                 } label: {
@@ -73,12 +71,12 @@ struct EncodeView: View {
                         Circle()
                             .foregroundStyle(Color.accentColor.opacity(0.5))
                             .scaleEffect(circleAnimationAmount)
-                            .onAppear{
+                            .onAppear {
                                 withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
                                     circleAnimationAmount *= 1.2
                                 }
                             }
-                            .onDisappear{
+                            .onDisappear {
                                 circleAnimationAmount = 1.0
                             }
                             .padding()
@@ -93,13 +91,13 @@ struct EncodeView: View {
                 }
                 .padding(.all, 50)
                 .buttonStyle(.plain)
-                
+
                 Spacer()
             }
             .navigationTitle("Encode")
             .ignoresSafeArea(.keyboard)
         }
-        
+
     }
 }
 

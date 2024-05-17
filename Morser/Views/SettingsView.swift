@@ -32,25 +32,23 @@ struct SettingsView: View {
             footer: {
                 if soundEnabled {
                     Text("A \(Int(soundFrequency))Hz sound will be played alongside haptics to help recognition.")
-                }
-                else {
+                } else {
                     Text("No sound will be played alongside haptics.")
                 }
-                
             }
                 Section {
                     HStack {
                         Text("Haptics Time Unit")
                         Spacer()
-                        Text("\(sliderPreference * 100,specifier: "%.0f") ms")
+                        Text("\(sliderPreference * 100, specifier: "%.0f") ms")
                     }
                     Slider(value: $sliderPreference, in: (1.0)...(5.0)) {
                         Text("Haptics Speed (\(sliderPreference))")
                     }
-                    .onChange(of: sliderPreference, perform: { value in
+                    .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })
-                   
+
                 } header: {
                     Text("Timings")
                 }
@@ -58,11 +56,11 @@ struct SettingsView: View {
                 Text("""
                         Time unit is espressed in ms (milliseconds).
                         Timings:
-                        . = 1 time unit (\(sliderPreference * 100,specifier: "%.0f") ms)
-                        - = 3 time units (\(sliderPreference * 100 * 3,specifier: "%.0f") ms)
-                        Space between same symbols = 1 time unit (\(sliderPreference * 100,specifier: "%.0f") ms)
-                        Space between different symbols = 3 time units (\(sliderPreference * 100 * 3,specifier: "%.0f") ms)
-                        Space between words = 7 time units (\(sliderPreference * 100 * 7,specifier: "%.0f") ms)
+                        . = 1 time unit (\(sliderPreference * 100, specifier: "%.0f") ms)
+                        - = 3 time units (\(sliderPreference * 100 * 3, specifier: "%.0f") ms)
+                        Space between same symbols = 1 time unit (\(sliderPreference * 100, specifier: "%.0f") ms)
+                        Space between different symbols = 3 time units (\(sliderPreference * 100 * 3, specifier: "%.0f") ms)
+                        Space between words = 7 time units (\(sliderPreference * 100 * 7, specifier: "%.0f") ms)
                         """
                 )
             }

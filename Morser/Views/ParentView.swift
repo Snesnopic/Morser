@@ -13,7 +13,7 @@ struct ParentView: View {
     @Environment(\.managedObjectContext) var mocModelContext
     var body: some View {
         TabView {
-            EncodeView().tabItem{
+            EncodeView().tabItem {
                 Label(
                     title: { Text("Encode") },
                     icon: { Image(systemName: "text.badge.plus") }
@@ -50,8 +50,8 @@ struct ParentView: View {
                     String(localized: "Let me describe the location to you."),
                     String(localized: "I'll tap your hand to get your attention.")
                 ]
-                var array:[Sentence] = []
-                var index:Int32 = 0
+                var array: [Sentence] = []
+                var index: Int32 = 0
                 strings.forEach { string in
                     let sentence = Sentence(entity: Sentence.entity(), insertInto: mocModelContext)
                     sentence.sentence = string

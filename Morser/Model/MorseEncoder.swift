@@ -9,7 +9,7 @@ import Foundation
 
 class MorseEncoder {
     // map of all latin characters to morse
-    private static let AlphaNumToMorse: [String:String] = [
+    private static let AlphaNumToMorse: [String: String] = [
         // latin alphabet
         "A": ".-",
         "B": "-...",
@@ -95,10 +95,10 @@ class MorseEncoder {
         "!": "-.-.--",
         "?": "..--..",
         "=": "-...-",
-        "@": ".--.-.",
+        "@": ".--.-."
     ]
     // greek characters
-    private static let GreekToMorse: [String:String] = [
+    private static let GreekToMorse: [String: String] = [
         "Α": ".-",
         "Β": "-...",
         "Γ": "--.",
@@ -146,10 +146,10 @@ class MorseEncoder {
         "φ": "..-.",     // Phi (lowercase)
         "χ": "----",     // Chi (lowercase)
         "ψ": "--.-",     // Psi (lowercase)
-        "ω": ".--",       // Omega (lowercase)
+        "ω": ".--"       // Omega (lowercase)
     ]
     // cyrillic characters
-    private static let CyrillicToMorse: [String:String] = [
+    private static let CyrillicToMorse: [String: String] = [
         "А": ".-",
         "Б": "-...",
         "В": ".--",
@@ -188,7 +188,7 @@ class MorseEncoder {
         "Ґ": "--."
     ]
     // extended cyrillic characters
-    private static let ExtendedCyrillicToMorse: [String:String] = [
+    private static let ExtendedCyrillicToMorse: [String: String] = [
         "А": ".-",       // A
         "Б": "-...",     // Be
         "В": ".--",      // Ve
@@ -462,10 +462,10 @@ class MorseEncoder {
         "Ԡ": ".----.",   // Combining Cyrillic Letter Uk
         "ԡ": ".----.",   // Combining Cyrillic Letter Uk (lowercase, uses same as Ԡ)
         "Ԣ": ".----.",   // Combining Cyrillic Letter Ghe with Upturn
-        "ԣ": ".----.",    // Combining Cyrillic Letter Ghe with Upturn (lowercase, uses same as Ԣ)
+        "ԣ": ".----."    // Combining Cyrillic Letter Ghe with Upturn (lowercase, uses same as Ԣ)
     ]
     // hebrew characters
-    private static let HebrewToMorse: [String:String] = [
+    private static let HebrewToMorse: [String: String] = [
         "א": ".-",
         "ב": "-...",
         "ג": "--.",
@@ -490,7 +490,7 @@ class MorseEncoder {
         "ת": "-"
     ]
     // arabic characters
-    private static var ArabicToMorse: [String:String] = [
+    private static var ArabicToMorse: [String: String] = [
         "ا": ".-",
         "ب": "-...",
         "ت": "-",
@@ -522,7 +522,7 @@ class MorseEncoder {
         "ﺀ": "."
     ]
     // persian characters
-    private static var PersianToMorse: [String:String] = [
+    private static var PersianToMorse: [String: String] = [
         "ا": ".-",
         "ب": "-...",
         "پ": ".--.",
@@ -557,7 +557,7 @@ class MorseEncoder {
         "ی": ".."
     ]
     // kurdish characters
-    private static let KurdishToMorse: [String:String] = [
+    private static let KurdishToMorse: [String: String] = [
         "ا": ".-",       // Alef
         "ب": "-...",     // Beh
         "پ": ".--.",     // Pe
@@ -591,10 +591,10 @@ class MorseEncoder {
         "ە": "..-..",    // E
         "ێ": "-.--.",    // E
         "گ": "--.",      // Gaf
-        "ڤ": "...-",     // Vav
+        "ڤ": "...-"     // Vav
     ]
     // devanagari characters
-    private static let DevanagariToMorse: [String:String] = [
+    private static let DevanagariToMorse: [String: String] = [
         "अ": ".-",         // A
         "आ": ".-",         // AA (long A)
         "इ": "..",         // I
@@ -663,7 +663,7 @@ class MorseEncoder {
         "९": "----."       // Digit 9
     ]
     // korean characters
-    private static let KoreanToMorse: [String:String] = [
+    private static let KoreanToMorse: [String: String] = [
         "ㄱ": ".-..",
         "ㄴ": "..-.",
         "ㄷ": "-...",
@@ -694,7 +694,7 @@ class MorseEncoder {
         "ㅒ": "....-"
     ]
     // japanese characters
-    private static let JapaneseToMorse: [String:String] = [
+    private static let JapaneseToMorse: [String: String] = [
         "ア": "--.--",
         "カ": ".-..",
         "サ": "-.-.-",
@@ -752,7 +752,7 @@ class MorseEncoder {
         "）": ".-..-."
     ]
     // thai characters
-    private static let ThaiToMorse: [String:String] = [
+    private static let ThaiToMorse: [String: String] = [
         "ก": "--.",
         "ข": "-.-.",
         "ค": "-.-",
@@ -806,39 +806,39 @@ class MorseEncoder {
         "ๆ": "-.---",
         "ฯ": "--.-."
     ]
-    
     // encode string to morse (removing trailing and leading whitespace)
     public static func encode(string: String) -> String {
         var morse: String = ""
-        ArabicToMorse.forEach { (key,value) in
+        ArabicToMorse.forEach { (key, value) in
             self.ArabicToMorse[key] = String(value.reversed())
         }
-        PersianToMorse.forEach { (key,value) in
+        PersianToMorse.forEach { (key, value) in
             self.PersianToMorse[key] = String(value.reversed())
         }
-        let dictionaries = [AlphaNumToMorse,GreekToMorse,CyrillicToMorse,HebrewToMorse,ArabicToMorse,PersianToMorse,KurdishToMorse,DevanagariToMorse,JapaneseToMorse,ThaiToMorse]
+        let dictionaries = [AlphaNumToMorse, GreekToMorse, CyrillicToMorse, HebrewToMorse, ArabicToMorse, PersianToMorse, KurdishToMorse, DevanagariToMorse, JapaneseToMorse, ThaiToMorse]
         let bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
             partialResult = map.merging(partialResult, uniquingKeysWith: { current, _ in
                 current
             })
         }
         // remove trailing leading whitespaces and diacritics
-        string.trimmingCharacters(in: .whitespacesAndNewlines).folding(options: .diacriticInsensitive, locale: .current).forEach { char in
+        string.trimmingCharacters(in: .whitespacesAndNewlines)
+            .folding(options: .diacriticInsensitive, locale: .current).forEach { char in
             if char.isKorean {
                 let scalars = Array(String(char).decomposedStringWithCompatibilityMapping.unicodeScalars)
                 // for each scalar that composes the korean word
                 scalars.forEach { scalar in
                     KoreanToMorse.keys.forEach { kor in
                         // manual searching for compatibility reasons
-                        if kor.precomposedStringWithCompatibilityMapping == String(scalar).precomposedStringWithCompatibilityMapping {
+                        if kor.precomposedStringWithCompatibilityMapping == String(scalar)
+                            .precomposedStringWithCompatibilityMapping {
                             morse.append(KoreanToMorse[kor] ?? "")
                         }
                     }
                 }
 //                morse.replace(String(char), maxReplacements: 1, with: "")
                 morse = morse.replacingOccurrences(of: String(char), with: "")
-            }
-            else {
+            } else {
                 morse.append(bigDictionary[char.description.uppercased()] ?? "")
             }
         }

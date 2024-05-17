@@ -11,13 +11,13 @@ import AVFAudio
 import SwiftUI
 
 class VibrationEngine: ObservableObject {
-    static let shared:VibrationEngine = VibrationEngine()
+    static let shared: VibrationEngine = VibrationEngine()
     private init() {
-        
+
     }
     // A haptic engine manages the connection to the haptic server.
     var engine: CHHapticEngine?
-    
+
     // configurable time unit, will be changeable later with settings
     @AppStorage("soundEnabled") static private var soundEnabled = true
     @AppStorage("sliderPreference") static private var timeUnit = 1.0
@@ -35,15 +35,15 @@ class VibrationEngine: ObservableObject {
         wordSeparatorDelay = 7 * VibrationEngine.timeUnit / 10
     }
     var vibrationTimer: Timer?
-    
+
     @Published var morseCodeIndex = 0
     @Published var morseCodeString = ""
-    
-    var dotPlayer:BeepPlayer? = nil
-    var dashPlayer:BeepPlayer? = nil
-    
+
+    var dotPlayer: BeepPlayer?
+    var dashPlayer: BeepPlayer?
+
     func readMorseCode(morseCode: String) {
-        
+
         morseCodeIndex = 0
         morseCodeString = morseCode
         if VibrationEngine.soundEnabled && dotPlayer == nil && dashPlayer == nil {
@@ -52,7 +52,7 @@ class VibrationEngine: ObservableObject {
         }
         triggerNextVibration()
     }
-    
+
     func readMorseCode(sentence: Sentence) {
         morseCodeIndex = 0
         morseCodeString = MorseEncoder.encode(string: sentence.sentence!)
@@ -70,25 +70,25 @@ class VibrationEngine: ObservableObject {
             vibrationTimer = nil
             return
         }
-        
+
         let character = morseCodeString.charAt(morseCodeIndex)
         var nextCharacter: Character {
             if morseCodeIndex + 1 >= morseCodeString.count {
                 return character
-            }
-            else {
+            } else {
                 return morseCodeString.charAt(morseCodeIndex + 1)
             }
         }
         morseCodeIndex += 1
-        
+
         switch character {
         case ".":
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
             playHapticsFile(named: "dot")
-            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
+            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration +
+            (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                 self.triggerNextVibration()
             }
         case "-":
@@ -102,7 +102,7 @@ class VibrationEngine: ObservableObject {
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                 self.triggerNextVibration()
             }
-            
+
         case "/":
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: wordSeparatorDelay, repeats: false) { _ in
                 self.triggerNextVibration()
@@ -112,14 +112,13 @@ class VibrationEngine: ObservableObject {
             break
         }
     }
-    
+
     // Function to stop reading Morse code
     func stopReading() {
         vibrationTimer?.invalidate()
         vibrationTimer = nil
     }
-    
-    
+
     /// - Tag: CreateEngine
     func createEngine() {
         // Create and configure a haptic engine.
@@ -131,12 +130,12 @@ class VibrationEngine: ObservableObject {
         } catch let error {
             print("Engine Creation Error: \(error)")
         }
-        
+
         guard let engine = engine else {
             print("Failed to create engine!")
             return
         }
-        
+
         // The stopped handler alerts you of engine stoppage due to external causes.
         engine.stoppedHandler = { reason in
             print("The engine stopped for reason: \(reason.rawValue)")
@@ -159,7 +158,7 @@ class VibrationEngine: ObservableObject {
                 print("Unknown error")
             }
         }
-        
+
         // The reset handler provides an opportunity for your app to restart the engine in case of failure.
         engine.resetHandler = {
             // Try restarting the engine.
@@ -171,27 +170,27 @@ class VibrationEngine: ObservableObject {
             }
         }
     }
-    
+
     /// - Tag: PlayAHAP
     func playHapticsFile(named filename: String) {
-        
+
         // If the device doesn't support Core Haptics, abort.
         //        if !supportsHaptics {
         //            return
         //        }
-        
+
         // Express the path to the AHAP file before attempting to load it.
         guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
             return
         }
-        
+
         do {
             // Start the engine in case it's idle.
             try engine?.start()
-            
+
             // Tell the engine to play a pattern.
             try engine?.playPattern(from: URL(fileURLWithPath: path))
-            
+
         } catch { // Engine startup errors
             print("An error occured playing \(filename): \(error).")
         }

@@ -11,24 +11,24 @@ import SwiftData
 struct QuickTranslateView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
     @Environment(\.managedObjectContext) var moc
-    @State private var mode:EditMode = .inactive
-    @FocusState private var textFieldIsFocused:Bool
+    @State private var mode: EditMode = .inactive
+    @FocusState private var textFieldIsFocused: Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
-    
-    private func vibrate(_ sentence:Sentence) {
+
+    private func vibrate(_ sentence: Sentence) {
         if !vibrationEngine.isVibrating() {
             vibrationEngine.createEngine()
             vibrationEngine.readMorseCode(sentence: sentence)
         }
     }
-    
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
                     return sent1.order < sent2.order
                 })) { sentence in
-                    TextField("Insert a frequently used sentence",text: Binding(get: {
+                    TextField("Insert a frequently used sentence", text: Binding(get: {
                         sentence.sentence!
                     }, set: { newValue in
                         sentence.sentence! = newValue
@@ -55,8 +55,7 @@ struct QuickTranslateView: View {
                         })
                         do {
                             try moc.save()
-                        }
-                        catch {
+                        } catch {
                             print("Error: \(error)")
                         }
                     }
@@ -77,8 +76,7 @@ struct QuickTranslateView: View {
                             }
                             do {
                                 try moc.save()
-                            }
-                            catch {
+                            } catch {
                                 print("Error: \(error)")
                             }
                         }
@@ -90,18 +88,16 @@ struct QuickTranslateView: View {
                             })
                             do {
                                 try moc.save()
-                            }
-                            catch {
+                            } catch {
                                 print("Error: \(error)")
                             }
                         })
                 })
-                
-                
+
             }
             .listStyle(.plain)
             .navigationTitle("Quick Translate")
-            .toolbar{
+            .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                         .disabled(vibrationEngine.isVibrating())
@@ -117,15 +113,15 @@ struct QuickTranslateView: View {
                     Image(systemName: "plus")
                 }
                 .disabled(vibrationEngine.isVibrating())
-                    
+
                 }
-                
+
             }
             .environment(\.editMode, $mode)
         }
     }
 }
-//#Preview {
+// #Preview {
 //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
 //    let container = try! ModelContainer(for: Sentence.self, configurations: config)
 //    [
@@ -144,9 +140,9 @@ struct QuickTranslateView: View {
 //    }
 //
 //    return QuickTranslateView().modelContainer(container)
-//}
+// }
 //
-//#Preview ("Dark mode") {
+// #Preview ("Dark mode") {
 //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
 //    let container = try! ModelContainer(for: Sentence.self, configurations: config)
 //    [
@@ -167,4 +163,4 @@ struct QuickTranslateView: View {
 //    return QuickTranslateView()
 //        .modelContainer(container)
 //        .preferredColorScheme(.dark)
-//}
+// }

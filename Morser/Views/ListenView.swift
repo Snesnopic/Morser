@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ListenView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
-    @State var isRecording:Bool = false
-    @State private var circleAnimationAmount:Double = 1.005
-    
+    @State var isRecording: Bool = false
+    @State private var circleAnimationAmount: Double = 1.005
+
     var body: some View {
         NavigationView {
             VStack {
                 Button {
                     if isRecording {
                         stopTranscribing()
-                    }
-                    else {
+                    } else {
                         startTranscribing()
                     }
                 } label: {
@@ -29,16 +28,15 @@ struct ListenView: View {
                             .scaleEffect(circleAnimationAmount)
                             .if(isRecording, transform: { view in
                                 view
-                                    .onAppear{
+                                    .onAppear {
                                         withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
                                             circleAnimationAmount *= 1.2
                                         }
                                     }
-                                    .onDisappear{
+                                    .onDisappear {
                                         circleAnimationAmount = 1.0
                                     }
                             })
-                        
                             .padding()
                         Circle()
                             .foregroundStyle(Color.accentColor)
@@ -47,8 +45,7 @@ struct ListenView: View {
                             Image(systemName: "mic.fill")
                             if isRecording {
                                 Text("**Stop listening**")
-                            }
-                            else {
+                            } else {
                                 Text("**Start listening**")
                             }
                         }
@@ -58,14 +55,14 @@ struct ListenView: View {
                 }
                 .padding(.all, 50)
                 .buttonStyle(.plain)
-                Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!" : "\(speechRecognizer.transcript)")
+                Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!"
+                     : "\(speechRecognizer.transcript)")
                     .bold()
                     .font(.title2)
             }
             .navigationTitle("Listen")
         }
     }
-    
     private func startTranscribing() {
         speechRecognizer.resetTranscript()
         speechRecognizer.startTranscribing()

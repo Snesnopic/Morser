@@ -30,6 +30,15 @@ extension Character {
 }
 
 extension String {
+    func createAhapFile(_ withName: String = "temp") -> URL {
+      let url = FileManager.default.temporaryDirectory
+        .appendingPathComponent(withName)
+        .appendingPathExtension("ahap")
+      let string = self
+      try? string.write(to: url, atomically: true, encoding: .utf8)
+      return url
+    }
+  }
     // helper function to get single char from string
     func charAt(_ index: Int) -> Character {
         return Array(self)[index]

@@ -15,13 +15,6 @@ struct QuickTranslateView: View {
     @FocusState private var textFieldIsFocused: Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
 
-    private func vibrate(_ sentence: Sentence) {
-        if !vibrationEngine.isVibrating() {
-            vibrationEngine.createEngine()
-            vibrationEngine.readMorseCode(sentence: sentence)
-        }
-    }
-
     var body: some View {
         NavigationView {
             List {
@@ -40,7 +33,7 @@ struct QuickTranslateView: View {
                                 Color.white.opacity(0.0001)
                                     .onTapGesture {
                                         if !vibrationEngine.isVibrating() {
-                                            vibrate(sentence)
+                                            vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
                                         } else {
                                             vibrationEngine.stopReading()
                                         }

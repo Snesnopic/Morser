@@ -28,7 +28,8 @@ actor SpeechRecognizer: ObservableObject {
         }
     }
 
-    @MainActor var transcript: String = ""
+    @MainActor @Published var transcript: String = ""
+    @MainActor @Published var audioLevel: Double = 0.0
 
     private var audioEngine: AVAudioEngine?
     private var request: SFSpeechAudioBufferRecognitionRequest?
@@ -91,7 +92,7 @@ actor SpeechRecognizer: ObservableObject {
         }
 
         do {
-            let (audioEngine, request) = try Self.prepareEngine()
+            let (audioEngine, request) = try prepareEngine()
             self.audioEngine = audioEngine
             self.request = request
             self.task = recognizer.recognitionTask(with: request, resultHandler: { [weak self] result, error in
@@ -117,7 +118,7 @@ actor SpeechRecognizer: ObservableObject {
         task = nil
     }
 
-    private static func prepareEngine() throws -> (AVAudioEngine, SFSpeechAudioBufferRecognitionRequest) {
+    private func prepareEngine() throws -> (AVAudioEngine, SFSpeechAudioBufferRecognitionRequest) {
         let audioEngine = AVAudioEngine()
 
         let request = SFSpeechAudioBufferRecognitionRequest()
@@ -129,13 +130,31 @@ actor SpeechRecognizer: ObservableObject {
         let inputNode = audioEngine.inputNode
 
         let recordingFormat = inputNode.outputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, _: AVAudioTime) in
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [weak self] (buffer: AVAudioPCMBuffer, _: AVAudioTime) in
             request.append(buffer)
+            self?.updateAudioLevel(buffer: buffer)
         }
         audioEngine.prepare()
         try audioEngine.start()
 
         return (audioEngine, request)
+    }
+
+    private func updateAudioLevel(buffer: AVAudioPCMBuffer) {
+        let channelData = buffer.floatChannelData![0]
+        let channelDataValueArray = stride(from: 0,
+                                           to: Int(buffer.frameLength),
+                                           by: buffer.stride).map { channelData[$0] }
+        let rms: Double = sqrt(channelDataValueArray.map { Double($0 * $0) }.reduce(0, +) / Double(buffer.frameLength))
+        let avgPower = 20.0 * log10(rms)
+        let minDb: Double = -80.0
+        let level: Double = 1.1 + max(0, min(1, (avgPower + 80) / (80 - minDb)))
+
+        Task { @MainActor in
+            withAnimation {
+                self.audioLevel = level
+            }
+        }
     }
 
     nonisolated private func recognitionHandler(audioEngine: AVAudioEngine, result: SFSpeechRecognitionResult?, error: Error?) {

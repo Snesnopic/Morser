@@ -18,6 +18,7 @@ struct ListenView: View {
                 Button {
                     if isRecording {
                         stopTranscribing()
+                        VibrationEngine.shared.readMorseCode(morseCode: speechRecognizer.transcript.morseCode())
                     } else {
                         startTranscribing()
                     }

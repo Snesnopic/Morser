@@ -108,6 +108,11 @@ actor SpeechRecognizer: ObservableObject {
         task?.cancel()
         audioEngine?.stop()
         audioEngine = nil
+        do {
+            try AVAudioSession.sharedInstance().setActive(false)
+        } catch {
+            print("Error deactivating audio session: \(error)")
+        }
         request = nil
         task = nil
     }
@@ -119,7 +124,7 @@ actor SpeechRecognizer: ObservableObject {
         request.shouldReportPartialResults = true
 
         let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(.playAndRecord, mode: .measurement, options: .duckOthers)
+        try audioSession.setCategory(.multiRoute, mode: .measurement, options: .duckOthers)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         let inputNode = audioEngine.inputNode
 
@@ -150,10 +155,6 @@ actor SpeechRecognizer: ObservableObject {
     nonisolated private func transcribe(_ message: String) {
         Task { @MainActor in
             transcript = message
-            if !VibrationEngine.shared.isVibrating() {
-                VibrationEngine.shared.createEngine()
-                VibrationEngine.shared.readMorseCode(morseCode: transcript.morseCode())
-            }
         }
     }
     nonisolated private func transcribe(_ error: Error) {

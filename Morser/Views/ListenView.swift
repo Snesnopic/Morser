@@ -10,7 +10,7 @@ import SwiftUI
 struct ListenView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State var isRecording: Bool = false
-    @State private var circleAnimationAmount: Double = 1.005
+    @ObservedObject var vibrationEngine = VibrationEngine.shared
 
     var body: some View {
         NavigationView {
@@ -18,11 +18,10 @@ struct ListenView: View {
                 Button {
                     if isRecording {
                         stopTranscribing()
-                        if !VibrationEngine.shared.isVibrating() {
-                            VibrationEngine.shared.createEngine()
-                            VibrationEngine.shared.readMorseCode(morseCode: speechRecognizer.transcript.morseCode())
+                        if !vibrationEngine.isVibrating() {
+                            vibrationEngine.createEngine()
+                            vibrationEngine.readMorseCode(morseCode: speechRecognizer.transcript.morseCode())
                         }
-
                     } else {
                         startTranscribing()
                     }
@@ -30,17 +29,9 @@ struct ListenView: View {
                     ZStack {
                         Circle()
                             .foregroundStyle(Color.accentColor.opacity(0.5))
-                            .scaleEffect(circleAnimationAmount)
                             .if(isRecording, transform: { view in
                                 view
-                                    .onAppear {
-                                        withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                            circleAnimationAmount *= 1.2
-                                        }
-                                    }
-                                    .onDisappear {
-                                        circleAnimationAmount = 1.0
-                                    }
+                                    .scaleEffect(speechRecognizer.audioLevel)
                             })
                             .padding()
                         Circle()

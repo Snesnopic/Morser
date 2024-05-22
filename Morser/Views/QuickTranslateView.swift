@@ -33,6 +33,7 @@ struct QuickTranslateView: View {
                                 Color.white.opacity(0.0001)
                                     .onTapGesture {
                                         if !vibrationEngine.isVibrating() {
+                                            vibrationEngine.createEngine()
                                             vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
                                         } else {
                                             vibrationEngine.stopReading()

@@ -5,4 +5,6 @@ Now become a fully fledged app, downloadable [on the app store](https://apps.app
 App Icon by: [Mahary Esposito](https://www.behance.net/mychan1) <br>
 Russian Localisation by: Artem Alekseenko <br>
 Spanish (Latin America) Localisation by: [Fernanda Lozoya Navarro](https://www.behance.net/ferlozoya2) <br>
-Korena Localisation by: [Yun Jae Kim](http://www.mikaylakim.com/)
+Korean Localisation by: [Yun Jae Kim](http://www.mikaylakim.com/)
+Neapolitan Localisation by: [Giovanni Bifulco](https://github.com/GioveWasTaken)
+Turkish Localisation by: [Kevser Günaydin](https://en.wikipedia.org/wiki/Kebab)

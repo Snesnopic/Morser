@@ -72,9 +72,6 @@ class VibrationEngine: ObservableObject {
         triggerNextVibration()
     }
 
-    func readMorseCode(sentence: Sentence) {
-        readMorseCode(morseCode: sentence.sentence!)
-    }
     // Function to trigger vibrations based on Morse code
     func triggerNextVibration() {
         guard morseCodeIndex < morseCodeString.count else {
@@ -99,6 +96,10 @@ class VibrationEngine: ObservableObject {
             playHapticsFile(named: "dot")
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
+            }
+            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration +
+            (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
+                self.triggerNextVibration()
             }
         case "-":
             if VibrationEngine.soundEnabled {

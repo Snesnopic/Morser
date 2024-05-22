@@ -38,6 +38,10 @@ extension String {
       try? string.write(to: url, atomically: true, encoding: .utf8)
       return url
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     // helper function to get single char from string
     func charAt(_ index: Int) -> Character {
         return Array(self)[index]

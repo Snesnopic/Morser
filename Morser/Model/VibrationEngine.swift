@@ -14,6 +14,7 @@ class VibrationEngine: ObservableObject {
     static let shared: VibrationEngine = VibrationEngine()
     var dashAhapUrl: URL?
     var dotAhapUrl: URL?
+<<<<<<< Updated upstream
     private init() {
         dashAhapUrl =  """
         {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dashDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
@@ -23,6 +24,9 @@ class VibrationEngine: ObservableObject {
         {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dotDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
         """.createAhapFile("dash")
     }
+=======
+
+>>>>>>> Stashed changes
     // A haptic engine manages the connection to the haptic server.
     var engine: CHHapticEngine?
 
@@ -41,6 +45,15 @@ class VibrationEngine: ObservableObject {
         sameCharacterSeparatorDelay = 1 * VibrationEngine.timeUnit / 10
         characterSeparatorDelay = 3 * VibrationEngine.timeUnit / 10
         wordSeparatorDelay = 7 * VibrationEngine.timeUnit / 10
+    }
+    func updateAHAPs() {
+        dashAhapUrl =  """
+        {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dashDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
+        """.createAhapFile("dash")
+
+        dotAhapUrl =  """
+        {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dotDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
+        """.createAhapFile("dash")
     }
     var vibrationTimer: Timer?
 
@@ -62,6 +75,8 @@ class VibrationEngine: ObservableObject {
     }
 
     func readMorseCode(sentence: Sentence) {
+        updateTimings()
+        updateAHAPs()
         readMorseCode(morseCode: sentence.sentence!)
     }
     // Function to trigger vibrations based on Morse code
@@ -87,6 +102,7 @@ class VibrationEngine: ObservableObject {
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
+<<<<<<< Updated upstream
             playHaptics(url: dotAhapUrl!)
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { [self] _ in
                 //                playHapticsFile(named: "dot")
@@ -94,6 +110,25 @@ class VibrationEngine: ObservableObject {
                                                       (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                     self.triggerNextVibration()
                 }
+=======
+            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { [self] _ in
+                playHaptics(url: dotAhapUrl!)
+                vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration +
+                                                      (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { [self] _ in
+                    triggerNextVibration()
+                }
+            }
+        case "-":
+            if VibrationEngine.soundEnabled {
+                dashPlayer?.playSound()
+            }
+            for _ in 1...3 {
+                playHaptics(url: dashAhapUrl!)
+                usleep(UInt32(dashDuration) * (10000 * UInt32(VibrationEngine.timeUnit)))
+            }
+            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
+                self.triggerNextVibration()
+>>>>>>> Stashed changes
             }
             case "-":
                 if VibrationEngine.soundEnabled {
@@ -179,6 +214,7 @@ class VibrationEngine: ObservableObject {
         }
     }
     /// - Tag: PlayAHAP
+<<<<<<< Updated upstream
        func playHapticsFile(named filename: String) {
 
            // If the device doesn't support Core Haptics, abort.
@@ -204,6 +240,54 @@ class VibrationEngine: ObservableObject {
        }
     /// - Tag: PlayAHAP
     func playHaptics(url: URL) {
+=======
+    func playHapticsFile(named filename: String) {
+>>>>>>> Stashed changes
+
+        // If the device doesn't support Core Haptics, abort.
+        //        if !supportsHaptics {
+        //            return
+        //        }
+
+<<<<<<< Updated upstream
+=======
+        // Express the path to the AHAP file before attempting to load it.
+        guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
+            return
+        }
+
+>>>>>>> Stashed changes
+        do {
+            // Start the engine in case it's idle.
+            try engine?.start()
+
+            // Tell the engine to play a pattern.
+<<<<<<< Updated upstream
+            try engine?.playPattern(from: url)
+=======
+            try engine?.playPattern(from: URL(fileURLWithPath: path))
+>>>>>>> Stashed changes
+
+        } catch { // Engine startup errors
+            print("An error occured playing \(filename): \(error).")
+        }
+    }        // Maintain a variable to check for Core Haptics compatibility on device.
+    //    lazy var supportsHaptics: Bool = {
+    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //        return appDelegate.supportsHaptics
+    //    }()
+    func isVibrating() -> Bool {
+        return vibrationTimer != nil
+    }
+<<<<<<< Updated upstream
+    // Maintain a variable to check for Core Haptics compatibility on device.
+    //    lazy var supportsHaptics: Bool = {
+    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //        return appDelegate.supportsHaptics
+    //    }()
+=======
+    /// - Tag: PlayAHAP
+    func playHaptics(url: URL) {
 
         // If the device doesn't support Core Haptics, abort.
         //        if !supportsHaptics {
@@ -221,17 +305,5 @@ class VibrationEngine: ObservableObject {
             print("An error occured playing \(url): \(error).")
         }
     }
-    // Maintain a variable to check for Core Haptics compatibility on device.
-    //    lazy var supportsHaptics: Bool = {
-    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //        return appDelegate.supportsHaptics
-    //    }()
-    func isVibrating() -> Bool {
-        return vibrationTimer != nil
-    }
-    // Maintain a variable to check for Core Haptics compatibility on device.
-    //    lazy var supportsHaptics: Bool = {
-    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //        return appDelegate.supportsHaptics
-    //    }()
+>>>>>>> Stashed changes
 }

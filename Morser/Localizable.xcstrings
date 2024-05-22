@@ -32,6 +32,12 @@
             "state" : "translated",
             "value" : "**Начать прослушивание**"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Dinlemeye başla**"
+          }
         }
       }
     },
@@ -65,6 +71,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "**Остановить прослушивание**"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Dinlemeye başla**"
           }
         }
       }
@@ -100,6 +112,12 @@
             "state" : "translated",
             "value" : "мс"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
         }
       }
     },
@@ -130,6 +148,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -168,6 +192,12 @@
             "state" : "translated",
             "value" : "%lld"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
         }
       }
     },
@@ -201,6 +231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ГГц звук будет воспроизведён вместе с вибрация что помочь восприятию."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanımaya yardımcı olmak için dokunsal özelliklerin yanında %lldHz sesi çalınacaktır."
           }
         }
       }
@@ -236,6 +272,12 @@
             "state" : "translated",
             "value" : "Закодировать"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çevir"
+          }
         }
       }
     },
@@ -269,6 +311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скорость вибрации (%lf)"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titreşim Hızı(%lf)"
           }
         }
       }
@@ -304,6 +352,12 @@
             "state" : "translated",
             "value" : "Единицы измерения вибрации"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titreşim Zaman Birimi"
+          }
         }
       }
     },
@@ -337,6 +391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я понял, дай мне помочь тебе"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anlıyorum, size yardım etmeme izin verin."
           }
         }
       }
@@ -372,6 +432,12 @@
             "state" : "translated",
             "value" : "Я опишу позиции меню для тебя"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menü seçeneklerini sizin için açıklayacağım."
+          }
         }
       }
     },
@@ -405,6 +471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я покажу тебе дорогу через касания"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dokunarak gezinmenize yardımcı olacağım."
           }
         }
       }
@@ -440,6 +512,12 @@
             "state" : "translated",
             "value" : "Я отведу тебя на автобусную остановку"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sizi otobüs istasyonuna götüreceğim."
+          }
         }
       }
     },
@@ -473,6 +551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я коснусь твоей руки чтобы привлечь твоё внимание"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dikkatinizi çekmek için elinize dokunacağım."
           }
         }
       }
@@ -508,6 +592,12 @@
             "state" : "translated",
             "value" : "Я запищу это для тебя"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sizin için bunu yazacağım."
+          }
         }
       }
     },
@@ -541,6 +631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Я общаюсь с тобой через касание"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sizinle dokunarak iletişim kuruyorum."
           }
         }
       }
@@ -576,6 +672,12 @@
             "state" : "translated",
             "value" : "Я здесь, чтобы помочь"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yardım için buradayım."
+          }
         }
       }
     },
@@ -609,6 +711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Напиши часто используемое предложение"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sık kullanılan bir cümle girin."
           }
         }
       }
@@ -644,6 +752,12 @@
             "state" : "translated",
             "value" : "Дай мне описать местоположение для тебя"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Size konumu tarif edeceğim."
+          }
         }
       }
     },
@@ -677,6 +791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слушай"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinle"
           }
         }
       }
@@ -712,6 +832,12 @@
             "state" : "translated",
             "value" : "Код Морзе будет здесь!"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mors kodu burada olacak!"
+          }
         }
       }
     },
@@ -745,6 +871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Звук не будет воспроизводиться вместе с вибрацией."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titreşimler dışında bir ses oynatılmayacak."
           }
         }
       }
@@ -780,6 +912,12 @@
             "state" : "translated",
             "value" : "Воспроизвести код"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titreşimleri oynat."
+          }
         }
       }
     },
@@ -813,6 +951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Быстрый перевод"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlı Çeviri"
           }
         }
       }
@@ -848,6 +992,12 @@
             "state" : "translated",
             "value" : "Текст для кодирования"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çevirilecek cümle"
+          }
         }
       }
     },
@@ -881,6 +1031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
           }
         }
       }
@@ -916,6 +1072,12 @@
             "state" : "translated",
             "value" : "Звук"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses"
+          }
         }
       }
     },
@@ -949,6 +1111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Озвучивать код"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses Titreşimleri"
           }
         }
       }
@@ -984,6 +1152,12 @@
             "state" : "translated",
             "value" : "Высота звука"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frekans"
+          }
         }
       }
     },
@@ -1018,6 +1192,12 @@
             "state" : "translated",
             "value" : "Высота звука (%lf)"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frekans"
+          }
         }
       }
     },
@@ -1051,6 +1231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стоп-код"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titreşimleri durdur"
           }
         }
       }
@@ -1092,6 +1278,12 @@
             "state" : "translated",
             "value" : "Единицы времени выражены в мс (миллисекундах).\nВремя: . = 1 единица времени (%1$.0f ms) - = 3 единицы времени(%2$.0f ms) Промежуток между одинаковыми символами = 1 единица времени (%3$.0f ms)\nПромежуток между разными символами = 3 единицы времени (%4$.0f ms)\nПромежуток между словами = 7 единиц времени (%5$.0f ms)"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaman birimi ms (milisaniye) cinsinden ifade edilir.\nZamanlamalar:\n. = 1 zaman birimi (%1$.0f ms)\n- = 3 zaman birimi (%2$.0f ms)\nAynı semboller arasındaki boşluk = 1 zaman birimi (%3$.0f ms)\nFarklı semboller arasındaki boşluk = 3 zaman birimi (%4$.0f ms)\nKelimeler arasındaki boşluk = 7 zaman birimi (%5$.0f ms)"
+          }
         }
       }
     },
@@ -1125,6 +1317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тайминг"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamanlama"
           }
         }
       }
@@ -1160,6 +1358,12 @@
             "state" : "translated",
             "value" : "Транскрипция будет здесь"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çeviri burada olacak!"
+          }
         }
       }
     },
@@ -1193,6 +1397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Да, я могу помочь тебе"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evet, sana yol gösterebilirim."
           }
         }
       }

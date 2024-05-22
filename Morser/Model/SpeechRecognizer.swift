@@ -51,9 +51,9 @@ actor SpeechRecognizer: ObservableObject {
                 guard await SFSpeechRecognizer.hasAuthorizationToRecognize() else {
                     throw RecognizerError.notAuthorizedToRecognize
                 }
-//                guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
-//                    throw RecognizerError.notPermittedToRecord
-//                }
+                guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
+                    throw RecognizerError.notPermittedToRecord
+                }
             } catch {
                 transcribe(error)
             }
@@ -188,3 +188,13 @@ extension SFSpeechRecognizer {
 //        }
 //    }
 // }
+
+extension AVAudioSession {
+    func hasPermissionToRecord() async -> Bool {
+        await withCheckedContinuation { continuation in
+            self.requestRecordPermission { authorized in
+                continuation.resume(returning: authorized)
+            }
+        }
+    }
+}

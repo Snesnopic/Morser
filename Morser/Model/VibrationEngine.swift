@@ -49,7 +49,7 @@ class VibrationEngine: ObservableObject {
 
         dotAhapUrl =  """
         {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dotDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
-        """.createAhapFile("dash")
+        """.createAhapFile("dot")
     }
     var vibrationTimer: Timer?
 

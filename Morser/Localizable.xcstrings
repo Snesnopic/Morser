@@ -27,6 +27,12 @@
             "value" : "**듣기 시작**"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Accuminci'a scutà**"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -67,6 +73,12 @@
             "value" : "**듣기 중지**"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Fermate 'e scutà**"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -101,7 +113,19 @@
             "value" : "%.0f ms"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
+        "nap" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%.0f ms"
@@ -141,7 +165,19 @@
             "value" : "%@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "nap" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -181,7 +217,19 @@
             "value" : "%lld"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "nap" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -227,6 +275,12 @@
             "value" : "인식을 돕기 위해 %lldHz 사운드가 햅틱과 함께 재생됩니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu suono a %lldHz sarà sunato 'nzime a 'e vibrazioni pe aiutà 'a riconoscenza"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -265,6 +319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "암호화"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Codificà"
           }
         },
         "ru" : {
@@ -307,6 +367,12 @@
             "value" : "햅틱 속도 (%lf)"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velocità d' 'e vibrazione (%lf)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -345,6 +411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "햅틱 시간 단위"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unità 'e tiempo d' 'e vibrazione"
           }
         },
         "ru" : {
@@ -387,6 +459,12 @@
             "value" : "이해했습니다. 도와드릴게요."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agg capit, fatt aiuta a me"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -425,6 +503,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "메뉴를 설명해드릴게요."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te spieg 'e opzion 'ncoppo 'o menù"
           }
         },
         "ru" : {
@@ -467,6 +551,12 @@
             "value" : "터치 기능을 이용해 탐색을 도와드리겠습니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te aiuto a navigà cu 'o tatto"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -505,6 +595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "버스 정류장까지 안내해 드리겠습니다."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te porto a' fermata d' 'o pullman"
           }
         },
         "ru" : {
@@ -547,6 +643,12 @@
             "value" : "주의를 끌기 위해 손을 두드리겠습니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te tocco 'a mano pe' piglià 'a to' attenzione"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -585,6 +687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "적어 드릴게요."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te 'o scrivo pe' te"
           }
         },
         "ru" : {
@@ -627,6 +735,12 @@
             "value" : "터치 기능을 이용해 소통을 하고있습니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sto comunicanno cu tte attraverso 'o tatto"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -665,6 +779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "도와드릴게요."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "So' ccà pe' t'aiutà"
           }
         },
         "ru" : {
@@ -707,6 +827,12 @@
             "value" : "자주 사용하는 문장을 기입하세요."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inserisci na frase ca s'usa spesso"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -745,6 +871,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위치를 설명해 드리겠습니다."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lassam descrivere 'o posto"
           }
         },
         "ru" : {
@@ -787,6 +919,12 @@
             "value" : "듣기"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appizz 'e recchie"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -825,6 +963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모스 부호가 여기에 표기될 것입니다."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O codice Morse sarà ccà!"
           }
         },
         "ru" : {
@@ -867,6 +1011,12 @@
             "value" : "햅틱과 함께 소리가 재생되지 않습니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nisciun suono sarà sunato 'nzime a 'e vibrazione"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -905,6 +1055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "햅틱 재생"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riproduce 'e vibrazioni"
           }
         },
         "ru" : {
@@ -947,6 +1103,12 @@
             "value" : "빠른 번역"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traduzion veloc"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -985,6 +1147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "암호화할 문장"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frase da codificà"
           }
         },
         "ru" : {
@@ -1027,6 +1195,12 @@
             "value" : "설정"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impostazioni"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1065,6 +1239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "사운드"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O suon"
           }
         },
         "ru" : {
@@ -1107,6 +1287,12 @@
             "value" : "사운드 햅틱"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibrazioni sonore"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1145,6 +1331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "음정"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonalità d' 'o suono"
           }
         },
         "ru" : {
@@ -1187,6 +1379,12 @@
             "value" : "음정 Sound Pitch (%lf)"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonalità d' 'o suono (%lf)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1225,6 +1423,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "햅틱 스톱"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermate 'e vibrazioni"
           }
         },
         "ru" : {
@@ -1273,6 +1477,12 @@
             "value" : "시간 단위는 ms(밀리초) 단위로 표시됩니다.\n타이밍:\n. = 1 시간 단위(%.0f ms)\n- = 3시간 단위(%.0f ms)\n동일한 기호 사이의 간격 = 1 시간 단위(%.0f ms)\n서로 다른 기호 사이의 간격 = 3시간 단위(%.0f ms)\n단어 사이의 간격 = 7 시간 단위(%.0f ms)"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'unità 'e tiempo è espressa in ms (millisecondi).\nTempi:\n. = 1 unità 'e tiempo (%1$.0f ms)\n= 3 unità 'e tiempo (%2$.0f ms)\nSpazio tra stessi simboli = 1 unità 'e tiempo (%3$.0f ms)\nSpazio tra simboli differenti = 3 unità 'e tiempo (%4$.0f ms)\nSpazio tra parole = 7 unità 'e tiempo (%5$.0f ms)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1311,6 +1521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "타이밍"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O tiemp"
           }
         },
         "ru" : {
@@ -1353,6 +1569,12 @@
             "value" : "녹취록이 여기 있을 겁니다!"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A trascrizion sarà accà"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1391,6 +1613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "네, 안내해 드릴 수 있습니다."
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si, t' puoss guidà"
           }
         },
         "ru" : {

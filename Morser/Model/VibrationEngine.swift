@@ -88,12 +88,13 @@ class VibrationEngine: ObservableObject {
                 return morseCodeString.charAt(morseCodeIndex + 1)
             }
         }
+//        print("Word: \(morseCodeString) current index: \(morseCodeIndex) current char: \(character) next char: \(nextCharacter)")
         morseCodeIndex += 1
 
         switch character {
         case ".":
-//            playHaptics(url: dotAhapUrl!)
-            playHapticsFile(named: "dot")
+            playHaptics(url: dotAhapUrl!)
+//            playHapticsFile(named: "dot")
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
@@ -102,14 +103,14 @@ class VibrationEngine: ObservableObject {
                 self.triggerNextVibration()
             }
         case "-":
+            playHaptics(url: dotAhapUrl!)
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }
-            for _ in 1...3 {
-//                playHaptics(url: dashAhapUrl!)
-                playHapticsFile(named: "dash")
-                usleep(UInt32(dashDuration * 10000.0 * VibrationEngine.timeUnit))
-            }
+//            for _ in 1...3 {
+//                playHapticsFile(named: "dash")
+//                usleep(UInt32(dashDuration * 10000.0 * VibrationEngine.timeUnit))
+//            }
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
                 self.triggerNextVibration()
             }

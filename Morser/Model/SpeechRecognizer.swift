@@ -112,7 +112,6 @@ actor SpeechRecognizer: ObservableObject {
         } catch {
             print("Error deactivating audio session: \(error)")
         }
-        request = nil
         task = nil
     }
 

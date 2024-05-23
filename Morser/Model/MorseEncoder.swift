@@ -815,7 +815,7 @@ class MorseEncoder {
         PersianToMorse.forEach { (key, value) in
             self.PersianToMorse[key] = String(value.reversed())
         }
-        let dictionaries = [AlphaNumToMorse, GreekToMorse, CyrillicToMorse, HebrewToMorse, ArabicToMorse, PersianToMorse, KurdishToMorse, DevanagariToMorse, JapaneseToMorse, ThaiToMorse]
+        let dictionaries = [AlphaNumToMorse, GreekToMorse, ExtendedCyrillicToMorse, CyrillicToMorse, HebrewToMorse, ArabicToMorse, PersianToMorse, KurdishToMorse, DevanagariToMorse, JapaneseToMorse, ThaiToMorse]
         let bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
             partialResult = map.merging(partialResult, uniquingKeysWith: { current, _ in
                 current

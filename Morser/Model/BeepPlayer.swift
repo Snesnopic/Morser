@@ -11,13 +11,8 @@ import AVFoundation
 class BeepPlayer {
     private var engine: AVAudioEngine
     private var playerNode: AVAudioPlayerNode
-    private var audioConverter: AVAudioConverter?
-    private let frequency: Float
-    private let duration: TimeInterval
     private var convertedBuffer: AVAudioPCMBuffer?
     init(frequency: Float, duration: TimeInterval) {
-        self.frequency = frequency
-        self.duration = duration
         engine = AVAudioEngine()
         playerNode = AVAudioPlayerNode()
 

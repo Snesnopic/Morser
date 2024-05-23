@@ -103,7 +103,7 @@ class VibrationEngine: ObservableObject {
                 self.triggerNextVibration()
             }
         case "-":
-            playHaptics(url: dotAhapUrl!)
+            playHaptics(url: dashAhapUrl!)
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }

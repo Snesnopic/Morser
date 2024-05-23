@@ -32,7 +32,6 @@ actor SpeechRecognizer: ObservableObject {
     @MainActor @Published var audioLevel: Double = 0.0
 
     private var audioEngine: AVAudioEngine?
-    private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
     private let recognizer: SFSpeechRecognizer?
 
@@ -94,7 +93,6 @@ actor SpeechRecognizer: ObservableObject {
         do {
             let (audioEngine, request) = try prepareEngine()
             self.audioEngine = audioEngine
-            self.request = request
             self.task = recognizer.recognitionTask(with: request, resultHandler: { [weak self] result, error in
                 self?.recognitionHandler(audioEngine: audioEngine, result: result, error: error)
             })

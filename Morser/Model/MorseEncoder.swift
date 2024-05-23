@@ -807,8 +807,7 @@ class MorseEncoder {
         "ฯ": "--.-."
     ]
     // encode string to morse (removing trailing and leading whitespace)
-    public static func encode(string: String) -> String {
-        var morse: String = ""
+    private static func setupBigDictionary() {
         ArabicToMorse.forEach { (key, value) in
             self.ArabicToMorse[key] = String(value.reversed())
         }
@@ -816,10 +815,17 @@ class MorseEncoder {
             self.PersianToMorse[key] = String(value.reversed())
         }
         let dictionaries = [AlphaNumToMorse, GreekToMorse, ExtendedCyrillicToMorse, CyrillicToMorse, HebrewToMorse, ArabicToMorse, PersianToMorse, KurdishToMorse, DevanagariToMorse, JapaneseToMorse, ThaiToMorse]
-        let bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
+        bigDictionary = dictionaries.reduce(into: [:]) { partialResult, map in
             partialResult = map.merging(partialResult, uniquingKeysWith: { current, _ in
                 current
             })
+        }
+    }
+    private static var bigDictionary: [String: String] = [:]
+    public static func encode(string: String) -> String {
+        var morse: String = ""
+        if bigDictionary.isEmpty {
+            setupBigDictionary()
         }
         // remove trailing leading whitespaces and diacritics
         string.trimmingCharacters(in: .whitespacesAndNewlines)

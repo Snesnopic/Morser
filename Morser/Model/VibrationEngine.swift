@@ -186,29 +186,29 @@ class VibrationEngine: ObservableObject {
         }
     }
     /// - Tag: PlayAHAP
-    func playHapticsFile(named filename: String) {
-
-           // If the device doesn't support Core Haptics, abort.
-           //        if !supportsHaptics {
-           //            return
-           //        }
-
-           // Express the path to the AHAP file before attempting to load it.
-           guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
-               return
-           }
-
-           do {
-               // Start the engine in case it's idle.
-               try engine?.start()
-
-               // Tell the engine to play a pattern.
-               try engine?.playPattern(from: URL(fileURLWithPath: path))
-
-           } catch { // Engine startup errors
-               print("An error occured playing \(filename): \(error).")
-           }
-       }
+//    func playHapticsFile(named filename: String) {
+//
+//           // If the device doesn't support Core Haptics, abort.
+//           //        if !supportsHaptics {
+//           //            return
+//           //        }
+//
+//           // Express the path to the AHAP file before attempting to load it.
+//           guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
+//               return
+//           }
+//
+//           do {
+//               // Start the engine in case it's idle.
+//               try engine?.start()
+//
+//               // Tell the engine to play a pattern.
+//               try engine?.playPattern(from: URL(fileURLWithPath: path))
+//
+//           } catch { // Engine startup errors
+//               print("An error occured playing \(filename): \(error).")
+//           }
+//       }
 
 //    lazy var supportsHaptics: Bool = {
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate

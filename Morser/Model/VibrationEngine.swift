@@ -88,7 +88,7 @@ class VibrationEngine: ObservableObject {
                 return morseCodeString.charAt(morseCodeIndex + 1)
             }
         }
-//        print("Word: \(morseCodeString) current index: \(morseCodeIndex) current char: \(character) next char: \(nextCharacter)")
+        let interCharDelay = (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay)
         morseCodeIndex += 1
 
         switch character {
@@ -99,7 +99,7 @@ class VibrationEngine: ObservableObject {
                 dotPlayer?.playSound()
             }
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration +
-            (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
+            interCharDelay, repeats: false) { _ in
                 self.triggerNextVibration()
             }
         case "-":
@@ -111,7 +111,7 @@ class VibrationEngine: ObservableObject {
 //                playHapticsFile(named: "dash")
 //                usleep(UInt32(dashDuration * 10000.0 * VibrationEngine.timeUnit))
 //            }
-            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + (character == nextCharacter ? sameCharacterSeparatorDelay : characterSeparatorDelay), repeats: false) { _ in
+            vibrationTimer = Timer.scheduledTimer(withTimeInterval: dashDuration + interCharDelay, repeats: false) { _ in
                 self.triggerNextVibration()
             }
         case "/":

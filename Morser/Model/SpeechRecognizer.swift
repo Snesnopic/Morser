@@ -180,9 +180,10 @@ actor SpeechRecognizer: ObservableObject {
         } else {
             errorMessage += error.localizedDescription
         }
-        Task { @MainActor [errorMessage] in
-            transcript = "<< \(errorMessage) >>"
-        }
+//        Task { @MainActor [errorMessage] in
+//            transcript = "<< \(errorMessage) >>"
+//        }
+        print("Error transcribing: \(errorMessage)")
     }
 }
 

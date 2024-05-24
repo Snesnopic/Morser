@@ -95,9 +95,9 @@ struct EncodeView: View {
                             .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor : Color.red)
                             .padding()
                         Text(!vibrationEngine.isVibrating() ? "Play haptics" : "Stop haptics")
-                                .bold()
-                                .font(.title)
-                                .foregroundStyle(.white)
+                            .bold()
+                            .font(.title)
+                            .foregroundStyle(.white)
                     }
                 }
                 .padding(.all, 50)

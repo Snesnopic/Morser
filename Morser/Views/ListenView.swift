@@ -52,10 +52,10 @@ struct ListenView: View {
                 .buttonStyle(.plain)
                 Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!"
                      : "\(speechRecognizer.transcript)")
+                .bold()
                 .if(!speechRecognizer.transcript.isEmpty, transform: { view in
                     view.textSelection(.enabled)
                 })
-                .bold()
                 .font(.title2)
             }
             .navigationTitle("Listen")

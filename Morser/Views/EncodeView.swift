@@ -36,6 +36,7 @@ struct EncodeView: View {
                 if enteredText.isEmpty {
                     Text("Morse code will be here!")
                         .bold()
+                        .font(.title3)
                 } else {
                     if !vibrationEngine.isVibrating() {
                         Text(enteredText.morseCode())

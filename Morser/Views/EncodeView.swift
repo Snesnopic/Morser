@@ -45,6 +45,7 @@ struct EncodeView: View {
                     Text("Morse code will be here!")
                         .bold()
                         .font(.title3)
+                        .accessibilityHidden(true)
                 } else {
                     if !vibrationEngine.isVibrating() {
                         Text(enteredText.morseCode())
@@ -54,6 +55,7 @@ struct EncodeView: View {
                             .onTapGesture {
                                 textFieldIsFocused = false
                             }
+                            .accessibilityHidden(true)
                     } else {
                         HStack {
                             Text(vibrationEngine.morseCodeString.prefix(vibrationEngine.morseCodeIndex - 1)) +
@@ -61,6 +63,7 @@ struct EncodeView: View {
                                 .font(.largeTitle) +
                             Text(vibrationEngine.morseCodeString.dropFirst(vibrationEngine.morseCodeIndex))
                         }
+                        .accessibilityHidden(true)
                         .padding()
                         .font(.title3)
                     }

@@ -29,6 +29,14 @@ struct EncodeView: View {
                     .onSubmit {
                         tryReading()
                     }
+                    .toolbar {
+                        ToolbarItem(placement: .keyboard) {
+                            Button("Close") {
+                                textFieldIsFocused = false
+                            }
+                            .opacity(enteredText.isEmpty ? 0.0 : 1.0)
+                        }
+                    }
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
                     .disableAutocorrection(true)

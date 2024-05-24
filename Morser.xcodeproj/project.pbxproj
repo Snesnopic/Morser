@@ -23,11 +23,42 @@
 		9D7F43402C00C4BB00DB6DE3 /* ExpandingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */; };
 		9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9BC1572BECE24200CD2C5B /* SettingsView.swift */; };
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
+		9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653C2C00E68900663324 /* MorserWatchApp.swift */; };
+		9DAE653F2C00E68900663324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653E2C00E68900663324 /* ContentView.swift */; };
+		9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65402C00E68A00663324 /* Assets.xcassets */; };
+		9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65432C00E68A00663324 /* Preview Assets.xcassets */; };
+		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */; };
+		9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */; };
 		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
 		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DAE65452C00E68A00663324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D3DED1F2BCD109400DAD675 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DAE65392C00E68900663324;
+			remoteInfo = "MorserWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9DAE65482C00E68A00663324 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D0CB0562BF5E78500FD8E57 /* Sentence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sentence.xcdatamodel; sourceTree = "<group>"; };
@@ -49,6 +80,13 @@
 		9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingCircle.swift; sourceTree = "<group>"; };
 		9D9BC1572BECE24200CD2C5B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9DA6966F2BCD7154002B9CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MorserWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAE653C2C00E68900663324 /* MorserWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserWatchApp.swift; sourceTree = "<group>"; };
+		9DAE653E2C00E68900663324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9DAE65402C00E68A00663324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DAE65432C00E68A00663324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
+		9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
 		9DC81D0F2BCD30E300A13C99 /* dash.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dash.ahap; sourceTree = "<group>"; };
 		9DC81D102BCD30E300A13C99 /* dot.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot.ahap; sourceTree = "<group>"; };
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
@@ -57,6 +95,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9D3DED242BCD109400DAD675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAE65372C00E68900663324 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,6 +127,7 @@
 			children = (
 				9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */,
 				9D3DED292BCD109400DAD675 /* Morser */,
+				9DAE653B2C00E68900663324 /* MorserWatch Watch App */,
 				9D3DED282BCD109400DAD675 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3DED272BCD109400DAD675 /* Morser.app */,
+				9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +165,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9DAE653B2C00E68900663324 /* MorserWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE653C2C00E68900663324 /* MorserWatchApp.swift */,
+				9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */,
+				9DAE653E2C00E68900663324 /* ContentView.swift */,
+				9DAE65402C00E68A00663324 /* Assets.xcassets */,
+				9DAE65422C00E68A00663324 /* Preview Content */,
+			);
+			path = "MorserWatch Watch App";
+			sourceTree = "<group>";
+		};
+		9DAE65422C00E68A00663324 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9DAE65432C00E68A00663324 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		9DC81D112BCD30E300A13C99 /* AHAP */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
+				9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */,
 				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */,
@@ -154,14 +222,33 @@
 				9D3DED242BCD109400DAD675 /* Frameworks */,
 				9D3DED252BCD109400DAD675 /* Resources */,
 				9DED8FBA2BF79015008D0B29 /* Swift Lint */,
+				9DAE65482C00E68A00663324 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DAE65462C00E68A00663324 /* PBXTargetDependency */,
+			);
+			name = Morser;
+			productName = Morser;
+			productReference = 9D3DED272BCD109400DAD675 /* Morser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DAE65392C00E68900663324 /* MorserWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DAE654B2C00E68A00663324 /* Build configuration list for PBXNativeTarget "MorserWatch Watch App" */;
+			buildPhases = (
+				9DAE65362C00E68900663324 /* Sources */,
+				9DAE65372C00E68900663324 /* Frameworks */,
+				9DAE65382C00E68900663324 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Morser;
-			productName = Morser;
-			productReference = 9D3DED272BCD109400DAD675 /* Morser.app */;
+			name = "MorserWatch Watch App";
+			productName = "MorserWatch Watch App";
+			productReference = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -171,11 +258,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					9D3DED262BCD109400DAD675 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					9DAE65392C00E68900663324 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -202,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				9D3DED262BCD109400DAD675 /* Morser */,
+				9DAE65392C00E68900663324 /* MorserWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +308,15 @@
 				9D39222F2BCFB86E00FA1D05 /* Localizable.xcstrings in Resources */,
 				9D3DED2F2BCD109500DAD675 /* Assets.xcassets in Resources */,
 				9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAE65382C00E68900663324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */,
+				9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,13 +361,32 @@
 				9D0CB0572BF5E78500FD8E57 /* Sentence.xcdatamodeld in Sources */,
 				9D3DED2B2BCD109400DAD675 /* MorserApp.swift in Sources */,
 				9D7F43402C00C4BB00DB6DE3 /* ExpandingCircle.swift in Sources */,
+				9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
 				9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DAE65362C00E68900663324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAE653F2C00E68900663324 /* ContentView.swift in Sources */,
+				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
+				9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DAE65462C00E68A00663324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DAE65392C00E68900663324 /* MorserWatch Watch App */;
+			targetProxy = 9DAE65452C00E68A00663324 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9D3DED342BCD109500DAD675 /* Debug */ = {
@@ -393,6 +512,7 @@
 		9D3DED372BCD109500DAD675 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Morser/Morser.entitlements;
@@ -439,6 +559,7 @@
 		9D3DED382BCD109500DAD675 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Morser/Morser.entitlements;
@@ -482,6 +603,67 @@
 			};
 			name = Release;
 		};
+		9DAE65492C00E68A00663324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MorserWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3FRYF657J2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		9DAE654A2C00E68A00663324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MorserWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 3FRYF657J2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -499,6 +681,15 @@
 			buildConfigurations = (
 				9D3DED372BCD109500DAD675 /* Debug */,
 				9D3DED382BCD109500DAD675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DAE654B2C00E68A00663324 /* Build configuration list for PBXNativeTarget "MorserWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAE65492C00E68A00663324 /* Debug */,
+				9DAE654A2C00E68A00663324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

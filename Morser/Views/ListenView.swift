@@ -11,7 +11,6 @@ struct ListenView: View {
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State var isRecording: Bool = false
     @ObservedObject var vibrationEngine = VibrationEngine.shared
-
     var body: some View {
         NavigationView {
             VStack {
@@ -53,8 +52,11 @@ struct ListenView: View {
                 .buttonStyle(.plain)
                 Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!"
                      : "\(speechRecognizer.transcript)")
-                    .bold()
-                    .font(.title2)
+                .if(!speechRecognizer.transcript.isEmpty, transform: { view in
+                    view.textSelection(.enabled)
+                })
+                .bold()
+                .font(.title2)
             }
             .navigationTitle("Listen")
         }

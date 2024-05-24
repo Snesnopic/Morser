@@ -87,11 +87,13 @@ struct EncodeView: View {
                         ForEach(circles, id: \.self) { _ in
                             ExpandingCircle()
                         }
-                        .onChange(of: vibrationEngine.morseCodeIndex) { _ in
-                            let newCircle = UUID()
-                            circles.append(newCircle)
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                circles.removeAll { $0 == newCircle }
+                        .onChange(of: vibrationEngine.morseCodeIndex) { newValue in
+                            if newValue != 0 {
+                                let newCircle = UUID()
+                                circles.append(newCircle)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    circles.removeAll { $0 == newCircle }
+                                }
                             }
                         }
                         Circle()

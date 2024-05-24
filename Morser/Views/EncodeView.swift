@@ -28,7 +28,8 @@ struct EncodeView: View {
             VStack {
                 Spacer()
                 HStack {
-                    TextField("Sentence to encode", text: $enteredText)
+                    TextField("Sentence to encode", text: (isRecording ? $speechRecognizer.transcript : ($enteredText)))
+                        .disabled(isRecording || vibrationEngine.isVibrating())
                         .focused($textFieldIsFocused)
                         .saveSize(in: $size)
                         .onSubmit {
@@ -42,8 +43,11 @@ struct EncodeView: View {
                         if isRecording {
                             stopTranscribing()
                             enteredText = speechRecognizer.transcript
+                            speechRecognizer.transcript = ""
                         } else {
+                            textFieldIsFocused = false
                             startTranscribing()
+                            enteredText = ""
                         }
                     } label: {
                         ZStack {
@@ -59,11 +63,12 @@ struct EncodeView: View {
                                 .foregroundStyle(.white)
                         }
                     }
+                    .disabled(vibrationEngine.isVibrating())
                     .frame(height: size.height)
                     .padding(.horizontal, 10)
                     .buttonStyle(.plain)
                 }
-                if enteredText.isEmpty {
+                if enteredText.isEmpty && speechRecognizer.transcript.isEmpty {
                     Text("Morse code will be here!")
                         .bold()
                         .padding()
@@ -71,7 +76,7 @@ struct EncodeView: View {
                         .accessibilityHidden(true)
                 } else {
                     if !vibrationEngine.isVibrating() {
-                        Text(enteredText.morseCode())
+                        Text((isRecording ? speechRecognizer.transcript.morseCode() : enteredText.morseCode()))
                             .font(.title3)
                             .bold()
                             .padding()
@@ -140,6 +145,7 @@ struct EncodeView: View {
                             .foregroundStyle(.white)
                     }
                 }
+                .disabled(isRecording)
                 .padding(.all, 50)
                 .buttonStyle(.plain)
                 Spacer()

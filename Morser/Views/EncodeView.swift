@@ -23,7 +23,6 @@ struct EncodeView: View {
             vibrationEngine.readMorseCode(morseCode: enteredText.morseCode())
         }
     }
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -35,19 +34,10 @@ struct EncodeView: View {
                         .onSubmit {
                             tryReading()
                         }
-                        .toolbar {
-                            ToolbarItem(placement: .keyboard) {
-                                Button("Close") {
-                                    textFieldIsFocused = false
-                                }
-                                .opacity(enteredText.isEmpty ? 0.0 : 1.0)
-                            }
-                        }
                         .textInputAutocapitalization(.never)
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                         .padding(.leading)
-                    
                     Button {
                         if isRecording {
                             stopTranscribing()
@@ -102,12 +92,12 @@ struct EncodeView: View {
                         .font(.title3)
                     }
                 }
-                
+
                 Spacer()
                     .onTapGesture {
                         textFieldIsFocused = false
                     }
-                
+
                 Button {
                     if !vibrationEngine.isVibrating() {
                         print("Size: \(size)")
@@ -157,7 +147,7 @@ struct EncodeView: View {
             .navigationTitle("Encode")
             .ignoresSafeArea(.keyboard)
         }
-        
+
     }
     private func startTranscribing() {
         speechRecognizer.resetTranscript()

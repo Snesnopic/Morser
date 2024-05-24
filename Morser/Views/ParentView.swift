@@ -9,8 +9,6 @@ import SwiftUI
 import CoreData
 
 struct ParentView: View {
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
-    @Environment(\.managedObjectContext) var mocModelContext
     var body: some View {
         TabView {
             EncodeView().tabItem {
@@ -40,12 +38,14 @@ struct ParentView: View {
 }
 
 #Preview {
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) var sentences: FetchedResults<Sentence>
     @StateObject var dataController = DataController()
     return ParentView()
         .environment(\.managedObjectContext, dataController.container.viewContext)
 }
 
 #Preview ("Dark mode") {
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) var sentences: FetchedResults<Sentence>
     @StateObject var dataController = DataController()
     return ParentView()
         .environment(\.managedObjectContext, dataController.container.viewContext)

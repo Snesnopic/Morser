@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct EncodeView: View {
+    @StateObject var speechRecognizer = SpeechRecognizer()
+    @State var isRecording: Bool = false
     @State private var enteredText: String = ""
     @FocusState private var textFieldIsFocused: Bool
     @State private var circleAnimationAmount: Double = 1.005
     @State private var circles: [UUID] = []
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    @State var size: CGSize = .zero
     fileprivate func tryReading() {
         textFieldIsFocused = false
         if !vibrationEngine.isVibrating() {
@@ -25,23 +28,51 @@ struct EncodeView: View {
         NavigationView {
             VStack {
                 Spacer()
-                TextField("Sentence to encode", text: $enteredText)
-                    .focused($textFieldIsFocused)
-                    .onSubmit {
-                        tryReading()
-                    }
-                    .toolbar {
-                        ToolbarItem(placement: .keyboard) {
-                            Button("Close") {
-                                textFieldIsFocused = false
+                HStack {
+                    TextField("Sentence to encode", text: $enteredText)
+                        .focused($textFieldIsFocused)
+                        .saveSize(in: $size)
+                        .onSubmit {
+                            tryReading()
+                        }
+                        .toolbar {
+                            ToolbarItem(placement: .keyboard) {
+                                Button("Close") {
+                                    textFieldIsFocused = false
+                                }
+                                .opacity(enteredText.isEmpty ? 0.0 : 1.0)
                             }
-                            .opacity(enteredText.isEmpty ? 0.0 : 1.0)
+                        }
+                        .textInputAutocapitalization(.never)
+                        .textFieldStyle(.roundedBorder)
+                        .disableAutocorrection(true)
+                        .padding(.leading)
+
+                    Button {
+                        if isRecording {
+                            stopTranscribing()
+                            enteredText = speechRecognizer.transcript
+                        } else {
+                            startTranscribing()
+                        }
+                    } label: {
+                        ZStack {
+                            Circle()
+                                .foregroundStyle(Color.accentColor.opacity(0.5))
+                                .if(isRecording, transform: { view in
+                                    view
+                                        .scaleEffect(speechRecognizer.audioLevel)
+                                })
+                            Circle()
+                                .foregroundStyle(Color.accentColor)
+                            Image(systemName: "mic" + (isRecording ? ".slash" : "") + ".fill")
+                                .foregroundStyle(.white)
                         }
                     }
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(.roundedBorder)
-                    .disableAutocorrection(true)
-                    .padding(.horizontal)
+                    .frame(height: size.height)
+                    .padding(.horizontal, 10)
+                    .buttonStyle(.plain)
+                }
                 if enteredText.isEmpty {
                     Text("Morse code will be here!")
                         .bold()
@@ -78,6 +109,7 @@ struct EncodeView: View {
 
                 Button {
                     if !vibrationEngine.isVibrating() {
+                        print("Size: \(size)")
                         tryReading()
                     } else {
                         vibrationEngine.stopReading()
@@ -125,6 +157,15 @@ struct EncodeView: View {
             .ignoresSafeArea(.keyboard)
         }
 
+    }
+    private func startTranscribing() {
+        speechRecognizer.resetTranscript()
+        speechRecognizer.startTranscribing()
+        isRecording = true
+    }
+    private func stopTranscribing() {
+        speechRecognizer.stopTranscribing()
+        isRecording = false
     }
 }
 

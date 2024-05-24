@@ -1,98 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "**Start listening**" : {
-      "localizations" : {
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Start listening**"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Comenzar a escuchar**"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Inizia ad ascoltare**"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**듣기 시작**"
-          }
-        },
-        "nap" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Accuminci'a scutà**"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Начать прослушивание**"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Dinlemeye başla**"
-          }
-        }
-      }
-    },
-    "**Stop listening**" : {
-      "localizations" : {
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Stop listening**"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Detener la escucha**"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Interrompi l'ascolto**"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**듣기 중지**"
-          }
-        },
-        "nap" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Fermate 'e scutà**"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Остановить прослушивание**"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "**Dinlemeye başla**"
-          }
-        }
-      }
-    },
     "%.0f ms" : {
       "localizations" : {
         "en-GB" : {
@@ -294,6 +202,9 @@
           }
         }
       }
+    },
+    "Close" : {
+
     },
     "Encode" : {
       "localizations" : {
@@ -1399,6 +1310,52 @@
         }
       }
     },
+    "Start listening" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start listening"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comenzar a escuchar"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inizia ad ascoltare"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 시작"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accuminci'a scutà"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать прослушивание"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinlemeye başla"
+          }
+        }
+      }
+    },
     "Stop haptics" : {
       "localizations" : {
         "en-GB" : {
@@ -1441,6 +1398,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titreşimleri durdur"
+          }
+        }
+      }
+    },
+    "Stop listening" : {
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop listening"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detener la escucha"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interrompi l'ascolto"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듣기 중지"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermate 'e scutà"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остановить прослушивание"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dinlemeye başla"
           }
         }
       }

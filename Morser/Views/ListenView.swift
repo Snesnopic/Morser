@@ -39,9 +39,11 @@ struct ListenView: View {
                         VStack {
                             Image(systemName: "mic.fill")
                             if isRecording {
-                                Text("**Stop listening**")
+                                Text("Stop listening")
+                                    .bold()
                             } else {
-                                Text("**Start listening**")
+                                Text("Start listening")
+                                    .bold()
                             }
                         }
                         .font(.title)

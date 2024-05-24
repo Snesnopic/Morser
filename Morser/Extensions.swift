@@ -31,19 +31,19 @@ extension Character {
 
 extension String {
     func createAhapFile(_ withName: String = "temp") -> URL {
-      let url = FileManager.default.temporaryDirectory
-        .appendingPathComponent(withName)
-        .appendingPathExtension("ahap")
-      let string = self
-      try? string.write(to: url, atomically: true, encoding: .utf8)
-      return url
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent(withName)
+            .appendingPathExtension("ahap")
+        let string = self
+        try? string.write(to: url, atomically: true, encoding: .utf8)
+        return url
     }
     // helper function to get single char from string
     func charAt(_ index: Int) -> Character {
         return Array(self)[index]
     }
     func morseCode() -> String {
-          return MorseEncoder.encode(string: self)
+        return MorseEncoder.encode(string: self)
     }
 }
 
@@ -54,5 +54,26 @@ extension FetchedResults<Sentence> {
             array.append(result)
         }
         return array
+    }
+}
+
+struct SizeCalculator: ViewModifier {
+    @Binding var size: CGSize
+    func body(content: Content) -> some View {
+        content
+            .background(
+                GeometryReader { proxy in
+                    Color.clear // we just want the reader to get triggered, so let's use an empty color
+                        .onAppear {
+                            size = proxy.size
+                        }
+                }
+            )
+    }
+}
+
+extension View {
+    func saveSize(in size: Binding<CGSize>) -> some View {
+        modifier(SizeCalculator(size: size))
     }
 }

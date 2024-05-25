@@ -18,7 +18,7 @@ class BeepPlayer {
 
         // Collega il playerNode all'engine
         engine.attach(playerNode)
-        engine.connect(playerNode, to: engine.mainMixerNode, format: nil)
+        engine.connect(playerNode, to: engine.mainMixerNode, format: engine.outputNode.outputFormat(forBus: 0))
 
         // Avvia l'engine
         do {

@@ -13,6 +13,27 @@ struct ContentView: View {
             Button("Vibrate iPhone") {
                 WatchCommunicationManager.shared.sendVibrationRequest()
             }
+            Button("Beep 'SOS'") {
+                let dot = BeepPlayer(frequency: 300, duration: 0.1)
+                let dash = BeepPlayer(frequency: 300, duration: 0.3)
+                dot.playSound()
+                usleep(100000)
+                dot.playSound()
+                usleep(100000)
+                dot.playSound()
+                usleep(300000)
+                dash.playSound()
+                usleep(100000)
+                dash.playSound()
+                usleep(100000)
+                dash.playSound()
+                usleep(3000000)
+                dot.playSound()
+                usleep(100000)
+                dot.playSound()
+                usleep(100000)
+                dot.playSound()
+            }
         }
     }
 }

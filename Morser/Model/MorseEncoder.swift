@@ -848,6 +848,15 @@ class MorseEncoder {
                 morse.append(bigDictionary[char.description.uppercased()] ?? "")
             }
         }
+        // check if it starts or ends with '/'
+        while morse.starts(with: "/") {
+            morse.removeFirst()
+            morse = morse.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        while morse.reversed().starts(with: "/") {
+            morse.removeLast()
+            morse = morse.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
         return morse
     }
 }

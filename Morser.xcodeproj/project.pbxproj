@@ -30,6 +30,7 @@
 		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */; };
 		9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */; };
+		9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
 		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
@@ -372,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */,
 				9DAE653F2C00E68900663324 /* ContentView.swift in Sources */,
 				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
 				9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */,

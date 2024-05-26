@@ -95,6 +95,7 @@
 		9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
 		9DD162FC2C0397A3006A410D /* EncodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeView.swift; sourceTree = "<group>"; };
 		9DD163042C03A512006A410D /* QuickTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTranslateView.swift; sourceTree = "<group>"; };
+		9DD163062C03A89C006A410D /* MorserWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MorserWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
 		9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +177,7 @@
 		9DAE653B2C00E68900663324 /* MorserWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9DD163062C03A89C006A410D /* MorserWatch-Watch-App-Info.plist */,
 				9DAE653C2C00E68900663324 /* MorserWatchApp.swift */,
 				9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */,
 				9DD163012C039B19006A410D /* Views */,
@@ -626,6 +628,7 @@
 				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MorserWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;
@@ -656,6 +659,7 @@
 				DEVELOPMENT_TEAM = 3FRYF657J2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MorserWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;

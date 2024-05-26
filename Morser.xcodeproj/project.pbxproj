@@ -25,12 +25,12 @@
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653C2C00E68900663324 /* MorserWatchApp.swift */; };
 		9DAE653F2C00E68900663324 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653E2C00E68900663324 /* ParentView.swift */; };
-		9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65402C00E68A00663324 /* Assets.xcassets */; };
 		9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65432C00E68A00663324 /* Preview Assets.xcassets */; };
 		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */; };
 		9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */; };
 		9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
+		9DB015632C03C17A00BB18EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DED2E2BCD109500DAD675 /* Assets.xcassets */; };
 		9DD162F82C038F78006A410D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
 		9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */; };
@@ -91,7 +91,6 @@
 		9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MorserWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAE653C2C00E68900663324 /* MorserWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserWatchApp.swift; sourceTree = "<group>"; };
 		9DAE653E2C00E68900663324 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
-		9DAE65402C00E68A00663324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DAE65432C00E68A00663324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
 		9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
@@ -183,7 +182,6 @@
 				9DAE653C2C00E68900663324 /* MorserWatchApp.swift */,
 				9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */,
 				9DD163012C039B19006A410D /* Views */,
-				9DAE65402C00E68A00663324 /* Assets.xcassets */,
 				9DAE65422C00E68A00663324 /* Preview Content */,
 			);
 			path = "MorserWatch Watch App";
@@ -324,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */,
-				9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */,
+				9DB015632C03C17A00BB18EB /* Assets.xcassets in Resources */,
 				9DD163072C03B336006A410D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

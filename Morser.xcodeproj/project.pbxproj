@@ -39,6 +39,7 @@
 		9DD163022C039F9B006A410D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0582BF5E87F00FD8E57 /* DataController.swift */; };
 		9DD163052C03A512006A410D /* QuickTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD163042C03A512006A410D /* QuickTranslateView.swift */; };
 		9DD163072C03B336006A410D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */; };
+		9DD163082C03B43F006A410D /* ExpandingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -380,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD163082C03B43F006A410D /* ExpandingCircle.swift in Sources */,
 				9DD162F82C038F78006A410D /* Extensions.swift in Sources */,
 				9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */,
 				9DAE653F2C00E68900663324 /* ParentView.swift in Sources */,

@@ -8,10 +8,11 @@
 import Foundation
 import SwiftUI
 import WatchConnectivity
+import CoreData
 
 class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
     static let shared = WatchCommunicationManager()
-
+    var managedContext: NSManagedObjectContext?
     private override init() {
         super.init()
         if WCSession.isSupported() {
@@ -36,6 +37,29 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
                     VibrationEngine.shared.updateTimings()
                     print("Ricevute dall'iPhone settings: \(sliderPreference) e \(soundFrequency)")
                 }
+            case "sentences":
+                if let dict = userInfo["dict"] as? [Int32: String] {
+                    print(dict)
+                    do {
+                        let fetchRequest = Sentence.fetchRequest()
+                        let items = try? managedContext!.fetch(fetchRequest)
+                        for item in items ?? [] {
+                            managedContext!.delete(item)
+                        }
+                        try managedContext!.save()
+
+                        try dict.forEach { order, sentence in
+                            print("Frase attuale: \(sentence)")
+                            let newSentence: Sentence = Sentence(context: managedContext!)
+                            newSentence.order = order
+                            newSentence.sentence = sentence
+                            try managedContext!.save()
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+
             default:
 
                 break

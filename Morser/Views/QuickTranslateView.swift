@@ -51,6 +51,7 @@ struct QuickTranslateView: View {
                         })
                         do {
                             try moc.save()
+                            WatchConnectivityProvider.sendSentencesToWatch()
                         } catch {
                             print("Error: \(error)")
                         }
@@ -72,6 +73,7 @@ struct QuickTranslateView: View {
                             }
                             do {
                                 try moc.save()
+                                WatchConnectivityProvider.sendSentencesToWatch()
                             } catch {
                                 print("Error: \(error)")
                             }
@@ -95,7 +97,7 @@ struct QuickTranslateView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -112,6 +114,7 @@ struct QuickTranslateView: View {
             }
             .onAppear {
                 ensureSentencesExist(sentences, moc)
+                WatchConnectivityProvider.sendSentencesToWatch()
             }
             .environment(\.editMode, $mode)
         }

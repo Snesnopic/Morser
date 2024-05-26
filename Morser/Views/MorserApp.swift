@@ -16,6 +16,9 @@ struct MorserApp: App {
         WindowGroup {
             ParentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .onAppear {
+                    WatchConnectivityProvider.shared.managedContext = dataController.container.viewContext
+                }
         }
     }
 }

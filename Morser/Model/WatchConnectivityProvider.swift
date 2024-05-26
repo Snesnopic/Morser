@@ -10,9 +10,11 @@ import WatchConnectivity
 import Combine
 import CoreHaptics
 import SwiftUI
+import CoreData
 
 class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
     static let shared = WatchConnectivityProvider()
+    var managedContext: NSManagedObjectContext?
 
     private override init() {
         super.init()
@@ -62,11 +64,16 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
         }
     }
 
-    private func vibrateDevice() {
-        //        DispatchQueue.main.async {
-        //            let generator = UIImpactFeedbackGenerator(style: .medium)
-        //            generator.impactOccurred()
-        //        }
-        //    }
+    static func sendSentencesToWatch() {
+        var message: [String: Any] = ["action": "sentences"]
+        var fetchRequest = Sentence.fetchRequest()
+        var sentences = try? WatchConnectivityProvider.shared.managedContext!.fetch(fetchRequest)
+        var dict: [Int32: String] = [:]
+        sentences?.forEach({ sentence in
+            dict[sentence.order] = sentence.sentence!
+        })
+        message["dict"] = dict
+        WCSession.default.transferUserInfo(message)
+        print("Mandate al watch sentences: \(message)")
     }
 }

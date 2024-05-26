@@ -20,8 +20,8 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
 
-    func sendVibrationRequest() {
-        WCSession.default.transferUserInfo(["action": "vibrate", "message": "sos"])
+    func sendVibrationRequest(_ message: String) {
+        WCSession.default.transferUserInfo(["action": "vibrate", "message": message])
     }
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         print(userInfo)

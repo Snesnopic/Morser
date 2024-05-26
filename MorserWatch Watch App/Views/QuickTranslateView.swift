@@ -20,12 +20,12 @@ struct QuickTranslateView: View {
                     Text(sentence.sentence!)
                         .onTapGesture {
                             if !vibrationEngine.isVibrating() {
+                                WatchCommunicationManager.shared.sendVibrationRequest(sentence.sentence!)
                                 vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
                             } else if vibrationEngine.morseCodeString == sentence.sentence!.morseCode() {
                                     vibrationEngine.stopReading()
                                 }
                             }
-                        }
                         .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.sentence!.morseCode()) { view in
                             view.listRowBackground(Color.blue)
                         }

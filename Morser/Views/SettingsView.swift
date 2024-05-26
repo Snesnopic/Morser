@@ -56,7 +56,7 @@ struct SettingsView: View {
                             WatchConnectivityProvider.sendSettingsToWatch()
                         }
                     }
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !vibrationEngine.supportsHaptics)
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })

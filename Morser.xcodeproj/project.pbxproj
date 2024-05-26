@@ -33,6 +33,9 @@
 		9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DC81D122BCD30E300A13C99 /* dash.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D0F2BCD30E300A13C99 /* dash.ahap */; };
 		9DC81D132BCD30E300A13C99 /* dot.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 9DC81D102BCD30E300A13C99 /* dot.ahap */; };
+		9DD162F82C038F78006A410D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
+		9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
+		9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -373,9 +376,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD162F82C038F78006A410D /* Extensions.swift in Sources */,
 				9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */,
 				9DAE653F2C00E68900663324 /* ContentView.swift in Sources */,
+				9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */,
 				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
+				9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */,
 				9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

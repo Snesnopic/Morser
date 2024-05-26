@@ -21,10 +21,26 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
     }
 
     func sendVibrationRequest() {
-            WCSession.default.transferUserInfo(["action": "vibrate", "message": "sos"])
+        WCSession.default.transferUserInfo(["action": "vibrate", "message": "sos"])
     }
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        print(userInfo)
+        if let action = userInfo["action"] as? String {
+            switch action {
+            case "settings":
+                @AppStorage("sliderPreference") var sliderPreference = 1.0
+                @AppStorage("soundFrequency") var soundFrequency = 600.0
+                if let slp = userInfo["sliderPreference"]! as? Double, let sof = userInfo["soundFrequency"]! as? Double {
+                    sliderPreference = slp
+                    soundFrequency = sof
+                    VibrationEngine.shared.updateTimings()
+                    print("Ricevute dall'iPhone settings: \(sliderPreference) e \(soundFrequency)")
+                }
+            default:
 
+                break
+            }
+        }
     }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     func sessionReachabilityDidChange(_ session: WCSession) {}

@@ -55,7 +55,8 @@ class VibrationEngine: ObservableObject {
 
     @Published var morseCodeIndex = 0
     @Published var morseCodeString = ""
-
+    // band aid solution
+    @Published var isListening = false
     var dotPlayer: BeepPlayer?
     var dashPlayer: BeepPlayer?
 

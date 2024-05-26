@@ -59,7 +59,7 @@ struct QuickTranslateView: View {
                     .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.sentence!.morseCode()) { view in
                         view.listRowBackground(Color.accentColor)
                     }
-                    .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != sentence.sentence!.morseCode()) { view in
+                    .if((vibrationEngine.isVibrating() && vibrationEngine.morseCodeString != sentence.sentence!.morseCode()) || vibrationEngine.isListening) { view in
                         view
                             .disabled(true)
                             .foregroundStyle(Color.gray)
@@ -96,7 +96,7 @@ struct QuickTranslateView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
-                        .disabled(vibrationEngine.isVibrating())
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())             
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -108,7 +108,7 @@ struct QuickTranslateView: View {
                 label: {
                     Image(systemName: "plus")
                 }
-                .disabled(vibrationEngine.isVibrating())
+                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
             }
             .onAppear {

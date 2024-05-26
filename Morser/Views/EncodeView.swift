@@ -44,10 +44,12 @@ struct EncodeView: View {
                             stopTranscribing()
                             enteredText = speechRecognizer.transcript
                             speechRecognizer.transcript = ""
+                            vibrationEngine.isListening = false
                         } else {
                             textFieldIsFocused = false
                             startTranscribing()
                             enteredText = ""
+                            vibrationEngine.isListening = true
                         }
                     } label: {
                         ZStack {

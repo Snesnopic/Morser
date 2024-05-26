@@ -11,11 +11,13 @@ struct SettingsView: View {
     @AppStorage("soundEnabled") private var soundEnabled = true
     @AppStorage("sliderPreference") private var sliderPreference = 1.0
     @AppStorage("soundFrequency") private var soundFrequency = 600.0
+    @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
         NavigationView {
             Form {
                 Section {
                     Toggle("Sound Haptics", isOn: $soundEnabled)
+                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     if soundEnabled {
                         HStack {
                             Text("Sound Pitch")
@@ -25,6 +27,7 @@ struct SettingsView: View {
                         Slider(value: $soundFrequency, in: 300...800) {
                             Text("Sound Pitch (\(soundFrequency))")
                         }
+                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     }
                 } header: {
                     Text("Sound")
@@ -45,6 +48,7 @@ struct SettingsView: View {
                     Slider(value: $sliderPreference, in: (0.5)...(5.0)) {
                         Text("Haptics Speed (\(sliderPreference))")
                     }
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })

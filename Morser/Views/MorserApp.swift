@@ -18,6 +18,10 @@ struct MorserApp: App {
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .onAppear {
                     WatchConnectivityProvider.shared.managedContext = dataController.container.viewContext
+                    if !VibrationEngine.shared.supportsHaptics {
+                        @AppStorage("soundEnabled") var soundEnabled = true
+                        soundEnabled = true
+                    }
                 }
         }
     }

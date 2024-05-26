@@ -30,10 +30,10 @@ class VibrationEngine: ObservableObject {
     var engine: CHHapticEngine?
 
     // configurable time unit, will be changeable later with settings
-    #endif
-    #if os(watchOS)
+#endif
+#if os(watchOS)
     private init() {}
-    #endif
+#endif
     @AppStorage("soundEnabled") static private var soundEnabled = true
     @AppStorage("sliderPreference") static private var timeUnit = 1.0
     @AppStorage("soundFrequency") static private var soundFrequency = 600.0
@@ -49,7 +49,7 @@ class VibrationEngine: ObservableObject {
         characterSeparatorDelay = 3 * VibrationEngine.timeUnit / 10
         wordSeparatorDelay = 7 * VibrationEngine.timeUnit / 10
     }
-    #if !os(watchOS)
+#if !os(watchOS)
     func updateAHAPs() {
         dashAhapUrl =  """
         {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dashDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
@@ -59,7 +59,7 @@ class VibrationEngine: ObservableObject {
         {"Version":1,"Pattern":[{"Event":{"Time":0,"EventType":"HapticContinuous","EventDuration":\(dotDuration),"EventParameters":[{"ParameterID":"HapticIntensity","ParameterValue":1.0},{"ParameterID":"HapticSharpness","ParameterValue":0.0}]}}]}
         """.createAhapFile("dot")
     }
-    #endif
+#endif
     var vibrationTimer: Timer?
 
     @Published var morseCodeIndex = 0
@@ -71,9 +71,9 @@ class VibrationEngine: ObservableObject {
 
     func readMorseCode(morseCode: String) {
         updateTimings()
-        #if !os(watchOS)
+#if !os(watchOS)
         updateAHAPs()
-        #endif
+#endif
         let soundFreq = Float(VibrationEngine.soundFrequency)
         morseCodeIndex = 0
         morseCodeString = morseCode
@@ -105,20 +105,20 @@ class VibrationEngine: ObservableObject {
 
         switch character {
         case ".":
-            #if !os(watchOS)
+#if !os(watchOS)
             playHaptics(url: dotAhapUrl!)
-            #endif
+#endif
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
             vibrationTimer = Timer.scheduledTimer(withTimeInterval: dotDuration +
-            interCharDelay, repeats: false) { _ in
+                                                  interCharDelay, repeats: false) { _ in
                 self.triggerNextVibration()
             }
         case "-":
-            #if !os(watchOS)
+#if !os(watchOS)
             playHaptics(url: dashAhapUrl!)
-            #endif
+#endif
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }
@@ -210,12 +210,11 @@ class VibrationEngine: ObservableObject {
             print("An error occured playing \(url): \(error).")
         }
     }
-    #endif
-
-//    lazy var supportsHaptics: Bool = {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        return appDelegate.supportsHaptics
-//    }()
+    lazy var supportsHaptics: Bool = {
+        let hapticCapability = CHHapticEngine.capabilitiesForHardware()
+        return hapticCapability.supportsHaptics
+    }()
+#endif
 
     func isVibrating() -> Bool {
         return vibrationTimer != nil

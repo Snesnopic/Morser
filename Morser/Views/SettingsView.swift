@@ -17,7 +17,7 @@ struct SettingsView: View {
             Form {
                 Section {
                     Toggle("Sound Haptics", isOn: $soundEnabled)
-                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !vibrationEngine.supportsHaptics)
                     if soundEnabled {
                         HStack {
                             Text("Sound Pitch")
@@ -56,7 +56,7 @@ struct SettingsView: View {
                             WatchConnectivityProvider.sendSettingsToWatch()
                         }
                     }
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !vibrationEngine.supportsHaptics)
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })

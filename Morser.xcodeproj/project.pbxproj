@@ -24,7 +24,7 @@
 		9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9BC1572BECE24200CD2C5B /* SettingsView.swift */; };
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653C2C00E68900663324 /* MorserWatchApp.swift */; };
-		9DAE653F2C00E68900663324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653E2C00E68900663324 /* ContentView.swift */; };
+		9DAE653F2C00E68900663324 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653E2C00E68900663324 /* ParentView.swift */; };
 		9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65402C00E68A00663324 /* Assets.xcassets */; };
 		9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65432C00E68A00663324 /* Preview Assets.xcassets */; };
 		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -36,6 +36,8 @@
 		9DD162F82C038F78006A410D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED412BCD248100DAD675 /* MorseEncoder.swift */; };
 		9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */; };
+		9DD162FD2C0397A3006A410D /* EncodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD162FC2C0397A3006A410D /* EncodeView.swift */; };
+		9DD163002C039909006A410D /* VibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -86,13 +88,14 @@
 		9DA6966F2BCD7154002B9CBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MorserWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAE653C2C00E68900663324 /* MorserWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorserWatchApp.swift; sourceTree = "<group>"; };
-		9DAE653E2C00E68900663324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9DAE653E2C00E68900663324 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		9DAE65402C00E68A00663324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DAE65432C00E68A00663324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
 		9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
 		9DC81D0F2BCD30E300A13C99 /* dash.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dash.ahap; sourceTree = "<group>"; };
 		9DC81D102BCD30E300A13C99 /* dot.ahap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dot.ahap; sourceTree = "<group>"; };
+		9DD162FC2C0397A3006A410D /* EncodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeView.swift; sourceTree = "<group>"; };
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
 		9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +177,8 @@
 			children = (
 				9DAE653C2C00E68900663324 /* MorserWatchApp.swift */,
 				9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */,
-				9DAE653E2C00E68900663324 /* ContentView.swift */,
+				9DAE653E2C00E68900663324 /* ParentView.swift */,
+				9DD162FC2C0397A3006A410D /* EncodeView.swift */,
 				9DAE65402C00E68A00663324 /* Assets.xcassets */,
 				9DAE65422C00E68A00663324 /* Preview Content */,
 			);
@@ -378,11 +382,13 @@
 			files = (
 				9DD162F82C038F78006A410D /* Extensions.swift in Sources */,
 				9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */,
-				9DAE653F2C00E68900663324 /* ContentView.swift in Sources */,
+				9DAE653F2C00E68900663324 /* ParentView.swift in Sources */,
 				9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */,
 				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
+				9DD163002C039909006A410D /* VibrationEngine.swift in Sources */,
 				9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */,
 				9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */,
+				9DD162FD2C0397A3006A410D /* EncodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

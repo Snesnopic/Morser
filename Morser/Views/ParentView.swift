@@ -21,12 +21,6 @@ struct ParentView: View {
                     title: { Text("Quick Translate") },
                     icon: { Image(systemName: "list.bullet") }
                 ) }
-//            ListenView().tabItem {
-//                Label(
-//                    title: { Text("Listen") },
-//                    icon: { Image(systemName: "waveform") }
-//                )
-//            }
             SettingsView().tabItem {
                 Label(
                     title: { Text("Settings") },

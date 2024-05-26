@@ -23,7 +23,9 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
     func sendVibrationRequest() {
             WCSession.default.transferUserInfo(["action": "vibrate", "message": "sos"])
     }
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
 
+    }
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     func sessionReachabilityDidChange(_ session: WCSession) {}
 }

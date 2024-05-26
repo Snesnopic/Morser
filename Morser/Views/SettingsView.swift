@@ -26,6 +26,10 @@ struct SettingsView: View {
                         }
                         Slider(value: $soundFrequency, in: 300...800) {
                             Text("Sound Pitch (\(soundFrequency))")
+                        } onEditingChanged: { bool in
+                            if !bool {
+                                WatchConnectivityProvider.sendSettingsToWatch()
+                            }
                         }
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     }
@@ -47,6 +51,10 @@ struct SettingsView: View {
                     }
                     Slider(value: $sliderPreference, in: (0.5)...(5.0)) {
                         Text("Haptics Speed (\(sliderPreference))")
+                    } onEditingChanged: { bool in
+                        if !bool {
+                            WatchConnectivityProvider.sendSettingsToWatch()
+                        }
                     }
                     .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     .onChange(of: sliderPreference, perform: { _ in

@@ -9,6 +9,8 @@ import Foundation
 import WatchConnectivity
 import Combine
 import CoreHaptics
+import SwiftUI
+
 class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
     static let shared = WatchConnectivityProvider()
 
@@ -37,6 +39,12 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
     }
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
 
+    }
+    static func sendSettingsToWatch() {
+        @AppStorage("sliderPreference") var sliderPreference = 1.0
+        @AppStorage("soundFrequency") var soundFrequency = 600.0
+        WCSession.default.transferUserInfo(["action": "settings", "sliderPreference": sliderPreference, "soundFrequency": soundFrequency])
+        print("Mandate al watch settings: \(sliderPreference) e \(soundFrequency)")
     }
     @MainActor func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         if let action = userInfo["action"] as? String, let message = userInfo["message"] as? String {

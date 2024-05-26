@@ -28,6 +28,8 @@ actor SpeechRecognizer: ObservableObject {
         }
     }
 
+    @MainActor @Published var errorMessage: String = ""
+
     @MainActor @Published var transcript: String = ""
     @MainActor @Published var audioLevel: Double = 0.0
 
@@ -180,9 +182,9 @@ actor SpeechRecognizer: ObservableObject {
         } else {
             errorMessage += error.localizedDescription
         }
-//        Task { @MainActor [errorMessage] in
-//            transcript = "<< \(errorMessage) >>"
-//        }
+        Task { @MainActor [errorMessage] in
+            self.errorMessage = errorMessage
+        }
         print("Error transcribing: \(errorMessage)")
     }
 }

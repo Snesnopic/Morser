@@ -65,7 +65,7 @@ struct EncodeView: View {
                                 .foregroundStyle(.white)
                         }
                     }
-                    .disabled(vibrationEngine.isVibrating())
+                    .disabled(vibrationEngine.isVibrating() || !speechRecognizer.errorMessage.isEmpty)
                     .frame(height: size.height)
                     .padding(.horizontal, 10)
                     .buttonStyle(.plain)
@@ -103,6 +103,15 @@ struct EncodeView: View {
                     HStack {
                         Image(systemName: "exclamationmark.circle.fill")
                         Text("Your device does not support haptics!\n Only sound will be played.")
+                            .bold()
+                    }
+                    .foregroundStyle(.orange)
+                    Spacer()
+                }
+                if !speechRecognizer.errorMessage.isEmpty {
+                    HStack {
+                        Image(systemName: "exclamationmark.circle.fill")
+                        Text("Voice recognition not available!")
                             .bold()
                     }
                     .foregroundStyle(.orange)

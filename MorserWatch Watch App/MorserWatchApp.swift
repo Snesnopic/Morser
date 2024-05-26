@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
-
+import WatchConnectivity
+import UIKit
 @main
 struct MorserWatch_Watch_AppApp: App {
+    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             ParentView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

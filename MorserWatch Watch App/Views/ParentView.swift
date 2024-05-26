@@ -16,11 +16,11 @@ struct ParentView: View {
                     title: { Text("Encode") },
                     icon: { Image(systemName: "text.badge.plus") }
                 ) }
-//            QuickTranslateView().tabItem {
-//                Label(
-//                    title: { Text("Quick Translate") },
-//                    icon: { Image(systemName: "list.bullet") }
-//                ) }
+            QuickTranslateView().tabItem {
+                Label(
+                    title: { Text("Quick Translate") },
+                    icon: { Image(systemName: "list.bullet") }
+                ) }
         }
     }
 }

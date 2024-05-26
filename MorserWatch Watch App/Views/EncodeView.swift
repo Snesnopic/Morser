@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EncodeView: View {
+    private var watchCommsManager = WatchCommunicationManager.shared
     private var vibrationEngine = VibrationEngine.shared
     var body: some View {
         VStack {

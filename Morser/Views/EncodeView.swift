@@ -68,7 +68,7 @@ struct EncodeView: View {
                     .padding(.horizontal, 10)
                     .buttonStyle(.plain)
                 }
-                if enteredText.isEmpty && speechRecognizer.transcript.isEmpty {
+                if enteredText.isEmpty && speechRecognizer.transcript.isEmpty || (enteredText.morseCode().isEmpty && speechRecognizer.transcript.morseCode().isEmpty) {
                     Text("Morse code will be here!")
                         .bold()
                         .padding()
@@ -105,7 +105,6 @@ struct EncodeView: View {
 
                 Button {
                     if !vibrationEngine.isVibrating() {
-                        print("Size: \(size)")
                         tryReading()
                     } else {
                         vibrationEngine.stopReading()

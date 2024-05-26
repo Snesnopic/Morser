@@ -18,10 +18,11 @@ class BeepPlayer {
 
         // Collega il playerNode all'engine
         engine.attach(playerNode)
-        engine.connect(playerNode, to: engine.mainMixerNode, format: nil)
+        engine.connect(playerNode, to: engine.mainMixerNode, format: engine.outputNode.outputFormat(forBus: 0))
 
         // Avvia l'engine
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: .mixWithOthers)
             try engine.start()
         } catch {
             print("Error starting AVAudioEngine: \(error.localizedDescription)")
@@ -68,8 +69,10 @@ class BeepPlayer {
         }
     }
     func playSound() {
-        // Avvia la riproduzione del suono utilizzando AVAudioPlayerNode
-        playerNode.scheduleBuffer(convertedBuffer!, completionHandler: nil)
-        playerNode.play()
+        if convertedBuffer != nil {
+            // Avvia la riproduzione del suono utilizzando AVAudioPlayerNode
+            playerNode.scheduleBuffer(convertedBuffer!, completionHandler: nil)
+            playerNode.play()
+        }
     }
 }

@@ -96,7 +96,7 @@ struct QuickTranslateView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())             
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

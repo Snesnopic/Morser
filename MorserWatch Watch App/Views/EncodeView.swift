@@ -12,7 +12,7 @@ struct EncodeView: View {
     private var vibrationEngine = VibrationEngine.shared
     var body: some View {
         VStack {
-            Button("Beep 'SOS'") {
+            Button("SOS") {
                 WatchCommunicationManager.shared.sendVibrationRequest("sos")
                 vibrationEngine.readMorseCode(morseCode: "sos".morseCode())
             }

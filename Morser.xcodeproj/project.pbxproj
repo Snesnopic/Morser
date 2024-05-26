@@ -38,6 +38,7 @@
 		9DD163002C039909006A410D /* VibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */; };
 		9DD163022C039F9B006A410D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0582BF5E87F00FD8E57 /* DataController.swift */; };
 		9DD163052C03A512006A410D /* QuickTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD163042C03A512006A410D /* QuickTranslateView.swift */; };
+		9DD163072C03B336006A410D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -323,6 +324,7 @@
 			files = (
 				9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */,
 				9DAE65412C00E68A00663324 /* Assets.xcassets in Resources */,
+				9DD163072C03B336006A410D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,11 @@ struct ParentView: View {
     @State var currentSelection = 1
     var body: some View {
         TabView(selection: $currentSelection) {
-            EncodeView().tabItem {
-                Label(
-                    title: { Text("Encode") },
-                    icon: { Image(systemName: "text.badge.plus") }
-                ) }
+//            EncodeView().tabItem {
+//                Label(
+//                    title: { Text("Encode") },
+//                    icon: { Image(systemName: "text.badge.plus") }
+//                ) }
             QuickTranslateView().tabItem {
                 Label(
                     title: { Text("Quick Translate") },

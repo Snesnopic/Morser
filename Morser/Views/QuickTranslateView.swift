@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct QuickTranslateView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>

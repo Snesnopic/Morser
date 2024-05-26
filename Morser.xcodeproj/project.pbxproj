@@ -36,6 +36,8 @@
 		9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */; };
 		9DD162FD2C0397A3006A410D /* EncodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD162FC2C0397A3006A410D /* EncodeView.swift */; };
 		9DD163002C039909006A410D /* VibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */; };
+		9DD163022C039F9B006A410D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0CB0582BF5E87F00FD8E57 /* DataController.swift */; };
+		9DD163052C03A512006A410D /* QuickTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD163042C03A512006A410D /* QuickTranslateView.swift */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,7 @@
 		9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityProvider.swift; sourceTree = "<group>"; };
 		9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
 		9DD162FC2C0397A3006A410D /* EncodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeView.swift; sourceTree = "<group>"; };
+		9DD163042C03A512006A410D /* QuickTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTranslateView.swift; sourceTree = "<group>"; };
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
 		9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +212,7 @@
 			children = (
 				9DAE653E2C00E68900663324 /* ParentView.swift */,
 				9DD162FC2C0397A3006A410D /* EncodeView.swift */,
+				9DD163042C03A512006A410D /* QuickTranslateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +381,8 @@
 				9DAE653F2C00E68900663324 /* ParentView.swift in Sources */,
 				9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */,
 				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
+				9DD163052C03A512006A410D /* QuickTranslateView.swift in Sources */,
+				9DD163022C039F9B006A410D /* DataController.swift in Sources */,
 				9DD163002C039909006A410D /* VibrationEngine.swift in Sources */,
 				9DD162FA2C038F91006A410D /* Sentence.xcdatamodeld in Sources */,
 				9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */,
@@ -635,7 +641,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -666,7 +672,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

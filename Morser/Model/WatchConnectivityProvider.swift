@@ -49,7 +49,7 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
         print("Mandate al watch settings: \(sliderPreference) e \(soundFrequency)")
     }
     @MainActor func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
-        if let action = userInfo["action"] as? String, let message = userInfo["message"] as? String {
+        if let action = userInfo["action"] as? String, action == "vibrate", let message = userInfo["message"] as? String {
             print("\(message)")
             DispatchQueue.main.async {
                 if VibrationEngine.shared.engine == nil {
@@ -66,8 +66,8 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
 
     static func sendSentencesToWatch() {
         var message: [String: Any] = ["action": "sentences"]
-        var fetchRequest = Sentence.fetchRequest()
-        var sentences = try? WatchConnectivityProvider.shared.managedContext!.fetch(fetchRequest)
+        let fetchRequest = Sentence.fetchRequest()
+        let sentences = try? WatchConnectivityProvider.shared.managedContext!.fetch(fetchRequest)
         var dict: [Int32: String] = [:]
         sentences?.forEach({ sentence in
             dict[sentence.order] = sentence.sentence!

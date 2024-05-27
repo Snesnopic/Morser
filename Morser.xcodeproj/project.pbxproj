@@ -300,7 +300,6 @@
 				"en-GB",
 				tr,
 				uk,
-				ja,
 				nap,
 			);
 			mainGroup = 9D3DED1E2BCD109400DAD675;

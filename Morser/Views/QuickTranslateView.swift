@@ -119,7 +119,9 @@ struct QuickTranslateView: View {
             }
             .onAppear {
                 ensureSentencesExist(sentences, moc)
+                #if !DEBUG
                 WatchConnectivityProvider.sendSentencesToWatch()
+                #endif
             }
             .task {
                 if #available(iOS 17.0, *) {

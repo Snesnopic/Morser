@@ -12,7 +12,7 @@ struct SettingsView: View {
     @AppStorage("sliderPreference") private var sliderPreference = 1.0
     @AppStorage("soundFrequency") private var soundFrequency = 600.0
     @AppStorage("flashlight") private var flashlight = false
-    
+
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
         NavigationView {
@@ -48,7 +48,7 @@ struct SettingsView: View {
                 Section {
                     Toggle("Flashlight Haptics", isOn: $flashlight)
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !TorchEngine.shared.deviceHasTorch())
-                    
+
                 } header: {
                     Text("Flashlight")
                 } footer: {
@@ -71,7 +71,7 @@ struct SettingsView: View {
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })
-                    
+
                 } header: {
                     Text("Timings")
                 }
@@ -97,22 +97,22 @@ struct SettingsView: View {
         case soundAndHaptics
         case disabled
         case notAvailable
-        var rawValue:String  {
+        var rawValue: String {
             switch self {
-            case .soundOnly: 
-                return String(localized:"The torch will flash along the sounds")
-            case .hapticsOnly: 
-                return String(localized:"The torch will flash along the haptics")
-            case .soundAndHaptics: 
-                return String(localized:"The torch will flash along the sounds and haptics")
-            case .disabled: 
-                return String(localized:"The torch will not flash")
-            case .notAvailable: 
-                return String(localized:"Flashlight not available on this device!")
+            case .soundOnly:
+                return String(localized: "The torch will flash along the sounds")
+            case .hapticsOnly:
+                return String(localized: "The torch will flash along the haptics")
+            case .soundAndHaptics:
+                return String(localized: "The torch will flash along the sounds and haptics")
+            case .disabled:
+                return String(localized: "The torch will not flash")
+            case .notAvailable:
+                return String(localized: "Flashlight not available on this device!")
             }
         }
     }
-    
+
     private func whichCase() -> flashlightCases {
         if !TorchEngine.shared.deviceHasTorch() {
             return .notAvailable
@@ -126,7 +126,7 @@ struct SettingsView: View {
             return .soundOnly
         }
     }
-    
+
 }
 
 #Preview {

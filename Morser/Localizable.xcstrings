@@ -249,6 +249,15 @@
         }
       }
     },
+    "Flashlight" : {
+
+    },
+    "Flashlight Haptics" : {
+
+    },
+    "Flashlight not available on this device!" : {
+
+    },
     "Haptics Speed (%lf)" : {
       "localizations" : {
         "en-GB" : {
@@ -939,6 +948,9 @@
         }
       }
     },
+    "Play" : {
+
+    },
     "Play haptics" : {
       "localizations" : {
         "en-GB" : {
@@ -1030,6 +1042,9 @@
           }
         }
       }
+    },
+    "Save and listen" : {
+
     },
     "Sentence to encode" : {
       "localizations" : {
@@ -1353,6 +1368,9 @@
         }
       }
     },
+    "Stop" : {
+
+    },
     "Stop haptics" : {
       "localizations" : {
         "en-GB" : {
@@ -1444,6 +1462,18 @@
           }
         }
       }
+    },
+    "The torch will flash along the haptics" : {
+
+    },
+    "The torch will flash along the sounds" : {
+
+    },
+    "The torch will flash along the sounds and haptics" : {
+
+    },
+    "The torch will not flash" : {
+
     },
     "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%.0f ms)\n- = 3 time units (%.0f ms)\nSpace between same symbols = 1 time unit (%.0f ms)\nSpace between different symbols = 3 time units (%.0f ms)\nSpace between words = 7 time units (%.0f ms)" : {
       "localizations" : {
@@ -1589,6 +1619,9 @@
         }
       }
     },
+    "Voice recognition not available!" : {
+
+    },
     "Yes, I can guide you." : {
       "localizations" : {
         "en-GB" : {
@@ -1634,6 +1667,12 @@
           }
         }
       }
+    },
+    "Your device does not support haptics!\n Only sound will be played." : {
+
+    },
+    "Your saved sentences can be played with just a tap!" : {
+
     }
   },
   "version" : "1.0"

@@ -64,6 +64,11 @@ struct QuickTranslateView: View {
                             .disabled(true)
                             .foregroundStyle(Color.gray)
                     }
+                    if #available(iOS 17.0, *) {
+                        if sentence.order == 0 {
+                            TipView(SaveAndTapTip(), arrowEdge: .top)
+                        }
+                    }
                 }
                 .if(!vibrationEngine.isVibrating(), transform: { view in
                     view
@@ -116,6 +121,14 @@ struct QuickTranslateView: View {
                 ensureSentencesExist(sentences, moc)
                 WatchConnectivityProvider.sendSentencesToWatch()
             }
+            .task {
+                if #available(iOS 17.0, *) {
+                    try? Tips.configure([
+                        .displayFrequency(.immediate),
+                        .datastoreLocation(.applicationDefault)
+                    ])
+                }
+            }
             .environment(\.editMode, $mode)
         }
     }
@@ -131,4 +144,22 @@ struct QuickTranslateView: View {
     return QuickTranslateView()
         .environment(\.managedObjectContext, dataController.container.viewContext)
         .preferredColorScheme(.dark)
+}
+
+import TipKit
+
+// Define your tip's content.
+@available(iOS 17.0, *)
+struct SaveAndTapTip: Tip {
+    var title: Text {
+        Text("Save and listen")
+    }
+
+    var message: Text? {
+        Text("Your saved sentences can be played with just a tap!")
+    }
+
+    var image: Image? {
+        Image(systemName: "waveform")
+    }
 }

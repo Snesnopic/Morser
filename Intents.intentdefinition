@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>INEnums</key>
+	<array/>
+	<key>INIntentDefinitionModelVersion</key>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>HmvOxA</string>
+	<key>INIntentDefinitionSystemVersion</key>
+	<string>23F79</string>
+	<key>INIntentDefinitionToolsBuildVersion</key>
+	<string>15F31d</string>
+	<key>INIntentDefinitionToolsVersion</key>
+	<string>15.4</string>
+	<key>INIntents</key>
+	<array>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>generic</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDeprecated</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>Quickly encode and vibrate a sentence.</string>
+			<key>INIntentDescriptionID</key>
+			<string>EHqMhZ</string>
+			<key>INIntentEligibleForWidgets</key>
+			<true/>
+			<key>INIntentInput</key>
+			<string>sentence</string>
+			<key>INIntentKeyParameter</key>
+			<string>sentence</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>1</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>sentence</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Encode to morse and vibrate</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>ltlfaB</string>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>EncodeMorse</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key>sentence</key>
+				<dict>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Dai</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>osFF9b</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Encode to morse and vibrate</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>uKKLa2</string>
+				</dict>
+			</dict>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Sentence to encode</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>DeikLP</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>SOS</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>EUNF92</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>sentence</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>What sentence to encode?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>ALzJpj</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>1</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>test 456</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>Fg1mNP</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>test 123</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>q2y3Zg</string>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>test 101</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>FKIDO4</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>test 789</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>XbPyei</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Encode to Morse</string>
+			<key>INIntentTitleID</key>
+			<string>PNzBOv</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>Do</string>
+		</dict>
+	</array>
+	<key>INTypes</key>
+	<array/>
+</dict>
+</plist>

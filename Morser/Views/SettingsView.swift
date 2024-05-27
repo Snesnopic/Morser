@@ -48,7 +48,7 @@ struct SettingsView: View {
                 Section {
                     Toggle("Flashlight Haptics", isOn: $flashlight)
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !TorchEngine.shared.deviceHasTorch())
-
+                    
                 } header: {
                     Text("Flashlight")
                 } footer: {
@@ -71,7 +71,7 @@ struct SettingsView: View {
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
                     })
-
+                    
                 } header: {
                     Text("Timings")
                 }
@@ -91,14 +91,28 @@ struct SettingsView: View {
             .navigationTitle(String(localized: "Settings"))
         }
     }
-    private enum flashlightCases: String {
-        case soundOnly = "The torch will flash along the sounds"
-        case hapticsOnly = "The torch will flash along the haptics"
-        case soundAndHaptics = "The torch will flash along the sounds and haptics"
-        case disabled = "The torch will not flash"
-        case notAvailable = "Flashlight not available on this device!"
+    private enum flashlightCases {
+        case soundOnly
+        case hapticsOnly
+        case soundAndHaptics
+        case disabled
+        case notAvailable
+        var rawValue:String  {
+            switch self {
+            case .soundOnly: 
+                return String(localized:"The torch will flash along the sounds")
+            case .hapticsOnly: 
+                return String(localized:"The torch will flash along the haptics")
+            case .soundAndHaptics: 
+                return String(localized:"The torch will flash along the sounds and haptics")
+            case .disabled: 
+                return String(localized:"The torch will not flash")
+            case .notAvailable: 
+                return String(localized:"Flashlight not available on this device!")
+            }
+        }
     }
-
+    
     private func whichCase() -> flashlightCases {
         if !TorchEngine.shared.deviceHasTorch() {
             return .notAvailable
@@ -112,7 +126,7 @@ struct SettingsView: View {
             return .soundOnly
         }
     }
-
+    
 }
 
 #Preview {

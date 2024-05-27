@@ -3,6 +3,12 @@
   "strings" : {
     "%.0f ms" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -56,11 +62,23 @@
             "state" : "translated",
             "value" : "%.0f ms"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
         }
       }
     },
     "%@" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -110,6 +128,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -119,6 +143,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -168,6 +198,12 @@
           }
         },
         "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -224,6 +260,12 @@
             "state" : "translated",
             "value" : "Tanımaya yardımcı olmak için dokunsal özelliklerin yanında %lldHz sesi çalınacaktır."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звук частотою %lldГц буде відтворено разом з тактильним сигналом для полегшення розпізнавання."
+          }
         }
       }
     },
@@ -276,6 +318,12 @@
             "state" : "translated",
             "value" : "Çevir"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кодувати"
+          }
         }
       }
     },
@@ -298,6 +346,18 @@
             "state" : "translated",
             "value" : "Torcia"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플래시"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик"
+          }
         }
       }
     },
@@ -318,7 +378,19 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vibrazioni con torcia"
+            "value" : "Torcia aptica"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "손전등 햅틱"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик тактильный"
           }
         }
       }
@@ -341,6 +413,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Torcia non disponibile su questo dispositivo!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 장치에서는 손전등을 사용할 수 없습니다!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик недоступен на этом устройстве!"
           }
         }
       }
@@ -394,6 +478,12 @@
             "state" : "translated",
             "value" : "Titreşim Hızı(%lf)"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Швидкість тактильних сигналів (%lf)"
+          }
         }
       }
     },
@@ -445,6 +535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titreşim Zaman Birimi"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одиниця часу тактильних сигналів"
           }
         }
       }
@@ -498,6 +594,12 @@
             "state" : "translated",
             "value" : "Anlıyorum, size yardım etmeme izin verin."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я розумію, дозвольте мені допомогти вам."
+          }
         }
       }
     },
@@ -549,6 +651,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menü seçeneklerini sizin için açıklayacağım."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я опишу для вас варіанти меню."
           }
         }
       }
@@ -602,6 +710,12 @@
             "state" : "translated",
             "value" : "Dokunarak gezinmenize yardımcı olacağım."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я допоможу вам орієнтуватися за допомогою дотику."
+          }
         }
       }
     },
@@ -653,6 +767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sizi otobüs istasyonuna götüreceğim."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я проведу вас до автобусної зупинки."
           }
         }
       }
@@ -706,6 +826,12 @@
             "state" : "translated",
             "value" : "Dikkatinizi çekmek için elinize dokunacağım."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я постукаю вас по руці, щоб привернути вашу увагу."
+          }
         }
       }
     },
@@ -757,6 +883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sizin için bunu yazacağım."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я запишу це для вас."
           }
         }
       }
@@ -810,6 +942,12 @@
             "state" : "translated",
             "value" : "Sizinle dokunarak iletişim kuruyorum."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я спілкуюся з вами через дотик."
+          }
         }
       }
     },
@@ -861,6 +999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yardım için buradayım."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я тут, щоб допомогти."
           }
         }
       }
@@ -914,6 +1058,12 @@
             "state" : "translated",
             "value" : "Sık kullanılan bir cümle girin."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вставте часто вживане речення"
+          }
         }
       }
     },
@@ -965,6 +1115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Size konumu tarif edeceğim."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дозвольте мені описати вам місце розташування."
           }
         }
       }
@@ -1018,6 +1174,12 @@
             "state" : "translated",
             "value" : "Dinle"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Слухайте"
+          }
         }
       }
     },
@@ -1069,6 +1231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mors kodu burada olacak!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тут буде азбука Морзе!"
           }
         }
       }
@@ -1122,6 +1290,12 @@
             "state" : "translated",
             "value" : "Titreşimler dışında bir ses oynatılmayacak."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звук не буде відтворюватися разом з тактильними сигналами."
+          }
         }
       }
     },
@@ -1139,10 +1313,34 @@
             "value" : "Play"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comenzar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Avvia"
+            "value" : "Riproduci"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "놀다"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начинать"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başla"
           }
         }
       }
@@ -1196,6 +1394,12 @@
             "state" : "translated",
             "value" : "Titreşimleri oynat."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Відтворити тактильні сигнали"
+          }
         }
       }
     },
@@ -1248,6 +1452,12 @@
             "state" : "translated",
             "value" : "Hızlı Çeviri"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Швидкий переклад"
+          }
         }
       }
     },
@@ -1269,6 +1479,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Salva e ascolta"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장하고 듣기"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохрани и слушай"
           }
         }
       }
@@ -1322,6 +1544,12 @@
             "state" : "translated",
             "value" : "Çevirilecek cümle"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Речення для кодування"
+          }
         }
       }
     },
@@ -1373,6 +1601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ayarlar"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налаштування"
           }
         }
       }
@@ -1426,6 +1660,12 @@
             "state" : "translated",
             "value" : "Ses"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "звук"
+          }
         }
       }
     },
@@ -1477,6 +1717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ses Titreşimleri"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Звукові тактильні сигнали"
           }
         }
       }
@@ -1530,6 +1776,12 @@
             "state" : "translated",
             "value" : "Frekans"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Висота звуку"
+          }
         }
       }
     },
@@ -1581,6 +1833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frekans"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Висота звуку (%lf)"
           }
         }
       }
@@ -1634,6 +1892,12 @@
             "state" : "translated",
             "value" : "Dinlemeye başla"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почніть слухати"
+          }
         }
       }
     },
@@ -1651,10 +1915,40 @@
             "value" : "Stop"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detener"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stop"
+            "value" : "Ferma"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "멈추다"
+          }
+        },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermate"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Останавливаться"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bırak"
           }
         }
       }
@@ -1708,6 +2002,12 @@
             "state" : "translated",
             "value" : "Titreşimleri durdur"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Припинити тактильні сигнали"
+          }
         }
       }
     },
@@ -1758,7 +2058,13 @@
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dinlemeye başla"
+            "value" : "Dinlemeyi bırak"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Припиніть слухати"
           }
         }
       }
@@ -1782,6 +2088,18 @@
             "state" : "translated",
             "value" : "La torcia lampeggerà assieme alle vibrazioni"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토치가 햅틱을 따라 깜박입니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик будет мигать вдоль гаптики"
+          }
         }
       }
     },
@@ -1803,6 +2121,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La torcia lampeggerà assieme ai suoni"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소리에 따라 횃불이 깜박입니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Факел будет мигать под звуки"
           }
         }
       }
@@ -1826,6 +2156,18 @@
             "state" : "translated",
             "value" : "La torcia lampeggerà assieme ai suoni e le vibrazioni"
           }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "소리와 촉각에 따라 토치가 깜박입니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик будет мигать вместе со звуками и тактильными ощущениями."
+          }
         }
       }
     },
@@ -1847,6 +2189,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La torcia non lampeggerà"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "횃불이 깜박이지 않습니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фонарик не будет мигать"
           }
         }
       }
@@ -1900,6 +2254,12 @@
             "state" : "translated",
             "value" : "Zaman birimi ms (milisaniye) cinsinden ifade edilir.\nZamanlamalar:\n. = 1 zaman birimi (%1$.0f ms)\n- = 3 zaman birimi (%2$.0f ms)\nAynı semboller arasındaki boşluk = 1 zaman birimi (%3$.0f ms)\nFarklı semboller arasındaki boşluk = 3 zaman birimi (%4$.0f ms)\nKelimeler arasındaki boşluk = 7 zaman birimi (%5$.0f ms)"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Одиниця часу виражається в мілісекундах (мс).\nЧасові інтервали:\n. = 1 одиниця часу (%1$.0f мс)\n= 3 одиниці часу (%2$.0f мс)\nПроміжок між однаковими символами = 1 одиниця часу (%3$.0f мс)\nПроміжок між різними символами = 3 одиниці часу (%4$.0f мс)\nПроміжок між словами = 7 одиниць часу (%5$.0f мс)"
+          }
         }
       }
     },
@@ -1951,6 +2311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamanlama"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Часові інтервали"
           }
         }
       }
@@ -2004,6 +2370,12 @@
             "state" : "translated",
             "value" : "Çeviri burada olacak!"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тут буде транскрипт!"
+          }
         }
       }
     },
@@ -2025,6 +2397,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Riconoscimento vocale non disponibile!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성인식 불가!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Распознавание голоса недоступно!"
           }
         }
       }
@@ -2078,6 +2462,12 @@
             "state" : "translated",
             "value" : "Evet, sana yol gösterebilirim."
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Так, я можу вас направити."
+          }
         }
       }
     },
@@ -2098,7 +2488,19 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Il tuo dispositivo non supporta il feedback aptico!\n Solo i suoni verranno riprodotti."
+            "value" : "Il tuo dispositivo non supporta  il feedback aptico!\n Solo il suono verrà riprodotto."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "귀하의 장치는 햅틱을 지원하지 않습니다!\n 소리만 재생됩니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше устройство не поддерживает тактильные ощущения!\n Будет воспроизводиться только звук."
           }
         }
       }
@@ -2120,7 +2522,19 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le frasi salvate possono essere avviate con un tap!"
+            "value" : "Le tue frasi salvate possono essere ascoltate con un tap!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭 한 번으로 저장된 문장을 재생할 수 있습니다!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши сохраненные предложения можно воспроизвести одним касанием!"
           }
         }
       }

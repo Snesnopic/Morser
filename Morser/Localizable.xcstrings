@@ -3,6 +3,12 @@
   "strings" : {
     "%.0f ms" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -55,6 +61,12 @@
     },
     "%@" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -107,6 +119,12 @@
     },
     "%lld" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -159,6 +177,12 @@
     },
     "A %lldHz sound will be played alongside haptics to help recognition." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A %lldHz sound will be played alongside haptics to help recognition."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -205,6 +229,12 @@
     },
     "Encode" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encode"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -251,6 +281,12 @@
     },
     "Flashlight" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -267,6 +303,12 @@
     },
     "Flashlight Haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight Haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,6 +325,12 @@
     },
     "Flashlight not available on this device!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight not available on this device!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +347,12 @@
     },
     "Haptics Speed (%lf)" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptics Speed (%lf)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -345,6 +399,12 @@
     },
     "Haptics Time Unit" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptics Time Unit"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -391,6 +451,12 @@
     },
     "I understand, let me assist you." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I understand, let me assist you."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -437,6 +503,12 @@
     },
     "I'll describe the menu options for you." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll describe the menu options for you."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -483,6 +555,12 @@
     },
     "I'll help you navigate through touch." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll help you navigate through touch."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -529,6 +607,12 @@
     },
     "I'll lead you to the bus stop." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll lead you to the bus stop."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -575,6 +659,12 @@
     },
     "I'll tap your hand to get your attention." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll tap your hand to get your attention."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -621,6 +711,12 @@
     },
     "I'll write it down for you." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'll write it down for you."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -667,6 +763,12 @@
     },
     "I'm communicating with you through touch." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'm communicating with you through touch."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -713,6 +815,12 @@
     },
     "I'm here to help." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I'm here to help."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -759,6 +867,12 @@
     },
     "Insert a frequently used sentence" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert a frequently used sentence"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -805,6 +919,12 @@
     },
     "Let me describe the location to you." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let me describe the location to you."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -851,6 +971,12 @@
     },
     "Listen" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -897,6 +1023,12 @@
     },
     "Morse code will be here!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Morse code will be here!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -943,6 +1075,12 @@
     },
     "No sound will be played alongside haptics." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No sound will be played alongside haptics."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -989,6 +1127,12 @@
     },
     "Play" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1005,6 +1149,12 @@
     },
     "Play haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1051,6 +1201,12 @@
     },
     "Quick Translate" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quick Translate"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1097,6 +1253,12 @@
     },
     "Save and listen" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save and listen"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1113,6 +1275,12 @@
     },
     "Sentence to encode" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sentence to encode"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1159,6 +1327,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1205,6 +1379,12 @@
     },
     "Sound" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1251,6 +1431,12 @@
     },
     "Sound Haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1297,6 +1483,12 @@
     },
     "Sound Pitch" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Pitch"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1343,6 +1535,12 @@
     },
     "Sound Pitch (%lf)" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound Pitch (%lf)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1389,6 +1587,12 @@
     },
     "Start listening" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start listening"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1435,6 +1639,12 @@
     },
     "Stop" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1451,6 +1661,12 @@
     },
     "Stop haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1497,6 +1713,12 @@
     },
     "Stop listening" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop listening"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1543,6 +1765,12 @@
     },
     "The torch will flash along the haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1559,6 +1787,12 @@
     },
     "The torch will flash along the sounds" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the sounds"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1575,6 +1809,12 @@
     },
     "The torch will flash along the sounds and haptics" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the sounds and haptics"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1591,6 +1831,12 @@
     },
     "The torch will not flash" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will not flash"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1659,6 +1905,12 @@
     },
     "Timings" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timings"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1705,6 +1957,12 @@
     },
     "Transcript will be here!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcript will be here!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1751,6 +2009,12 @@
     },
     "Voice recognition not available!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice recognition not available!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1767,6 +2031,12 @@
     },
     "Yes, I can guide you." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, I can guide you."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1813,6 +2083,12 @@
     },
     "Your device does not support haptics!\n Only sound will be played." : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your device does not support haptics!\n Only sound will be played."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1829,6 +2105,12 @@
     },
     "Your saved sentences can be played with just a tap!" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your saved sentences can be played with just a tap!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",

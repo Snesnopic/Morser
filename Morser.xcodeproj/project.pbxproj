@@ -41,6 +41,7 @@
 		9DD163072C03B336006A410D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */; };
 		9DD163082C03B43F006A410D /* ExpandingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */; };
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
+		9DD801DB2C04B630007DEC31 /* TorchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD801DA2C04B630007DEC31 /* TorchEngine.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		9DD163042C03A512006A410D /* QuickTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickTranslateView.swift; sourceTree = "<group>"; };
 		9DD163062C03A89C006A410D /* MorserWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MorserWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
+		9DD801DA2C04B630007DEC31 /* TorchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorchEngine.swift; sourceTree = "<group>"; };
 		9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				9D0CB0552BF5E78500FD8E57 /* Sentence.xcdatamodeld */,
 				9D0CB0582BF5E87F00FD8E57 /* DataController.swift */,
 				9D3DED3F2BCD23E700DAD675 /* VibrationEngine.swift */,
+				9DD801DA2C04B630007DEC31 /* TorchEngine.swift */,
 				9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */,
 				9D3DED412BCD248100DAD675 /* MorseEncoder.swift */,
 				9D1CB9AF2BCEB5930088F90C /* SpeechRecognizer.swift */,
@@ -359,6 +362,7 @@
 			files = (
 				9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */,
 				9D3DED2D2BCD109400DAD675 /* ParentView.swift in Sources */,
+				9DD801DB2C04B630007DEC31 /* TorchEngine.swift in Sources */,
 				9D1CB9B02BCEB5930088F90C /* SpeechRecognizer.swift in Sources */,
 				9D3DED3C2BCD16DE00DAD675 /* QuickTranslateView.swift in Sources */,
 				9D3DED402BCD23E700DAD675 /* VibrationEngine.swift in Sources */,

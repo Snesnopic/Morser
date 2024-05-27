@@ -34,6 +34,7 @@ class VibrationEngine: ObservableObject {
 #if os(watchOS)
     private init() {}
 #endif
+    @AppStorage("flashlight") private var flashlight = false
     @AppStorage("soundEnabled") static private var soundEnabled = true
     @AppStorage("sliderPreference") static private var timeUnit = 1.0
     @AppStorage("soundFrequency") static private var soundFrequency = 600.0
@@ -107,6 +108,9 @@ class VibrationEngine: ObservableObject {
         case ".":
 #if !os(watchOS)
             playHaptics(url: dotAhapUrl!)
+            if flashlight {
+                TorchEngine.shared.toggleTorchFor(dotDuration)
+            }
 #endif
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
@@ -118,6 +122,9 @@ class VibrationEngine: ObservableObject {
         case "-":
 #if !os(watchOS)
             playHaptics(url: dashAhapUrl!)
+            if flashlight {
+                TorchEngine.shared.toggleTorchFor(dashDuration)
+            }
 #endif
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()

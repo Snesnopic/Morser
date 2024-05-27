@@ -22,7 +22,11 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
     }
 
     func sendVibrationRequest(_ message: String) {
-        WCSession.default.transferUserInfo(["action": "vibrate", "message": message])
+        WCSession.default.transferUserInfo(["action": "vibrate", "message": message, "maxDate": Date.now.addingTimeInterval(3)])
+    }
+
+    func sendStopRequest() {
+        WCSession.default.transferUserInfo(["action": "stop"])
     }
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         print(userInfo)

@@ -144,6 +144,9 @@ class VibrationEngine: ObservableObject {
 
     // Function to stop reading Morse code
     func stopReading() {
+        #if os(watchOS)
+        WatchCommunicationManager.shared.sendStopRequest()
+        #endif
         morseCodeIndex = 0
         morseCodeString = ""
         vibrationTimer?.invalidate()

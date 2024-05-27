@@ -50,17 +50,19 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
     }
     @MainActor func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         if let action = userInfo["action"] as? String, action == "vibrate", let message = userInfo["message"] as? String {
-            print("\(message)")
-            DispatchQueue.main.async {
-                if VibrationEngine.shared.engine == nil {
-                    do {
-                        VibrationEngine.shared.engine = try CHHapticEngine()
-                    } catch {
-                        print(error)
+            let maxDate = userInfo["maxDate"] as? Date
+            if maxDate! >= .now {
+                DispatchQueue.main.async {
+                    if VibrationEngine.shared.engine == nil {
+                        do {
+                            VibrationEngine.shared.engine = try CHHapticEngine()
+                        } catch {
+                            print(error)
+                        }
                     }
+                    VibrationEngine.shared.readMorseCode(morseCode: message.morseCode())
                 }
-                VibrationEngine.shared.readMorseCode(morseCode: message.morseCode())
-             }
+            }
         }
     }
 

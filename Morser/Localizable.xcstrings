@@ -250,13 +250,52 @@
       }
     },
     "Flashlight" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torcia"
+          }
+        }
+      }
     },
     "Flashlight Haptics" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight Haptics"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibrazioni con torcia"
+          }
+        }
+      }
     },
     "Flashlight not available on this device!" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flashlight not available on this device!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torcia non disponibile su questo dispositivo!"
+          }
+        }
+      }
     },
     "Haptics Speed (%lf)" : {
       "localizations" : {
@@ -949,7 +988,20 @@
       }
     },
     "Play" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia"
+          }
+        }
+      }
     },
     "Play haptics" : {
       "localizations" : {
@@ -1044,7 +1096,20 @@
       }
     },
     "Save and listen" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save and listen"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva e ascolta"
+          }
+        }
+      }
     },
     "Sentence to encode" : {
       "localizations" : {
@@ -1369,7 +1434,20 @@
       }
     },
     "Stop" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop"
+          }
+        }
+      }
     },
     "Stop haptics" : {
       "localizations" : {
@@ -1464,16 +1542,68 @@
       }
     },
     "The torch will flash along the haptics" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the haptics"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La torcia lampeggerà assieme alle vibrazioni"
+          }
+        }
+      }
     },
     "The torch will flash along the sounds" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the sounds"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La torcia lampeggerà assieme ai suoni"
+          }
+        }
+      }
     },
     "The torch will flash along the sounds and haptics" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will flash along the sounds and haptics"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La torcia lampeggerà assieme ai suoni e le vibrazioni"
+          }
+        }
+      }
     },
     "The torch will not flash" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The torch will not flash"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La torcia non lampeggerà"
+          }
+        }
+      }
     },
     "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%.0f ms)\n- = 3 time units (%.0f ms)\nSpace between same symbols = 1 time unit (%.0f ms)\nSpace between different symbols = 3 time units (%.0f ms)\nSpace between words = 7 time units (%.0f ms)" : {
       "localizations" : {
@@ -1620,7 +1750,20 @@
       }
     },
     "Voice recognition not available!" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voice recognition not available!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riconoscimento vocale non disponibile!"
+          }
+        }
+      }
     },
     "Yes, I can guide you." : {
       "localizations" : {
@@ -1669,10 +1812,36 @@
       }
     },
     "Your device does not support haptics!\n Only sound will be played." : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your device does not support haptics!\n Only sound will be played."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il tuo dispositivo non supporta il feedback aptico!\n Solo i suoni verranno riprodotti."
+          }
+        }
+      }
     },
     "Your saved sentences can be played with just a tap!" : {
-
+      "localizations" : {
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your saved sentences can be played with just a tap!"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le frasi salvate possono essere avviate con un tap!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -3,12 +3,6 @@
   "strings" : {
     "%.0f ms" : {
       "localizations" : {
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%.0f ms"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -28,12 +22,6 @@
           }
         },
         "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%.0f ms"
-          }
-        },
-        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%.0f ms"
@@ -73,12 +61,6 @@
     },
     "%@" : {
       "localizations" : {
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -98,12 +80,6 @@
           }
         },
         "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -143,12 +119,6 @@
     },
     "%lld" : {
       "localizations" : {
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -168,12 +138,6 @@
           }
         },
         "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        },
-        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -341,6 +305,12 @@
             "value" : "Flashlight"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linterna"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -353,10 +323,28 @@
             "value" : "플래시"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torcia"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El feneri"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ліхтарик"
           }
         }
       }
@@ -375,6 +363,12 @@
             "value" : "Flashlight Haptics"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hápticos de la linterna"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,10 +381,28 @@
             "value" : "손전등 햅틱"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Torcia aptica"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик тактильный"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El Feneri Dokunuşları"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вібрації ліхтарика"
           }
         }
       }
@@ -409,6 +421,12 @@
             "value" : "Flashlight not available on this device!"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡La linterna no está disponible en este dispositivo!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -421,10 +439,28 @@
             "value" : "이 장치에서는 손전등을 사용할 수 없습니다!"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'A torcia nun può esse usata 'mbriaco stu dispositivo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик недоступен на этом устройстве!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El feneri bu cihazda mevcut değil!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ліхтарик недоступний на цьому пристрої!"
           }
         }
       }
@@ -1331,6 +1367,12 @@
             "value" : "놀다"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fa sentì"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1341,6 +1383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Başla"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "грати"
           }
         }
       }
@@ -1475,6 +1523,12 @@
             "value" : "Save and listen"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar y escuchar"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1487,10 +1541,28 @@
             "value" : "저장하고 듣기"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scenn e rigioca"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сохрани и слушай"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet ve dinle"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Збережіть і послухайте"
           }
         }
       }
@@ -1950,6 +2022,12 @@
             "state" : "translated",
             "value" : "Bırak"
           }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "СТІЙ"
+          }
         }
       }
     },
@@ -2083,6 +2161,12 @@
             "value" : "The torch will flash along the haptics"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La antorcha parpadeará a lo largo de los hápticos."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2095,10 +2179,28 @@
             "value" : "토치가 햅틱을 따라 깜박입니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'A torcia lampeggerà accussì assieme alli vibrazziona"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик будет мигать вдоль гаптики"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meşale dokunma duyuları boyunca yanıp sönecek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Факел спалахне вздовж гаптики"
           }
         }
       }
@@ -2117,6 +2219,12 @@
             "value" : "The torch will flash along the sounds"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La antorcha parpadeará junto con los sonidos."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2129,10 +2237,28 @@
             "value" : "소리에 따라 횃불이 깜박입니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'A torcia lampeggerà accussì assieme 'e sònne"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Факел будет мигать под звуки"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meşale sesler boyunca yanıp sönecek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Факел спалахне під звуки"
           }
         }
       }
@@ -2151,6 +2277,12 @@
             "value" : "The torch will flash along the sounds and haptics"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La antorcha parpadeará junto con los sonidos y la sensación táctil."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2163,10 +2295,28 @@
             "value" : "소리와 촉각에 따라 토치가 깜박입니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "'A torcia lampeggerà accussì assieme 'e sònne e alli vibrazziona"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик будет мигать вместе со звуками и тактильными ощущениями."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meşale sesler ve dokunma duyuları boyunca yanıp sönecek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Факел буде спалахувати разом із звуками та тактильними відчуттями"
           }
         }
       }
@@ -2185,6 +2335,12 @@
             "value" : "The torch will not flash"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La antorcha no parpadea"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2197,10 +2353,28 @@
             "value" : "횃불이 깜박이지 않습니다."
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "’A torcia nun lampegge"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фонарик не будет мигать"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meşale yanıp sönmeyecek"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Факел не спалахне"
           }
         }
       }
@@ -2393,6 +2567,12 @@
             "value" : "Voice recognition not available!"
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡El reconocimiento de voz no está disponible!"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2405,10 +2585,28 @@
             "value" : "음성인식 불가!"
           }
         },
+        "nap" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nun c'è riconuscimento vocale!"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Распознавание голоса недоступно!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ses tanıma mevcut değil!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Розпізнавання голосу недоступне!"
           }
         }
       }
@@ -2485,6 +2683,12 @@
             "value" : "Your device does not support haptics!\n Only sound will be played."
           }
         },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Su dispositivo no admite hápticos!\n Sólo se reproducirá sonido."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2508,6 +2712,18 @@
             "state" : "translated",
             "value" : "Ваше устройство не поддерживает тактильные ощущения!\n Будет воспроизводиться только звук."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cihazınız haptikleri desteklemiyor!\n Yalnızca ses çalınacaktır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш пристрій не підтримує haptics!\n Відтворюватиметься лише звук."
+          }
         }
       }
     },
@@ -2523,6 +2739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your saved sentences can be played with just a tap!"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Tus frases guardadas se pueden reproducir con solo un toque!"
           }
         },
         "it" : {
@@ -2547,6 +2769,18 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ваши сохраненные предложения можно воспроизвести одним касанием!"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydedilen cümleleriniz tek bir dokunuşla çalınabilir!"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваші збережені речення можна відтворити одним дотиком!"
           }
         }
       }

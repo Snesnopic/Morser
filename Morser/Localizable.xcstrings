@@ -3,6 +3,12 @@
   "strings" : {
     "**Start listening**" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Ξεκινήστε να ακούτ**"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -55,6 +61,12 @@
     },
     "**Stop listening**" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "**Σταματήστε να ακούτε**"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +311,12 @@
     },
     "A %lldHz sound will be played alongside haptics to help recognition." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ένας ήχος %lldHz θα αναπαραχθεί μαζί με απτικά ερεθίσματα για να βοηθήσει στην αναγνώριση."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -351,6 +369,12 @@
     },
     "Encode" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Κωδικοποιήστε"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -403,6 +427,12 @@
     },
     "Haptics Speed (%lf)" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ταχύτητα απτικών (%lf)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -455,6 +485,12 @@
     },
     "Haptics Time Unit" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Μονάδα χρόνου απτικών"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -507,6 +543,12 @@
     },
     "I understand, let me assist you." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Καταλαβαίνω, αφήστε με να σας βοηθήσω"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -559,6 +601,12 @@
     },
     "I'll describe the menu options for you." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θα σας περιγράψω τις επιλογές του μενού."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -611,6 +659,12 @@
     },
     "I'll help you navigate through touch." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θα σας βοηθήσω να πλοηγηθείτε μέσω αφής."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -663,6 +717,12 @@
     },
     "I'll lead you to the bus stop." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θα σας οδηγήσω στη στάση του λεωφορείου."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -715,6 +775,12 @@
     },
     "I'll tap your hand to get your attention." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θα χτυπήσω το χέρι σας για να τραβήξω την προσοχή σας."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -767,6 +833,12 @@
     },
     "I'll write it down for you." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Θα το γράψω για εσάς."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -819,6 +891,12 @@
     },
     "I'm communicating with you through touch." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Επικοινωνώ μαζί σας μέσω αφής."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -871,6 +949,12 @@
     },
     "I'm here to help." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Είμαι εδώ για να βοηθήσω"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -923,6 +1007,12 @@
     },
     "Insert a frequently used sentence" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εισάγετε μια συχνά χρησιμοποιούμενη πρόταση"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -975,6 +1065,12 @@
     },
     "Let me describe the location to you." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αφήστε με να σας περιγράψω την τοποθεσία"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1027,6 +1123,12 @@
     },
     "Listen" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ακούστε"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1079,6 +1181,12 @@
     },
     "Morse code will be here!" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ο κώδικας Μορς θα είναι εδώ!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1131,6 +1239,12 @@
     },
     "No sound will be played alongside haptics." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Δεν θα αναπαραχθεί ήχος μαζί με τα απτικά ερεθίσματα."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1183,6 +1297,12 @@
     },
     "Play haptics" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ενεργοποιήστε τα απτικά ερεθίσματα"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1235,6 +1355,12 @@
     },
     "Quick Translate" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γρήγορη Μετάφραση"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1287,6 +1413,12 @@
     },
     "Sentence to encode" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Πρόταση για κωδικοποίηση"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1339,6 +1471,12 @@
     },
     "Settings" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ρυθμίσεις"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1391,6 +1529,12 @@
     },
     "Sound" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ήχος"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1443,6 +1587,12 @@
     },
     "Sound Haptics" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ήχος Απτικά Ερεθίσματα"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1495,6 +1645,12 @@
     },
     "Sound Pitch" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ύψος Ήχου"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1547,6 +1703,12 @@
     },
     "Sound Pitch (%lf)" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ύψος Ήχου (%lf)"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1599,6 +1761,12 @@
     },
     "Stop haptics" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διακόψτε τα απτικά ερεθίσματα"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1651,6 +1819,12 @@
     },
     "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%.0f ms)\n- = 3 time units (%.0f ms)\nSpace between same symbols = 1 time unit (%.0f ms)\nSpace between different symbols = 3 time units (%.0f ms)\nSpace between words = 7 time units (%.0f ms)" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η μονάδα χρόνου εκφράζεται σε ms (χιλιοστά του δευτερολέπτου).\nΧρονισμοί:\n. = 1 μονάδα χρόνου (%1$.0f ms)\n\n= 3 μονάδες χρόνου (%2$.0f ms)\nΔιάστημα μεταξύ των ίδιων συμβόλων = 1 μονάδα χρόνου (%3$.0f ms)\nΔιάστημα μεταξύ διαφορετικών συμβόλων = 3 μονάδες χρόνου (%4$.0f ms)\nΔιάστημα μεταξύ λέξεων = 7 μονάδες χρόνου (%5$.0f ms)"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -1709,6 +1883,12 @@
     },
     "Timings" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρονισμοί"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1761,6 +1941,12 @@
     },
     "Transcript will be here!" : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η απομαγνητοφώνηση θα είναι εδώ!"
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1813,6 +1999,12 @@
     },
     "Yes, I can guide you." : {
       "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ναι, μπορώ να σας καθοδηγήσω."
+          }
+        },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",

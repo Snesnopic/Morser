@@ -8,3 +8,4 @@ Spanish (Latin America) Localisation by: [Fernanda Lozoya Navarro](https://www.b
 Korean Localisation by: [Yun Jae Kim](http://www.mikaylakim.com/) <br>
 Neapolitan Localisation by: [Giovanni Bifulco](https://github.com/GioveWasTaken) <br>
 Turkish Localisation by: [Kevser Günaydin](https://www.linkedin.com/in/kevser-günaydın-2939561b8/) <br>
+French Localisation by: [Guillarme Coquard](https://github.com/g-cqd) <br>

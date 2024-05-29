@@ -70,7 +70,7 @@ struct EncodeView: View {
                     .padding(.trailing, 10)
                     .buttonStyle(.plain)
                 }
-                if enteredText.isEmpty && speechRecognizer.transcript.isEmpty || (enteredText.morseCode().isEmpty && speechRecognizer.transcript.morseCode().isEmpty) {
+                if enteredText.isEmpty && speechRecognizer.transcript.isEmpty && (enteredText.morseCode().isEmpty && speechRecognizer.transcript.morseCode().isEmpty) && vibrationEngine.morseCodeString.isEmpty {
                     Text("Morse code will be here!")
                         .bold()
                         .padding()

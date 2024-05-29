@@ -8,6 +8,8 @@
 import Foundation
 #if !os(watchOS)
 import CoreHaptics
+#else
+import WatchKit
 #endif
 import AVFAudio
 import SwiftUI
@@ -107,11 +109,18 @@ class VibrationEngine: ObservableObject {
         switch character {
         case ".":
 #if !os(watchOS)
-            playHaptics(url: dotAhapUrl!)
+            if supportsHaptics {
+                playHaptics(url: dotAhapUrl!)
+            } else {
+                // weakest vibration for older systems
+                AudioServicesPlaySystemSound(1520)
+            }
             if flashlight {
                 TorchEngine.shared.toggleTorchFor(dotDuration)
             }
-#endif
+            #else
+            WKInterfaceDevice.current().play(.start)
+            #endif
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
@@ -121,11 +130,18 @@ class VibrationEngine: ObservableObject {
             }
         case "-":
 #if !os(watchOS)
-            playHaptics(url: dashAhapUrl!)
+            if supportsHaptics {
+                playHaptics(url: dashAhapUrl!)
+            } else {
+                // strongest vibration for older systems
+                AudioServicesPlaySystemSound(1521)
+            }
             if flashlight {
                 TorchEngine.shared.toggleTorchFor(dashDuration)
             }
-#endif
+            #else
+            WKInterfaceDevice.current().play(.retry)
+            #endif
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }

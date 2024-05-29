@@ -21,6 +21,12 @@
             "value" : "%.0f ms"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f ms"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -74,6 +80,12 @@
           }
         },
         "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -137,6 +149,12 @@
             "value" : "%lld"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -193,6 +211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Un %lldHz sonido será reproducido junto con vibración para ayudar en el reconocimiento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un son de %lldHz de fréquence va être joué en même temps que les réponses haptiques pour vous aider à reconnaître le code."
           }
         },
         "it" : {
@@ -253,6 +277,12 @@
             "value" : "Codificar"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encoder"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -309,6 +339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Linterna"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lampe"
           }
         },
         "it" : {
@@ -369,6 +405,12 @@
             "value" : "Hápticos de la linterna"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haptique de la lampe torche"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -425,6 +467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡La linterna no está disponible en este dispositivo!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La lampe torche n'est pas disponible sur cet appareil !"
           }
         },
         "it" : {
@@ -485,6 +533,12 @@
             "value" : "Velocidad de la vibración (%lf)"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vitesse des Réponses Haptiques (%lf)"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -541,6 +595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Unidad de Tiempo de Vibración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unité de temps des Réponses Haptiques"
           }
         },
         "it" : {
@@ -601,6 +661,12 @@
             "value" : "Entiendo, déjame ayudarte."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je comprends, laissez-moi vous aider."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -657,6 +723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Describiré el menú de opciones para ti."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je vais vous décrire les options du menu."
           }
         },
         "it" : {
@@ -717,6 +789,12 @@
             "value" : "Te ayudaré a navegar a través del tacto."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je vais vous guide par le toucher."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -773,6 +851,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Te guiaré a la parada de autobús."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je vais vous guider à l'arrêt de bus."
           }
         },
         "it" : {
@@ -833,6 +917,12 @@
             "value" : "Tocaré tu mano para llamar tu atención."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je vais taper sur votre main pour attirer votre attention."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -889,6 +979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lo escribiré por tí."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je vais l'écrire pour vous."
           }
         },
         "it" : {
@@ -949,6 +1045,12 @@
             "value" : "Me estoy comunicando contigo a través del tacto."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je communique avec vous par le toucher."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1005,6 +1107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estoy aqui para ayudar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je suis là pour aider."
           }
         },
         "it" : {
@@ -1065,6 +1173,12 @@
             "value" : "Escribe una frase que utilizas frecuentemente."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insérer une phrase fréquemment utilisée"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1121,6 +1235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Déjame describirte el lugar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laissez moi vous décrire l'endroit."
           }
         },
         "it" : {
@@ -1181,6 +1301,12 @@
             "value" : "Escucha"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écouter"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1237,6 +1363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Código morse estará aqui!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le code Morse va apparaître ici."
           }
         },
         "it" : {
@@ -1297,6 +1429,12 @@
             "value" : "Ningún sonido se reproducirá junto con la vibración."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun son ne sera joué avec les réponses haptiques"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1353,6 +1491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comenzar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lecture"
           }
         },
         "it" : {
@@ -1413,6 +1557,12 @@
             "value" : "Iniciar"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouer les haptiques"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1469,6 +1619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Traducción rápida"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Traduction rapide"
           }
         },
         "it" : {
@@ -1529,6 +1685,12 @@
             "value" : "Guardar y escuchar"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder et écouter"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1585,6 +1747,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Frase a codificar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phrase à encoder"
           }
         },
         "it" : {
@@ -1645,6 +1813,12 @@
             "value" : "Configuración"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paramètres"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1701,6 +1875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sonido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son"
           }
         },
         "it" : {
@@ -1761,6 +1941,12 @@
             "value" : "Reproducir vibración"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonorité des Réponses Haptiques"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1817,6 +2003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tono de Sonido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hauteur du son"
           }
         },
         "it" : {
@@ -1877,6 +2069,12 @@
             "value" : "Tono de Sonido (%lf)"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hauteur du Son (%lf)"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1933,6 +2131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Comenzar a escuchar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencer l'écoute"
           }
         },
         "it" : {
@@ -1993,6 +2197,12 @@
             "value" : "Detener"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrêter"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2049,6 +2259,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Detener"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrester les réponses haptiques"
           }
         },
         "it" : {
@@ -2109,6 +2325,12 @@
             "value" : "Detener la escucha"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrêter l'écoute"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2165,6 +2387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La antorcha parpadeará a lo largo de los hápticos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La lampe clignotera selon les réponses haptiques."
           }
         },
         "it" : {
@@ -2225,6 +2453,12 @@
             "value" : "La antorcha parpadeará junto con los sonidos."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La lampe clignotera selon les sons."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2281,6 +2515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La antorcha parpadeará junto con los sonidos y la sensación táctil."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La lampe clignotera selon les sons et les réponses haptiques."
           }
         },
         "it" : {
@@ -2341,6 +2581,12 @@
             "value" : "La antorcha no parpadea"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La lampe ne va pas clignoter"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2397,6 +2643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La unidad de tiempo se expresa en ms (milisegundos).\nTiempos:\n. = 1 unidad de tiempo (%1$.0f ms)\n- = 3 unidades de tiempo (%2$.0f ms)\nEspacio entre los mismos símbolos = 1 unidad de tiempo (%3$.0f ms)\nEspacio entre diferentes símbolos = 3 unidades de tiempo (%4$.0f ms)\nEspacio entre palabras = 7 unidades de tiempo (%5$.0f ms)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unité de temps exprimée en ms (millisecondes).\nDurées :\n. = 1 unité de temps (%1$.0f ms)\n- = 3 unités de temps (%2$.0f ms)\nEspace entre les mêmes symboles = 1 unité de temps (%3$.0f ms)\nEspace entre différents symboles = 3 unités de temps (%4$.0f ms)\nEspace entre les mots = 7 unités de temps (%5$.0f ms)"
           }
         },
         "it" : {
@@ -2457,6 +2709,12 @@
             "value" : "Tiempos"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durées"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2513,6 +2771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡La transcripción estará aquí!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La transcription va apparaître ici !"
           }
         },
         "it" : {
@@ -2573,6 +2837,12 @@
             "value" : "¡El reconocimiento de voz no está disponible!"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reconnaissance vocale indisponible !"
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2629,6 +2899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sí, puedo guiarte."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oui, je peux vous guider."
           }
         },
         "it" : {
@@ -2689,6 +2965,12 @@
             "value" : "¡Su dispositivo no admite hápticos!\n Sólo se reproducirá sonido."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre appareil ne prend pas en charge les haptiques !\nSeul le son sera joué."
+          }
+        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2745,6 +3027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Tus frases guardadas se pueden reproducir con solo un toque!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos phrases sauvegardées peuvent être lues d'une simple pression !"
           }
         },
         "it" : {

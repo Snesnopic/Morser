@@ -66,8 +66,8 @@ struct EncodeView: View {
                         }
                     }
                     .disabled(vibrationEngine.isVibrating() || !speechRecognizer.errorMessage.isEmpty)
-                    .frame(height: size.height)
-                    .padding(.horizontal, 10)
+                    .frame(width: size.height, height: size.height)
+                    .padding(.trailing, 10)
                     .buttonStyle(.plain)
                 }
                 if enteredText.isEmpty && speechRecognizer.transcript.isEmpty || (enteredText.morseCode().isEmpty && speechRecognizer.transcript.morseCode().isEmpty) {

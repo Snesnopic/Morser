@@ -636,7 +636,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MorserWatch-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = Morser;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,7 +667,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MorserWatch-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = MorserWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = Morser;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.snesnopic.Morser;
 				LD_RUNPATH_SEARCH_PATHS = (

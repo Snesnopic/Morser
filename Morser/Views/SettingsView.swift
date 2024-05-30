@@ -19,7 +19,7 @@ struct SettingsView: View {
             Form {
                 Section {
                     Toggle("Sound Haptics", isOn: $soundEnabled)
-                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !vibrationEngine.supportsHaptics)
+                        .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating()/* || !vibrationEngine.supportsHaptics*/)
                     if soundEnabled {
                         HStack {
                             Text("Sound Pitch")
@@ -92,15 +92,15 @@ struct SettingsView: View {
         }
     }
     private enum flashlightCases {
-        case soundOnly
+//        case soundOnly
         case hapticsOnly
         case soundAndHaptics
         case disabled
         case notAvailable
         var rawValue: String {
             switch self {
-            case .soundOnly:
-                return String(localized: "The torch will flash along the sounds")
+//            case .soundOnly:
+//                return String(localized: "The torch will flash along the sounds")
             case .hapticsOnly:
                 return String(localized: "The torch will flash along the haptics")
             case .soundAndHaptics:
@@ -123,7 +123,8 @@ struct SettingsView: View {
         } else if !soundEnabled {
             return .hapticsOnly
         } else {
-            return .soundOnly
+//            return .soundOnly
+            return .soundAndHaptics
         }
     }
 

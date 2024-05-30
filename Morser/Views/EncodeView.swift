@@ -99,15 +99,15 @@ struct EncodeView: View {
                         .font(.title3)
                     }
                 }
-                if !vibrationEngine.supportsHaptics {
-                    HStack {
-                        Image(systemName: "exclamationmark.circle.fill")
-                        Text("Your device does not support haptics!\n Only sound will be played.")
-                            .bold()
-                    }
-                    .foregroundStyle(.orange)
-                    Spacer()
-                }
+//                if !vibrationEngine.supportsHaptics {
+//                    HStack {
+//                        Image(systemName: "exclamationmark.circle.fill")
+//                        Text("Your device does not support haptics!\nOnly sound will be played.")
+//                            .bold()
+//                    }
+//                    .foregroundStyle(.orange)
+//                    Spacer()
+//                }
                 if !speechRecognizer.errorMessage.isEmpty {
                     HStack {
                         Image(systemName: "exclamationmark.circle.fill")

@@ -123,7 +123,7 @@ struct QuickTranslateView: View {
                 }
 #else
                 ToolbarItem(placement: .automatic) {
-                    Button("") {
+                    Button("Edit") {
                         mode.toggle()
                     }
                     .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())

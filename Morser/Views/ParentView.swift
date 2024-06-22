@@ -11,22 +11,17 @@ import CoreData
 struct ParentView: View {
     var body: some View {
         TabView {
-            EncodeView().tabItem {
-                Label(
-                    title: { Text("Encode") },
-                    icon: { Image(systemName: "text.badge.plus") }
-                ) }
-            QuickTranslateView().tabItem {
-                Label(
-                    title: { Text("Quick Translate") },
-                    icon: { Image(systemName: "list.bullet") }
-                ) }
+            EncodeView()
+                .tabItem {
+                    Label("Encode", systemImage: "text.badge.plus")
+                }
+            QuickTranslateView()
+                .tabItem {
+                    Label("Quick Translate", systemImage: "list.bullet")
+                }
             #if os(iOS)
             SettingsView().tabItem {
-                Label(
-                    title: { Text("Settings") },
-                    icon: { Image(systemName: "gearshape") }
-                )
+                Label("Settings", systemImage: "gearshape")
             }
             #endif
         }

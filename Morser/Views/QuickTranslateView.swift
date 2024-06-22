@@ -10,9 +10,7 @@ import SwiftUI
 struct QuickTranslateView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
     @Environment(\.managedObjectContext) var moc
-#if !os(macOS)
     @State private var mode: EditMode = .inactive
-    #endif
     @FocusState private var textFieldIsFocused: Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
@@ -26,7 +24,6 @@ struct QuickTranslateView: View {
                     }, set: { newValue in
                         sentence.sentence! = newValue
                     }))
-#if !os(macOS)
                     .if(!mode.isEditing && sentence.order != -1, transform: { view in
                         view
                             .disabled(true)
@@ -42,7 +39,6 @@ struct QuickTranslateView: View {
                                     }
                             }
                     })
-                    #endif
                     .focused($textFieldIsFocused)
                     .onSubmit {
                         textFieldIsFocused = false
@@ -55,9 +51,9 @@ struct QuickTranslateView: View {
                         })
                         do {
                             try moc.save()
-                            #if !os(macOS)
+#if !os(macOS)
                             WatchConnectivityProvider.sendSentencesToWatch()
-                            #endif
+#endif
                         } catch {
                             print("Error: \(error)")
                         }
@@ -86,7 +82,7 @@ struct QuickTranslateView: View {
                                 try moc.save()
 #if !os(macOS)
                                 WatchConnectivityProvider.sendSentencesToWatch()
-                                #endif
+#endif
                             } catch {
                                 print("Error: \(error)")
                             }
@@ -107,8 +103,8 @@ struct QuickTranslateView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Quick Translate")
-#if !os(macOS)
             .toolbar {
+#if os(iOS)
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
@@ -120,18 +116,37 @@ struct QuickTranslateView: View {
                         newSentence.sentence = ""
                         textFieldIsFocused = true
                     }
-                label: {
-                    Image(systemName: "plus")
+                    label: {
+                        Image(systemName: "plus")
+                    }
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
-                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+#else
+                ToolbarItem(placement: .automatic) {
+                    Button("") {
+                        mode.toggle()
+                    }
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
+                ToolbarItem(placement: .automatic) {
+                    Button {
+                        let newSentence = Sentence(context: moc)
+                        newSentence.order = -1
+                        newSentence.sentence = ""
+                        textFieldIsFocused = true
+                    }
+                    label: {
+                        Image(systemName: "plus")
+                    }
+                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                }
+#endif
             }
-            #endif
             .onAppear {
                 ensureSentencesExist(sentences, moc)
-                #if !DEBUG
+#if !DEBUG
                 WatchConnectivityProvider.sendSentencesToWatch()
-                #endif
+#endif
             }
             .task {
                 if #available(iOS 17.0, macOS 14.0, *) {
@@ -141,12 +156,11 @@ struct QuickTranslateView: View {
                     ])
                 }
             }
-#if !os(macOS)
             .environment(\.editMode, $mode)
-            #endif
         }
     }
 }
+
 #Preview {
     @StateObject var dataController = DataController()
     return QuickTranslateView()

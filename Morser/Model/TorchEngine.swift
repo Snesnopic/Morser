@@ -7,10 +7,27 @@
 
 import Foundation
 import AVFoundation
+import SwiftUI
 
 class TorchEngine: ObservableObject {
+    enum TorchType {
+        case hardware
+        case software
+        case both
+    }
     @Published var torchIsOn: Bool = false
     static let shared = TorchEngine()
+    static var torchType: TorchType = {
+        #if os(iOS)
+        if TorchEngine.shared.deviceHasTorch() {
+            return .hardware
+        } else {
+            return .software
+        }
+        #else
+        return .software
+        #endif
+    }()
     private init() {}
     func toggleTorchFor(_ time: TimeInterval) {
         #if os(iOS)
@@ -36,7 +53,9 @@ class TorchEngine: ObservableObject {
         #endif
         torchIsOn = true
         Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
-            self.torchIsOn = false
+            withAnimation(.easeOut) {
+                self.torchIsOn = false
+            }
         }
 
     }

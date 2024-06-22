@@ -45,7 +45,8 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
     static func sendSettingsToWatch() {
         @AppStorage("sliderPreference") var sliderPreference = 1.0
         @AppStorage("soundFrequency") var soundFrequency = 600.0
-        WCSession.default.transferUserInfo(["action": "settings", "sliderPreference": sliderPreference, "soundFrequency": soundFrequency])
+        @AppStorage("flashlight") var flashlight = true
+        WCSession.default.transferUserInfo(["action": "settings", "sliderPreference": sliderPreference, "soundFrequency": soundFrequency, "flashlight": flashlight])
         print("Mandate al watch settings: \(sliderPreference) e \(soundFrequency)")
     }
     @MainActor func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {

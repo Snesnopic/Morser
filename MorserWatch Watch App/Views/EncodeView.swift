@@ -13,6 +13,8 @@ struct EncodeView: View {
     @State private var circleAnimationAmount: Double = 1.005
     @State private var circles: [UUID] = []
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    @ObservedObject private var torchEngine = TorchEngine.shared
+    @AppStorage("flashlight") private var flashlight = true
     fileprivate func tryReading() {
         textFieldIsFocused = false
         if !vibrationEngine.isVibrating() {
@@ -100,6 +102,10 @@ struct EncodeView: View {
             }
             .navigationTitle("Encode")
             .ignoresSafeArea(.keyboard)
+            .if(torchEngine.torchIsOn && flashlight && TorchEngine.torchType == .software) { view in
+                view
+                    .overlay(Color.white.ignoresSafeArea())
+            }
         }
     }
 }

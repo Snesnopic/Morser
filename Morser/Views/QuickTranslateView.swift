@@ -19,43 +19,58 @@ struct QuickTranslateView: View {
                 ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
                     return sent1.order < sent2.order
                 })) { sentence in
-                    TextField("Insert a frequently used sentence", text: Binding(get: {
-                        sentence.sentence!
-                    }, set: { newValue in
-                        sentence.sentence! = newValue
-                    }))
-                    .if(!mode.isEditing && sentence.order != -1, transform: { view in
-                        view
-                            .disabled(true)
-                            .overlay {
-                                Color.white.opacity(0.0001)
-                                    .onTapGesture {
-                                        if !vibrationEngine.isVibrating() {
-                                            vibrationEngine.createEngine()
-                                            vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
-                                        } else {
-                                            vibrationEngine.stopReading()
-                                        }
+                    Group {
+                        if mode == .active {
+                            TextField("Insert a frequently used sentence", text: Binding(get: {
+                                sentence.sentence!
+                            }, set: { newValue in
+                                sentence.sentence! = newValue
+                            }))
+                            .focused($textFieldIsFocused)
+                            .if(!mode.isEditing && sentence.order != -1, transform: { view in
+                                view
+                                    .disabled(true)
+                                    .overlay {
+                                        Color.white.opacity(0.0001)
+                                            .onTapGesture {
+                                                if !vibrationEngine.isVibrating() {
+                                                    vibrationEngine.createEngine()
+                                                    vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
+                                                } else {
+                                                    vibrationEngine.stopReading()
+                                                }
+                                            }
                                     }
+                            })
+                            .onSubmit {
+                                textFieldIsFocused = false
+                                let tempItems = sentences.toArray()
+                                tempItems.indices.forEach({ index in
+                                    sentences.filter({
+                                        $0.sentence! == tempItems[index].sentence!
+                                    }).first!.order = Int32(index)
+                                    sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = Int32(index)
+                                })
+                                do {
+                                    try moc.save()
+#if os(iOS)
+                                    WatchConnectivityProvider.sendSentencesToWatch()
+#endif
+                                } catch {
+                                    print("Error: \(error)")
+                                }
                             }
-                    })
-                    .focused($textFieldIsFocused)
-                    .onSubmit {
-                        textFieldIsFocused = false
-                        let tempItems = sentences.toArray()
-                        tempItems.indices.forEach({ index in
-                            sentences.filter({
-                                $0.sentence! == tempItems[index].sentence!
-                            }).first!.order = Int32(index)
-                            sentences.filter({ $0.sentence == tempItems[index].sentence}).first!.order = Int32(index)
-                        })
-                        do {
-                            try moc.save()
- #if os(iOS)
-                            WatchConnectivityProvider.sendSentencesToWatch()
- #endif
-                        } catch {
-                            print("Error: \(error)")
+                        } else {
+                            Button {
+                                if !vibrationEngine.isVibrating() {
+                                    vibrationEngine.createEngine()
+                                    vibrationEngine.readMorseCode(morseCode: sentence.sentence!.morseCode())
+                                } else {
+                                    vibrationEngine.stopReading()
+                                }
+                            } label: {
+                                Text(sentence.sentence!)
+                            }
                         }
                     }
                     .if(vibrationEngine.isVibrating() && vibrationEngine.morseCodeString == sentence.sentence!.morseCode()) { view in
@@ -80,9 +95,9 @@ struct QuickTranslateView: View {
                             }
                             do {
                                 try moc.save()
- #if os(iOS)
+#if os(iOS)
                                 WatchConnectivityProvider.sendSentencesToWatch()
- #endif
+#endif
                             } catch {
                                 print("Error: \(error)")
                             }
@@ -116,10 +131,10 @@ struct QuickTranslateView: View {
                         newSentence.sentence = ""
                         textFieldIsFocused = true
                     }
-                    label: {
-                        Image(systemName: "plus")
-                    }
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                label: {
+                    Image(systemName: "plus")
+                }
+                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
 #else
                 ToolbarItem(placement: .automatic) {
@@ -135,10 +150,10 @@ struct QuickTranslateView: View {
                         newSentence.sentence = ""
                         textFieldIsFocused = true
                     }
-                    label: {
-                        Image(systemName: "plus")
-                    }
-                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
+                label: {
+                    Image(systemName: "plus")
+                }
+                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                 }
 #endif
             }

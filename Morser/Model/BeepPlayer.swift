@@ -23,7 +23,9 @@ class BeepPlayer {
 
         // Start the engine
         do {
+        #if !os(macOS)
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: .mixWithOthers)
+        #endif
             try engine.start()
         } catch {
             print("Error starting AVAudioEngine: \(error.localizedDescription)")

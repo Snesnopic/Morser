@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+#if os(iOS)
 import WatchConnectivity
-
+#endif
 @main
 struct MorserApp: App {
+#if os(iOS)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    #endif
     @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             ParentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+#if os(iOS)
                 .onAppear {
                     WatchConnectivityProvider.shared.managedContext = dataController.container.viewContext
                     if !VibrationEngine.shared.supportsHaptics {
@@ -23,13 +27,15 @@ struct MorserApp: App {
                         soundEnabled = true
                     }
                 }
+            #endif
         }
     }
 }
-
+#if os(iOS)
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         WatchConnectivityProvider.shared.activate()
         return true
     }
 }
+#endif

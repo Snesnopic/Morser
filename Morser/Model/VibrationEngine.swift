@@ -152,7 +152,7 @@ class VibrationEngine: ObservableObject {
         dotPlayer = nil
         dashPlayer = nil
     }
-    
+
     func shortVibration() {
 #if !os(watchOS)
             if supportsHaptics {
@@ -165,7 +165,7 @@ class VibrationEngine: ObservableObject {
             WKInterfaceDevice.current().play(.start)
             #endif
     }
-    
+
     func longVibration() {
         #if !os(watchOS)
         if supportsHaptics {
@@ -186,8 +186,12 @@ class VibrationEngine: ObservableObject {
         do {
             // Associate the haptic engine with the default audio session
             // to ensure the correct behavior when playing audio-based haptics.
+            #if !os(macOS)
             let audioSession = AVAudioSession.sharedInstance()
             engine = try CHHapticEngine(audioSession: audioSession)
+            #else
+            engine = try CHHapticEngine()
+            #endif
         } catch let error {
             print("Engine Creation Error: \(error)")
         }

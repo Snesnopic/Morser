@@ -30,7 +30,9 @@ struct SettingsView: View {
                             Text("Sound Pitch (\(soundFrequency))")
                         } onEditingChanged: { bool in
                             if !bool {
+#if !os(macOS)
                                 WatchConnectivityProvider.sendSettingsToWatch()
+                                #endif
                             }
                         }
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
@@ -64,7 +66,9 @@ struct SettingsView: View {
                         Text("Haptics Speed (\(sliderPreference))")
                     } onEditingChanged: { bool in
                         if !bool {
+#if !os(macOS)
                             WatchConnectivityProvider.sendSettingsToWatch()
+                            #endif
                         }
                     }
                     .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())

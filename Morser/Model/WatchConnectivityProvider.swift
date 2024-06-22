@@ -4,7 +4,7 @@
 //
 //  Created by Giuseppe Francione on 24/05/24.
 //
-
+#if os(iOS)
 import Foundation
 import WatchConnectivity
 import Combine
@@ -79,3 +79,4 @@ class WatchConnectivityProvider: NSObject, ObservableObject, WCSessionDelegate {
         print("Mandate al watch sentences: \(message)")
     }
 }
+#endif

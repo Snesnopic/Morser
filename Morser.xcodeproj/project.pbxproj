@@ -25,7 +25,7 @@
 		9DA696702BCD7154002B9CBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA6966F2BCD7154002B9CBB /* Extensions.swift */; };
 		9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE653C2C00E68900663324 /* MorserWatchApp.swift */; };
 		9DAE65442C00E68A00663324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAE65432C00E68A00663324 /* Preview Assets.xcassets */; };
-		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DAE65472C00E68A00663324 /* MorserWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9DAE653A2C00E68900663324 /* MorserWatch Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE654E2C00E89D00663324 /* WatchConnectivityProvider.swift */; };
 		9DAE65512C00E8CE00663324 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE65502C00E8CE00663324 /* WatchCommunicationManager.swift */; };
 		9DAE65542C011BBD00663324 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
@@ -408,6 +408,7 @@
 /* Begin PBXTargetDependency section */
 		9DAE65462C00E68A00663324 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 9DAE65392C00E68900663324 /* MorserWatch Watch App */;
 			targetProxy = 9DAE65452C00E68A00663324 /* PBXContainerItemProxy */;
 		};
@@ -575,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -622,7 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.snesnopic.Morser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

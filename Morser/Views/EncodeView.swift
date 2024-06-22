@@ -35,7 +35,9 @@ struct EncodeView: View {
                         .onSubmit {
                             tryReading()
                         }
+#if !os(macOS)
                         .textInputAutocapitalization(.never)
+                    #endif
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                         .padding(.leading)
@@ -142,6 +144,7 @@ struct EncodeView: View {
                                 }
                             }
                         }
+#if os(iOS)
                         if UIDevice.current.userInterfaceIdiom == .phone {
                             Circle()
                                 .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor.opacity(0.5) : Color.red.opacity(0.5))
@@ -156,6 +159,7 @@ struct EncodeView: View {
                                 }
                                 .padding()
                         }
+                        #endif
                         Circle()
                             .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor : Color.red)
                             .padding()

@@ -40,11 +40,13 @@ class TorchEngine: ObservableObject {
         }
 
     }
-    #if os(iOS)
     func deviceHasTorch() -> Bool {
+        #if os(iOS)
         guard let device = AVCaptureDevice.default(for: .video) else { return false }
 
         return device.hasTorch
+        #else
+        return true
+        #endif
     }
-    #endif
 }

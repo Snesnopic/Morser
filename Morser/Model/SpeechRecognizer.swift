@@ -53,9 +53,11 @@ actor SpeechRecognizer: ObservableObject {
                 guard await SFSpeechRecognizer.hasAuthorizationToRecognize() else {
                     throw RecognizerError.notAuthorizedToRecognize
                 }
+                #if !os(macOS)
                 guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
                     throw RecognizerError.notPermittedToRecord
                 }
+                #endif
             } catch {
                 transcribe(error)
             }
@@ -109,30 +111,34 @@ actor SpeechRecognizer: ObservableObject {
         task?.cancel()
         audioEngine?.stop()
         audioEngine = nil
+        #if os(iOS)
         do {
             try AVAudioSession.sharedInstance().setActive(false)
         } catch {
             print("Error deactivating audio session: \(error)")
         }
+        #endif
         task = nil
     }
 
     private func prepareEngine() throws -> (AVAudioEngine, SFSpeechAudioBufferRecognitionRequest) {
         let audioEngine = AVAudioEngine()
-
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
 
+        #if os(iOS)
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.multiRoute, mode: .measurement, options: .duckOthers)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        let inputNode = audioEngine.inputNode
+        #endif
 
+        let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { [weak self] (buffer: AVAudioPCMBuffer, _: AVAudioTime) in
             request.append(buffer)
             self?.updateAudioLevel(buffer: buffer)
         }
+
         audioEngine.prepare()
         try audioEngine.start()
 
@@ -175,6 +181,7 @@ actor SpeechRecognizer: ObservableObject {
             transcript = message
         }
     }
+
     nonisolated private func transcribe(_ error: Error) {
         var errorMessage = ""
         if let error = error as? RecognizerError {
@@ -198,17 +205,7 @@ extension SFSpeechRecognizer {
         }
     }
 }
-
-// extension AVAudioSession {
-//    func hasPermissionToRecord() async -> Bool {
-//        await withCheckedContinuation { continuation in
-//            AVAudioApplication.requestRecordPermission { authorized in
-//                continuation.resume(returning: authorized)
-//            }
-//        }
-//    }
-// }
-
+#if !os(macOS)
 extension AVAudioSession {
     func hasPermissionToRecord() async -> Bool {
         await withCheckedContinuation { continuation in
@@ -218,3 +215,4 @@ extension AVAudioSession {
         }
     }
 }
+#endif

@@ -29,6 +29,11 @@ struct MorserApp: App {
                 }
             #endif
         }
+#if os(macOS)
+       Settings {
+           SettingsView()
+       }
+       #endif
     }
 }
 #if os(iOS)

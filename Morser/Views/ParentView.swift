@@ -21,7 +21,7 @@ struct ParentView: View {
                     title: { Text("Quick Translate") },
                     icon: { Image(systemName: "list.bullet") }
                 ) }
-            #if !os(watchOS)
+            #if os(iOS)
             SettingsView().tabItem {
                 Label(
                     title: { Text("Settings") },

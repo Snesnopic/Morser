@@ -44,6 +44,7 @@
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
 		9DF91E6A2C271D1C007A310E /* CompatibilityNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */; };
 		9DF91E8B2C272F09007A310E /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3DED2C2BCD109400DAD675 /* ParentView.swift */; };
+		9DF91E8C2C2732EE007A310E /* TorchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD801DA2C04B630007DEC31 /* TorchEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,6 +393,7 @@
 				9DD162F92C038F7B006A410D /* MorseEncoder.swift in Sources */,
 				9DF91E8B2C272F09007A310E /* ParentView.swift in Sources */,
 				9DAE653D2C00E68900663324 /* MorserWatchApp.swift in Sources */,
+				9DF91E8C2C2732EE007A310E /* TorchEngine.swift in Sources */,
 				9DD163052C03A512006A410D /* QuickTranslateView.swift in Sources */,
 				9DD163022C039F9B006A410D /* DataController.swift in Sources */,
 				9DD163002C039909006A410D /* VibrationEngine.swift in Sources */,

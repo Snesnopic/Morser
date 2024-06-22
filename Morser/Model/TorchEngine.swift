@@ -13,6 +13,7 @@ class TorchEngine: ObservableObject {
     static let shared = TorchEngine()
     private init() {}
     func toggleTorchFor(_ time: TimeInterval) {
+        #if os(iOS)
         guard let device = AVCaptureDevice.default(for: .video) else { return }
 
         if device.hasTorch {
@@ -32,10 +33,18 @@ class TorchEngine: ObservableObject {
                 self.torchIsOn = false
             }
         }
+        #endif
+        torchIsOn = true
+        Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
+            self.torchIsOn = false
+        }
+
     }
+    #if os(iOS)
     func deviceHasTorch() -> Bool {
         guard let device = AVCaptureDevice.default(for: .video) else { return false }
 
         return device.hasTorch
     }
+    #endif
 }

@@ -21,12 +21,14 @@ struct ParentView: View {
                     title: { Text("Quick Translate") },
                     icon: { Image(systemName: "list.bullet") }
                 ) }
+            #if !os(watchOS)
             SettingsView().tabItem {
                 Label(
                     title: { Text("Settings") },
                     icon: { Image(systemName: "gearshape") }
                 )
             }
+            #endif
         }
     }
 }

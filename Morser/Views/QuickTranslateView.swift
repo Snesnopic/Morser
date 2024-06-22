@@ -30,6 +30,7 @@ struct QuickTranslateView: View {
                             .if(!mode.isEditing && sentence.order != -1, transform: { view in
                                 view
                                     .disabled(true)
+                                    #if !os(tvOS)
                                     .overlay {
                                         Color.white.opacity(0.0001)
                                             .onTapGesture {
@@ -41,6 +42,7 @@ struct QuickTranslateView: View {
                                                 }
                                             }
                                     }
+                                    #endif
                             })
                             .onSubmit {
                                 textFieldIsFocused = false

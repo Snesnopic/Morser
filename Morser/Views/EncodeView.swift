@@ -91,10 +91,10 @@ struct EncodeView: View {
                             .padding()
                             #if !os(tvOS)
                             .textSelection(.enabled)
-                            #endif
                             .onTapGesture {
                                 textFieldIsFocused = false
                             }
+                            #endif
                             .accessibilityHidden(true)
                     } else {
                         HStack {
@@ -126,10 +126,11 @@ struct EncodeView: View {
                     .foregroundStyle(.orange)
                 }
                 Spacer()
+                #if !os(tvOS)
                     .onTapGesture {
                         textFieldIsFocused = false
                     }
-
+                #endif
                 Button {
                     if !vibrationEngine.isVibrating() {
                         tryReading()

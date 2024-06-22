@@ -43,6 +43,7 @@
 		9DD4250A2BE3C5BF009EE623 /* BeepPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */; };
 		9DD801DB2C04B630007DEC31 /* TorchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD801DA2C04B630007DEC31 /* TorchEngine.swift */; };
 		9DED8FBC2BF793B9008D0B29 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */; };
+		9DF91E6A2C271D1C007A310E /* CompatibilityNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		9DD425092BE3C5BF009EE623 /* BeepPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeepPlayer.swift; sourceTree = "<group>"; };
 		9DD801DA2C04B630007DEC31 /* TorchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorchEngine.swift; sourceTree = "<group>"; };
 		9DED8FBB2BF793B9008D0B29 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilityNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
 				9D9BC1572BECE24200CD2C5B /* SettingsView.swift */,
+				9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				9D7F43402C00C4BB00DB6DE3 /* ExpandingCircle.swift in Sources */,
 				9DAE654F2C00E89D00663324 /* WatchConnectivityProvider.swift in Sources */,
 				9D3DED3A2BCD167600DAD675 /* EncodeView.swift in Sources */,
+				9DF91E6A2C271D1C007A310E /* CompatibilityNavigation.swift in Sources */,
 				9D3DED422BCD248100DAD675 /* MorseEncoder.swift in Sources */,
 				9D9BC1582BECE24200CD2C5B /* SettingsView.swift in Sources */,
 			);
@@ -575,7 +579,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -622,7 +626,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

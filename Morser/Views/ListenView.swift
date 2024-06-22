@@ -12,7 +12,7 @@ struct ListenView: View {
     @State var isRecording: Bool = false
     @ObservedObject var vibrationEngine = VibrationEngine.shared
     var body: some View {
-        NavigationView {
+        CompatibilityNavigation {
             VStack {
                 Button {
                     if isRecording {

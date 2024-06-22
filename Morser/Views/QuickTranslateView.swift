@@ -14,7 +14,7 @@ struct QuickTranslateView: View {
     @FocusState private var textFieldIsFocused: Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
-        NavigationView {
+        CompatibilityNavigation {
             List {
                 ForEach(sentences.toArray().sorted(by: { sent1, sent2 in
                     return sent1.order < sent2.order

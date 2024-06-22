@@ -24,7 +24,7 @@ struct EncodeView: View {
         }
     }
     var body: some View {
-        NavigationView {
+        CompatibilityNavigation {
             VStack {
                 Spacer()
                 HStack {
@@ -39,6 +39,7 @@ struct EncodeView: View {
                         .textFieldStyle(.roundedBorder)
                         .disableAutocorrection(true)
                         .padding(.leading)
+                        .frame(height: size.height * 2)
                     Button {
                         if isRecording {
                             stopTranscribing()
@@ -141,18 +142,20 @@ struct EncodeView: View {
                                 }
                             }
                         }
-                        Circle()
-                            .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor.opacity(0.5) : Color.red.opacity(0.5))
-                            .scaleEffect(circleAnimationAmount)
-                            .onAppear {
-                                withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                    circleAnimationAmount *= 1.2
+                        if UIDevice.current.userInterfaceIdiom == .phone {
+                            Circle()
+                                .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor.opacity(0.5) : Color.red.opacity(0.5))
+                                .scaleEffect(circleAnimationAmount)
+                                .onAppear {
+                                    withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                                        circleAnimationAmount *= 1.05
+                                    }
                                 }
-                            }
-                            .onDisappear {
-                                circleAnimationAmount = 1.0
-                            }
-                            .padding()
+                                .onDisappear {
+                                    circleAnimationAmount = 1.0
+                                }
+                                .padding()
+                        }
                         Circle()
                             .foregroundStyle(!vibrationEngine.isVibrating() ? Color.accentColor : Color.red)
                             .padding()
@@ -184,7 +187,9 @@ struct EncodeView: View {
 }
 
 #Preview {
-    EncodeView()
+    TabView {
+        EncodeView()
+    }
 }
 
 #Preview ("Dark mode") {

@@ -15,7 +15,7 @@ struct SettingsView: View {
 
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     var body: some View {
-        NavigationView {
+        CompatibilityNavigation {
             Form {
                 Section {
                     Toggle("Sound Haptics", isOn: $soundEnabled)

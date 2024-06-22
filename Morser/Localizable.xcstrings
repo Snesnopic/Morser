@@ -561,72 +561,72 @@
         }
       }
     },
-    "Haptics Speed (%lf)" : {
+    "Haptics Speed (%lld)" : {
       "localizations" : {
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ταχύτητα απτικών (%lf)"
+            "value" : "Ταχύτητα απτικών (%lld)"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Haptics Speed (%lf)"
+            "value" : "Haptics Speed (%lld)"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Haptics Speed (%lf)"
+            "value" : "Haptics Speed (%lld)"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velocidad de la vibración (%lf)"
+            "value" : "Velocidad de la vibración (%lld)"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitesse des Réponses Haptiques (%lf)"
+            "value" : "Vitesse des Réponses Haptiques (%lld)"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velocità vibrazioni (%lf)"
+            "value" : "Velocità vibrazioni (%lld)"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "햅틱 속도 (%lf)"
+            "value" : "햅틱 속도 (%lld)"
           }
         },
         "nap" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velocità d' 'e vibrazione (%lf)"
+            "value" : "Velocità d' 'e vibrazione (%lld)"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скорость вибрации (%lf)"
+            "value" : "Скорость вибрации (%lld)"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Titreşim Hızı(%lf)"
+            "value" : "Titreşim Hızı(%lld)"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Швидкість тактильних сигналів (%lf)"
+            "value" : "Швидкість тактильних сигналів (%lld)"
           }
         }
       }
@@ -2241,72 +2241,72 @@
         }
       }
     },
-    "Sound Pitch (%lf)" : {
+    "Sound Pitch (%lld)" : {
       "localizations" : {
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ύψος Ήχου (%lf)"
+            "value" : "Ύψος Ήχου (%lld)"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sound Pitch (%lf)"
+            "value" : "Sound Pitch (%lld)"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sound Pitch (%lf)"
+            "value" : "Sound Pitch (%lld)"
           }
         },
         "es-419" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tono de Sonido (%lf)"
+            "value" : "Tono de Sonido (%lld)"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hauteur du Son (%lf)"
+            "value" : "Hauteur du Son (%lld)"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tono del suono(%lf)"
+            "value" : "Tono del suono(%lld)"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "음정 Sound Pitch (%lf)"
+            "value" : "음정 Sound Pitch (%lld)"
           }
         },
         "nap" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tonalità d' 'o suono (%lf)"
+            "value" : "Tonalità d' 'o suono (%lld)"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Высота звука (%lf)"
+            "value" : "Высота звука (%lld)"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Frekans"
+            "value" : "Frekans (%lld)"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Висота звуку (%lf)"
+            "value" : "Висота звуку (%lld)"
           }
         }
       }
@@ -2890,77 +2890,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time unit is espressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
-          }
-        },
-        "es-419" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La unidad de tiempo se expresa en ms (millisegundos).\nTiempos:\n. = 1 unidad de tiempo (%1$.0f ms)\n- = 3 unidades de tiempo (%2$.0f ms)\nEspacio entre los mismos símbolos = 1 unidad de tiempo (%3$.0f ms)\nEspacio entre diferentes símbolos = 3 unidades de tiempo (%4$.0f ms)\nEspacio entre palabras = 7 unidades de tiempo (%5$.0f ms)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unité de temps exprimée en ms (millisecondes).\nDurées :\n. = 1 unité de temps (%1$.0f ms)\n- = 3 unités de temps (%2$.0f ms)\nEspace entre les mêmes symboles = 1 unité de temps (%3$.0f ms)\nEspace entre différents symboles = 3 unités de temps (%4$.0f ms)\nEspace entre les mots = 7 unités de temps (%5$.0f ms)"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unità temporale espressa in ms (millisecondi).\nTempismi:\n. = 1 unità temporale (%1$.0f ms)\n- = 3 unità temporali (%2$.0f ms)\nSpazio tra simboli uguali = 1 unità temporale (%3$.0f ms)\nSpazio tra simboli diversi = 3 unità temporali (%4$.0f ms)\nSpazio tra parole = 7 unità temporali (%5$.0f ms)"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시간 단위는 ms(밀리초) 단위로 표시됩니다.\n타이밍:\n. = 1 시간 단위(%.0f ms)\n- = 3시간 단위(%.0f ms)\n동일한 기호 사이의 간격 = 1 시간 단위(%.0f ms)\n서로 다른 기호 사이의 간격 = 3시간 단위(%.0f ms)\n단어 사이의 간격 = 7 시간 단위(%.0f ms)"
-          }
-        },
-        "nap" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L'unità 'e tiempo è espressa in ms (millisecondi).\nTempi:\n. = 1 unità 'e tiempo (%1$.0f ms)\n= 3 unità 'e tiempo (%2$.0f ms)\nSpazio tra stessi simboli = 1 unità 'e tiempo (%3$.0f ms)\nSpazio tra simboli differenti = 3 unità 'e tiempo (%4$.0f ms)\nSpazio tra parole = 7 unità 'e tiempo (%5$.0f ms)"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Единицы времени выражены в мс (миллисекундах).\nВремя: . = 1 единица времени (%1$.0f ms) - = 3 единицы времени(%2$.0f ms) Промежуток между одинаковыми символами = 1 единица времени (%3$.0f ms)\nПромежуток между разными символами = 3 единицы времени (%4$.0f ms)\nПромежуток между словами = 7 единиц времени (%5$.0f ms)"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zaman birimi ms (milisaniye) cinsinden ifade edilir.\nZamanlamalar:\n. = 1 zaman birimi (%1$.0f ms)\n- = 3 zaman birimi (%2$.0f ms)\nAynı semboller arasındaki boşluk = 1 zaman birimi (%3$.0f ms)\nFarklı semboller arasındaki boşluk = 3 zaman birimi (%4$.0f ms)\nKelimeler arasındaki boşluk = 7 zaman birimi (%5$.0f ms)"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Одиниця часу виражається в мілісекундах (мс).\nЧасові інтервали:\n. = 1 одиниця часу (%1$.0f мс)\n= 3 одиниці часу (%2$.0f мс)\nПроміжок між однаковими символами = 1 одиниця часу (%3$.0f мс)\nПроміжок між різними символами = 3 одиниці часу (%4$.0f мс)\nПроміжок між словами = 7 одиниць часу (%5$.0f мс)"
-          }
-        }
-      }
-    },
-    "Time unit is expressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%.0f ms)\n- = 3 time units (%.0f ms)\nSpace between same symbols = 1 time unit (%.0f ms)\nSpace between different symbols = 3 time units (%.0f ms)\nSpace between words = 7 time units (%.0f ms)" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Η μονάδα χρόνου εκφράζεται σε ms (χιλιοστά του δευτερολέπτου).\nΧρονισμοί:\n. = 1 μονάδα χρόνου (%1$.0f ms)\n- = 3 μονάδες χρόνου (%2$.0f ms)\nΔιάστημα μεταξύ των ίδιων συμβόλων = 1 μονάδα χρόνου (%3$.0f ms)\nΔιάστημα μεταξύ διαφορετικών συμβόλων = 3 μονάδες χρόνου (%4$.0f ms)\nΔιάστημα μεταξύ λέξεων = 7 μονάδες χρόνου (%5$.0f ms)"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Time unit is expressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
-          }
-        },
-        "en-GB" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time unit is expressed in ms (milliseconds).\nTimings:\n. = 1 time unit (%1$.0f ms)\n- = 3 time units (%2$.0f ms)\nSpace between same symbols = 1 time unit (%3$.0f ms)\nSpace between different symbols = 3 time units (%4$.0f ms)\nSpace between words = 7 time units (%5$.0f ms)"
           }
         },
         "es-419" : {

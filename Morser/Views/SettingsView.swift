@@ -27,7 +27,7 @@ struct SettingsView: View {
                             Text("\(Int(soundFrequency))")
                         }
                         Slider(value: $soundFrequency, in: 300...800) {
-                            Text("Sound Pitch (\(soundFrequency))")
+                            Text("Sound Pitch (\(Int(soundFrequency)))")
                         } onEditingChanged: { bool in
                             if !bool {
 #if !os(macOS)
@@ -63,7 +63,7 @@ struct SettingsView: View {
                         Text("\(sliderPreference * 100, specifier: "%.0f") ms")
                     }
                     Slider(value: $sliderPreference, in: (0.5)...(5.0)) {
-                        Text("Haptics Speed (\(sliderPreference))")
+                        Text("Haptics Speed (\(Int(sliderPreference * 100)))")
                     } onEditingChanged: { bool in
                         if !bool {
 #if !os(macOS)

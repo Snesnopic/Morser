@@ -108,19 +108,10 @@ class VibrationEngine: ObservableObject {
 
         switch character {
         case ".":
-#if !os(watchOS)
-            if supportsHaptics {
-                playHaptics(url: dotAhapUrl!)
-            } else {
-                // weakest vibration for older systems
-                AudioServicesPlaySystemSound(1520)
-            }
+            shortVibration()
             if flashlight {
                 TorchEngine.shared.toggleTorchFor(dotDuration)
             }
-            #else
-            WKInterfaceDevice.current().play(.start)
-            #endif
             if VibrationEngine.soundEnabled {
                 dotPlayer?.playSound()
             }
@@ -129,19 +120,10 @@ class VibrationEngine: ObservableObject {
                 self.triggerNextVibration()
             }
         case "-":
-#if !os(watchOS)
-            if supportsHaptics {
-                playHaptics(url: dashAhapUrl!)
-            } else {
-                // strongest vibration for older systems
-                AudioServicesPlaySystemSound(1521)
-            }
+            longVibration()
             if flashlight {
                 TorchEngine.shared.toggleTorchFor(dashDuration)
             }
-            #else
-            WKInterfaceDevice.current().play(.retry)
-            #endif
             if VibrationEngine.soundEnabled {
                 dashPlayer?.playSound()
             }
@@ -169,6 +151,32 @@ class VibrationEngine: ObservableObject {
         vibrationTimer = nil
         dotPlayer = nil
         dashPlayer = nil
+    }
+    
+    func shortVibration() {
+#if !os(watchOS)
+            if supportsHaptics {
+                playHaptics(url: dotAhapUrl!)
+            } else {
+                // weakest vibration for older systems
+                AudioServicesPlaySystemSound(1520)
+            }
+            #else
+            WKInterfaceDevice.current().play(.start)
+            #endif
+    }
+    
+    func longVibration() {
+        #if !os(watchOS)
+        if supportsHaptics {
+            playHaptics(url: dashAhapUrl!)
+        } else {
+            // strongest vibration for older systems
+            AudioServicesPlaySystemSound(1521)
+        }
+        #else
+        WKInterfaceDevice.current().play(.retry)
+        #endif
     }
 #if !os(watchOS)
 

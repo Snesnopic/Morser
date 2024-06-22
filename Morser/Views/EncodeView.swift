@@ -151,7 +151,7 @@ struct EncodeView: View {
                                 .scaleEffect(circleAnimationAmount)
                                 .onAppear {
                                     withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
-                                        circleAnimationAmount *= 1.05
+                                        circleAnimationAmount *= 1.2
                                     }
                                 }
                                 .onDisappear {

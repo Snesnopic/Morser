@@ -51,9 +51,9 @@ struct QuickTranslateView: View {
                         })
                         do {
                             try moc.save()
-#if !os(macOS)
+ #if os(iOS)
                             WatchConnectivityProvider.sendSentencesToWatch()
-#endif
+ #endif
                         } catch {
                             print("Error: \(error)")
                         }
@@ -66,7 +66,7 @@ struct QuickTranslateView: View {
                             .disabled(true)
                             .foregroundStyle(Color.gray)
                     }
-                    if #available(iOS 17.0, macOS 14.0, *) {
+                    if #available(iOS 17.0, macOS 14.0, tvOS 17.0, *) {
                         if sentence.order == 0 {
                             TipView(SaveAndTapTip(), arrowEdge: .top)
                         }
@@ -80,9 +80,9 @@ struct QuickTranslateView: View {
                             }
                             do {
                                 try moc.save()
-#if !os(macOS)
+ #if os(iOS)
                                 WatchConnectivityProvider.sendSentencesToWatch()
-#endif
+ #endif
                             } catch {
                                 print("Error: \(error)")
                             }
@@ -149,7 +149,7 @@ struct QuickTranslateView: View {
 #endif
             }
             .task {
-                if #available(iOS 17.0, macOS 14.0, *) {
+                if #available(iOS 17.0, macOS 14.0, tvOS 17.0, *) {
                     try? Tips.configure([
                         .displayFrequency(.immediate),
                         .datastoreLocation(.applicationDefault)
@@ -177,7 +177,7 @@ struct QuickTranslateView: View {
 import TipKit
 
 // Define your tip's content.
-@available(iOS 17.0, macOS 14.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
 struct SaveAndTapTip: Tip {
     var title: Text {
         Text("Save and listen")

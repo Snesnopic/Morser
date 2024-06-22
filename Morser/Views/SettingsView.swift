@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+#if !os(tvOS)
 struct SettingsView: View {
     @AppStorage("soundEnabled") private var soundEnabled = true
     @AppStorage("sliderPreference") private var sliderPreference = 1.0
@@ -218,7 +218,13 @@ struct SettingsView: View {
 
 #endif
 }
-
+#else
+struct SettingsView: View {
+    var body: some View {
+        EmptyView()
+    }
+}
+#endif
 #Preview {
     SettingsView()
 }

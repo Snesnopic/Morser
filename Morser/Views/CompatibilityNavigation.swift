@@ -18,7 +18,7 @@ struct CompatibilityNavigation<Content>: View where Content: View {
             NavigationView(content: content)
         }
         #else
-        if #available(iOS 16, *), UIDevice.current.userInterfaceIdiom == .pad {
+        if #available(iOS 16, tvOS 16, *), UIDevice.current.userInterfaceIdiom == .pad {
             NavigationStack(root: content)
         } else {
             NavigationView(content: content)

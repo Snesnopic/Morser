@@ -4,11 +4,12 @@
 //
 //  Created by Giuseppe Francione on 16/04/24.
 //
-
 import Foundation
 import AVFoundation
-import Speech
 import SwiftUI
+import Combine
+#if !os(tvOS)
+import Speech
 
 /// A helper for transcribing speech to text using SFSpeechRecognizer and AVAudioEngine.
 actor SpeechRecognizer: ObservableObject {
@@ -214,5 +215,35 @@ extension AVAudioSession {
             }
         }
     }
+}
+#endif
+#else
+
+class SpeechRecognizer: ObservableObject {
+    enum RecognizerError: Error {
+        case nilRecognizer
+        case notAuthorizedToRecognize
+        case notPermittedToRecord
+        case recognizerIsUnavailable
+
+        var message: String {
+            switch self {
+            case .nilRecognizer: return "Can't initialize speech recognizer"
+            case .notAuthorizedToRecognize: return "Not authorized to recognize speech"
+            case .notPermittedToRecord: return "Not permitted to record audio"
+            case .recognizerIsUnavailable: return "Recognizer is unavailable"
+            }
+        }
+    }
+
+    @MainActor @Published var errorMessage: String = ""
+
+    @MainActor @Published var transcript: String = ""
+    @MainActor @Published var audioLevel: Double = 0.0
+
+    private var audioEngine: AVAudioEngine?
+    func resetTranscript() {}
+    func startTranscribing() {}
+    func stopTranscribing() {}
 }
 #endif

@@ -35,10 +35,12 @@ struct EncodeView: View {
                         .onSubmit {
                             tryReading()
                         }
-#if !os(macOS)
+                    #if !os(macOS)
                         .textInputAutocapitalization(.never)
                     #endif
+                    #if !os(tvOS)
                         .textFieldStyle(.roundedBorder)
+                    #endif
                         .disableAutocorrection(true)
                         .padding(.leading)
                         .frame(height: size.height * 2)
@@ -85,7 +87,9 @@ struct EncodeView: View {
                             .font(.title3)
                             .bold()
                             .padding()
+                            #if !os(tvOS)
                             .textSelection(.enabled)
+                            #endif
                             .onTapGesture {
                                 textFieldIsFocused = false
                             }

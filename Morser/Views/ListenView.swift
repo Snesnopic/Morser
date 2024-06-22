@@ -55,9 +55,11 @@ struct ListenView: View {
                 Text(speechRecognizer.transcript.isEmpty ? "Transcript will be here!"
                      : "\(speechRecognizer.transcript)")
                 .bold()
+                #if !os(tvOS)
                 .if(!speechRecognizer.transcript.isEmpty, transform: { view in
                     view.textSelection(.enabled)
                 })
+                #endif
                 .font(.title2)
             }
             .navigationTitle("Listen")

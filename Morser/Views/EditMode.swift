@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-#if os(macOS)
+#if !os(iOS)
 /// Reimplemenation of [EditMode](https://developer.apple.com/documentation/swiftui/editmode) for macOS.
 public enum EditMode {
 

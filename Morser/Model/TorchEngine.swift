@@ -8,7 +8,8 @@
 import Foundation
 import AVFoundation
 
-class TorchEngine {
+class TorchEngine: ObservableObject {
+    @Published var torchIsOn: Bool = false
     static let shared = TorchEngine()
     private init() {}
     func toggleTorchFor(_ time: TimeInterval) {
@@ -26,7 +27,10 @@ class TorchEngine {
                 print("Torch could not be used: \(error)")
             }
         } else {
-            print("Torch is not available")
+            torchIsOn = true
+            Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
+                self.torchIsOn = false
+            }
         }
     }
     func deviceHasTorch() -> Bool {

@@ -154,7 +154,9 @@ class VibrationEngine: ObservableObject {
     }
 
     func shortVibration() {
-#if !os(watchOS)
+        #if os(macOS)
+        NSHapticFeedbackManager.defaultPerformer.perform(.alignment, performanceTime: .now)
+        #elseif !os(watchOS)
             if supportsHaptics {
                 playHaptics(url: dotAhapUrl!)
             } else {
@@ -167,7 +169,17 @@ class VibrationEngine: ObservableObject {
     }
 
     func longVibration() {
-        #if !os(watchOS)
+        #if os(macOS)
+        for index in 1..<3 {
+            Timer.scheduledTimer(withTimeInterval: index == 0 ? 0 : self.dashDuration / 3, repeats: false) { _ in
+                for _ in 1..<10 {
+                    Timer.scheduledTimer(withTimeInterval: self.dashDuration / 30, repeats: false) { _ in
+                        NSHapticFeedbackManager.defaultPerformer.perform(NSHapticFeedbackManager.FeedbackPattern.alignment, performanceTime: NSHapticFeedbackManager.PerformanceTime.now)
+                    }
+                }
+            }
+        }
+        #elseif !os(watchOS)
         if supportsHaptics {
             playHaptics(url: dashAhapUrl!)
         } else {

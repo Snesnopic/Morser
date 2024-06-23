@@ -95,7 +95,9 @@ struct SettingsView: View {
                     Text("Flashlight")
                 } footer: {
                     VStack(alignment: .leading) {
-                        Text(whichCase().rawValue)
+                        if TorchEngine.torchType != .software {
+                            Text(whichCase().rawValue)
+                        }
                         if softwareFlashlight {
                                 Text("Warning: This feature uses your screen at maximum brightness, which may trigger seizures, migraines, or visual discomfort in sensitive individuals. Use with caution.")
                                 .bold()
@@ -175,13 +177,25 @@ struct SettingsView: View {
                 VStack {
                     Form {
                         Section {
-                            Toggle("Flashlight Haptics", isOn: $flashlight)
-                                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !TorchEngine.shared.deviceHasTorch())
+                            if TorchEngine.torchType == .hardware {
+                                Toggle("Flashlight Haptics", isOn: $flashlight)
+                                    .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating() || !TorchEngine.shared.deviceHasTorch())
+                            }
+                            Toggle("Screen Flashlight Haptics", isOn: $softwareFlashlight)
+                                .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
 
                         } header: {
                             Text("Flashlight")
                         } footer: {
-                            Text(whichCase().rawValue)
+                            VStack(alignment: .leading) {
+                                if TorchEngine.torchType != .software {
+                                    Text(whichCase().rawValue)
+                                }
+                                if softwareFlashlight {
+                                        Text("Warning: This feature uses your screen at maximum brightness, which may trigger seizures, migraines, or visual discomfort in sensitive individuals. Use with caution.")
+                                        .bold()
+                                    }
+                            }
                         }
                     }
                 }

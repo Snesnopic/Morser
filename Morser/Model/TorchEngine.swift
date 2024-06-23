@@ -10,6 +10,8 @@ import AVFoundation
 import SwiftUI
 
 class TorchEngine: ObservableObject {
+    @AppStorage("flashlight") private var flashlight = false
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = false
     enum TorchType {
         case hardware
         case software
@@ -31,9 +33,8 @@ class TorchEngine: ObservableObject {
     private init() {}
     func toggleTorchFor(_ time: TimeInterval) {
         #if os(iOS)
-        guard let device = AVCaptureDevice.default(for: .video) else { return }
 
-        if device.hasTorch {
+        if let device = AVCaptureDevice.default(for: .video), device.hasTorch && flashlight {
             do {
                 try device.lockForConfiguration()
                 device.torchMode = .on
@@ -44,20 +45,22 @@ class TorchEngine: ObservableObject {
             } catch {
                 print("Torch could not be used: \(error)")
             }
-        } else {
-            torchIsOn = true
-            Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
-                self.torchIsOn = false
-            }
         }
         #endif
-        torchIsOn = true
-        Timer.scheduledTimer(withTimeInterval: time, repeats: false) { _ in
-            withAnimation(.easeOut) {
+        if softwareFlashlight {
+            #if !os(watchOS)
+            let oldBrightness = UIScreen.main.brightness
+            UIScreen.main.brightness = 1.0
+            #endif
+            torchIsOn = true
+            Timer.scheduledTimer(withTimeInterval: time / 4, repeats: false) { _ in
                 self.torchIsOn = false
+                #if !os(watchOS)
+                UIScreen.main.brightness = oldBrightness
+                #endif
             }
-        }
 
+        }
     }
     func deviceHasTorch() -> Bool {
         #if os(iOS)

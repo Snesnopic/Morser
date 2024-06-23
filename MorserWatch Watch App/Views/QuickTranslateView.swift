@@ -11,6 +11,8 @@ struct QuickTranslateView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.order, order: .forward)]) private var sentences: FetchedResults<Sentence>
     @Environment(\.managedObjectContext) var moc
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    @ObservedObject private var torchEngine = TorchEngine.shared
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = true
     var body: some View {
         NavigationView {
             List {
@@ -62,6 +64,15 @@ struct QuickTranslateView: View {
             }
             .listStyle(.plain)
             .navigationTitle("Quick Translate")
+            .overlay {
+                Color.white
+                    .ignoresSafeArea()
+                    .opacity(torchEngine.torchIsOn && softwareFlashlight ? 1 : 0)
+                    .if(!torchEngine.torchIsOn) { view in
+                        view
+                            .animation(.easeOut(duration: vibrationEngine.dotDuration), value: torchEngine.torchIsOn)
+                    }
+            }
             .onAppear {
                 ensureSentencesExist(sentences, moc)
             }

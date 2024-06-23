@@ -13,6 +13,8 @@ struct QuickTranslateView: View {
     @State private var mode: EditMode = .inactive
     @FocusState private var textFieldIsFocused: Bool
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    @ObservedObject private var torchEngine = TorchEngine.shared
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = true
     var body: some View {
         CompatibilityNavigation {
             List {
@@ -117,6 +119,15 @@ struct QuickTranslateView: View {
                             }
                         })
                 })
+            }
+            .overlay {
+                Color.white
+                    .ignoresSafeArea()
+                    .opacity(torchEngine.torchIsOn && softwareFlashlight ? 1 : 0)
+                    .if(!torchEngine.torchIsOn) { view in
+                        view
+                            .animation(.easeOut(duration: vibrationEngine.dotDuration), value: torchEngine.torchIsOn)
+                    }
             }
             .listStyle(.plain)
             .navigationTitle("Quick Translate")

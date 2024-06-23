@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EncodeView: View {
+    @ObservedObject var torchEngine = TorchEngine.shared
     @StateObject var speechRecognizer = SpeechRecognizer()
     @State var isRecording: Bool = false
     @State private var enteredText: String = ""
@@ -15,6 +16,7 @@ struct EncodeView: View {
     @State private var circleAnimationAmount: Double = 1.005
     @State private var circles: [UUID] = []
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = false
     @State var size: CGSize = .zero
     fileprivate func tryReading() {
         textFieldIsFocused = false
@@ -180,6 +182,15 @@ struct EncodeView: View {
                 .padding(.all, 50)
                 .buttonStyle(.plain)
                 Spacer()
+            }
+            .overlay {
+                Color.white
+                    .ignoresSafeArea()
+                    .opacity(torchEngine.torchIsOn && softwareFlashlight ? 1 : 0)
+                    .if(!torchEngine.torchIsOn) { view in
+                        view
+                            .animation(.easeOut(duration: vibrationEngine.dotDuration), value: torchEngine.torchIsOn)
+                    }
             }
             .navigationTitle("Encode")
             .ignoresSafeArea(.keyboard)

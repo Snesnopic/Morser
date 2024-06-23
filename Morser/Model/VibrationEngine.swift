@@ -15,6 +15,7 @@ import AVFAudio
 import SwiftUI
 
 class VibrationEngine: ObservableObject {
+
     static let shared: VibrationEngine = VibrationEngine()
 #if !os(watchOS)
     var dashAhapUrl: URL?
@@ -37,10 +38,11 @@ class VibrationEngine: ObservableObject {
     private init() {}
 #endif
     @AppStorage("flashlight") private var flashlight = false
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = false
     @AppStorage("soundEnabled") static private var soundEnabled = true
     @AppStorage("sliderPreference") static private var timeUnit = 1.0
     @AppStorage("soundFrequency") static private var soundFrequency = 600.0
-    var dotDuration: TimeInterval = 1 * timeUnit / 10 // Duration for a dot
+    @Published var dotDuration: TimeInterval = 1 * timeUnit / 10 // Duration for a dot
     var dashDuration: TimeInterval = 3 * timeUnit / 10 // Duration for a dash
     var sameCharacterSeparatorDelay: TimeInterval = 1 * timeUnit / 10 // Delay between same characters
     var characterSeparatorDelay: TimeInterval = 3 * timeUnit / 10 // Delay between different characters
@@ -109,7 +111,7 @@ class VibrationEngine: ObservableObject {
         switch character {
         case ".":
             shortVibration()
-            if flashlight {
+            if flashlight || softwareFlashlight {
                 TorchEngine.shared.toggleTorchFor(dotDuration)
             }
             if VibrationEngine.soundEnabled {
@@ -121,7 +123,7 @@ class VibrationEngine: ObservableObject {
             }
         case "-":
             longVibration()
-            if flashlight {
+            if flashlight || softwareFlashlight {
                 TorchEngine.shared.toggleTorchFor(dashDuration)
             }
             if VibrationEngine.soundEnabled {

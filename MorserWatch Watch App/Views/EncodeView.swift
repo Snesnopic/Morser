@@ -14,7 +14,7 @@ struct EncodeView: View {
     @State private var circles: [UUID] = []
     @ObservedObject private var vibrationEngine = VibrationEngine.shared
     @ObservedObject private var torchEngine = TorchEngine.shared
-    @AppStorage("flashlight") private var flashlight = true
+    @AppStorage("softwareFlashlight") private var softwareFlashlight = true
     fileprivate func tryReading() {
         textFieldIsFocused = false
         if !vibrationEngine.isVibrating() {
@@ -102,9 +102,14 @@ struct EncodeView: View {
             }
             .navigationTitle("Encode")
             .ignoresSafeArea(.keyboard)
-            .if(torchEngine.torchIsOn && flashlight && TorchEngine.torchType == .software) { view in
-                view
-                    .overlay(Color.white.ignoresSafeArea())
+            .overlay {
+                Color.white
+                    .ignoresSafeArea()
+                    .opacity(torchEngine.torchIsOn && softwareFlashlight ? 1 : 0)
+                    .if(!torchEngine.torchIsOn) { view in
+                        view
+                            .animation(.easeOut(duration: vibrationEngine.dotDuration), value: torchEngine.torchIsOn)
+                    }
             }
         }
     }

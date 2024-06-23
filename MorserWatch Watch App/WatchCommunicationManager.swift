@@ -35,11 +35,11 @@ class WatchCommunicationManager: NSObject, WCSessionDelegate, ObservableObject {
             case "settings":
                 @AppStorage("sliderPreference") var sliderPreference = 1.0
                 @AppStorage("soundFrequency") var soundFrequency = 600.0
-                @AppStorage("flashlight") var flashlight = true
-                if let slp = userInfo["sliderPreference"]! as? Double, let sof = userInfo["soundFrequency"]! as? Double, let flash = userInfo["flashlight"]! as? Bool {
+                @AppStorage("softwareFlashlight") var softwareFlashlight = true
+                if let slp = userInfo["sliderPreference"]! as? Double, let sof = userInfo["soundFrequency"]! as? Double, let flash = userInfo["softwareFlashlight"]! as? Bool {
                     sliderPreference = slp
                     soundFrequency = sof
-                    flashlight = flash
+                    softwareFlashlight = flash
                     VibrationEngine.shared.updateTimings()
                     print("Ricevute dall'iPhone settings: \(sliderPreference) e \(soundFrequency)")
                 }

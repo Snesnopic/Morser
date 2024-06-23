@@ -162,6 +162,7 @@
 		9D3DED292BCD109400DAD675 /* Morser */ = {
 			isa = PBXGroup;
 			children = (
+				9D93D7B42C282A9E00EF521D /* Components */,
 				9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */,
 				9D1CB9AE2BCEB2810088F90C /* Info.plist */,
 				9DA6966F2BCD7154002B9CBB /* Extensions.swift */,
@@ -181,6 +182,15 @@
 				9D3DED322BCD109500DAD675 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D93D7B42C282A9E00EF521D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9D4681912C2745CC0041D33D /* EditMode.swift */,
+				9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9DAE653B2C00E68900663324 /* MorserWatch Watch App */ = {
@@ -210,10 +220,8 @@
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */,
 				9D3DED3B2BCD16DE00DAD675 /* QuickTranslateView.swift */,
-				9D4681912C2745CC0041D33D /* EditMode.swift */,
 				9D3DED3D2BCD16EB00DAD675 /* ListenView.swift */,
 				9D9BC1572BECE24200CD2C5B /* SettingsView.swift */,
-				9DF91E692C271D1C007A310E /* CompatibilityNavigation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

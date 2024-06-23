@@ -165,6 +165,7 @@
 				9D39222E2BCFB86E00FA1D05 /* Localizable.xcstrings */,
 				9D1CB9AE2BCEB2810088F90C /* Info.plist */,
 				9DA6966F2BCD7154002B9CBB /* Extensions.swift */,
+				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
 				9D2099822BCD37D800229594 /* Model */,
 				9DC81D142BCD33F900A13C99 /* Views */,
 				9D3DED2E2BCD109500DAD675 /* Assets.xcassets */,
@@ -205,7 +206,6 @@
 		9DC81D142BCD33F900A13C99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9D3DED2A2BCD109400DAD675 /* MorserApp.swift */,
 				9D3DED2C2BCD109400DAD675 /* ParentView.swift */,
 				9D3DED392BCD167600DAD675 /* EncodeView.swift */,
 				9D7F433F2C00C4BB00DB6DE3 /* ExpandingCircle.swift */,

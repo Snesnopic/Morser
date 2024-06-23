@@ -48,14 +48,17 @@ class TorchEngine: ObservableObject {
         }
         #endif
         if softwareFlashlight {
-            #if !os(watchOS)
+            #if os(macOS)
+            temporaryMaxBrightness(time/4)
+            #endif
+            #if os(iOS)
             let oldBrightness = UIScreen.main.brightness
             UIScreen.main.brightness = 1.0
             #endif
             torchIsOn = true
             Timer.scheduledTimer(withTimeInterval: time / 4, repeats: false) { _ in
                 self.torchIsOn = false
-                #if !os(watchOS)
+                #if os(iOS)
                 UIScreen.main.brightness = oldBrightness
                 #endif
             }
@@ -72,3 +75,33 @@ class TorchEngine: ObservableObject {
         #endif
     }
 }
+#if os(macOS)
+import IOKit
+import CoreGraphics
+
+func getCurrentBrightness() -> Float {
+    var brightness: Float = 0.0
+    let service = IOServiceGetMatchingService(kIOMainPortDefault, IOServiceMatching("IODisplayConnect"))
+
+    IODisplayGetFloatParameter(service, 0, kIODisplayBrightnessKey as CFString, &brightness)
+    IOObjectRelease(service)
+    return brightness
+}
+
+func setBrightness(level: Float) {
+    let service = IOServiceGetMatchingService(kIOMainPortDefault, IOServiceMatching("IODisplayConnect"))
+
+    let brightness = max(min(level, 1.0), 0.0)
+    IODisplaySetFloatParameter(service, 0, kIODisplayBrightnessKey as CFString, brightness)
+    IOObjectRelease(service)
+}
+
+func temporaryMaxBrightness(_ duration: TimeInterval) {
+    let originalBrightness = getCurrentBrightness()
+    setBrightness(level: 1.0)  // Set to maximum brightness
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+        setBrightness(level: originalBrightness)  // Reset to original brightness
+    }
+}
+#endif

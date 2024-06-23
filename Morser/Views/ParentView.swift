@@ -25,6 +25,15 @@ struct ParentView: View {
             }
             #endif
         }
+        #if os(macOS)
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                if #available(macOS 14.0, *) {
+                    SettingsLink()
+                }
+            }
+        }
+        #endif
     }
 }
 

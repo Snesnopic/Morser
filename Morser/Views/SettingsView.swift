@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-#if !os(tvOS)
 struct SettingsView: View {
     @AppStorage("soundEnabled") private var soundEnabled = true
     @AppStorage("sliderPreference") private var sliderPreference = 1.0
@@ -64,13 +63,7 @@ struct SettingsView: View {
                             Spacer()
                             Text("\(Int(soundFrequency))")
                         }
-                        Slider(value: $soundFrequency, in: 300...800) {
-                            Text("Sound Pitch (\(Int(soundFrequency)))")
-                        } onEditingChanged: { bool in
-                            if !bool {
-                                WatchConnectivityProvider.sendSettingsToWatch()
-                            }
-                        }
+                        HybridSlider(value: $soundFrequency, range: 300...800, label: "Sound Pitch (\(Int(soundFrequency)))")
                         .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     }
                 } header: {
@@ -110,13 +103,7 @@ struct SettingsView: View {
                         Spacer()
                         Text("\(sliderPreference * 100, specifier: "%.0f") ms")
                     }
-                    Slider(value: $sliderPreference, in: (0.5)...(5.0)) {
-                        Text("Haptics Speed (\(Int(sliderPreference * 100)))")
-                    } onEditingChanged: { bool in
-                        if !bool {
-                            WatchConnectivityProvider.sendSettingsToWatch()
-                        }
-                    }
+                    HybridSlider(value: $sliderPreference, range: (0.5)...(5.0), label: "Haptics Speed (\(Int(sliderPreference * 100)))")
                     .disabled(vibrationEngine.isListening || vibrationEngine.isVibrating())
                     .onChange(of: sliderPreference, perform: { _ in
                         VibrationEngine.shared.updateTimings()
@@ -243,13 +230,13 @@ struct SettingsView: View {
 
 #endif
 }
-#else
-struct SettingsView: View {
-    var body: some View {
-        EmptyView()
-    }
-}
-#endif
+// #else
+// struct SettingsView: View {
+//    var body: some View {
+//        EmptyView()
+//    }
+// }
+// #endif
 #Preview {
     SettingsView()
 }

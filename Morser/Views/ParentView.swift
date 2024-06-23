@@ -19,10 +19,12 @@ struct ParentView: View {
                 .tabItem {
                     Label("Quick Translate", systemImage: "list.bullet")
                 }
-            #if os(iOS)
+            #if !os(watchOS)
+            #if !os(macOS)
             SettingsView().tabItem {
                 Label("Settings", systemImage: "gearshape")
             }
+            #endif
             #endif
         }
         #if os(macOS)
